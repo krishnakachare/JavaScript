@@ -1,0 +1,1 @@
+// class parent extent to its derived child class , its nchain continoue

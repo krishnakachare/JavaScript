@@ -1,0 +1,27 @@
+h1 {
+    color:green
+}
+
+p {
+    color: yellow;
+    background-color:green;
+}
+
+.vegetable {
+    background-color: greenyellow;
+    color:red;
+    height: 200Px;
+    width:200px
+}
+
+.fruit{
+    color: red;
+    background-color: yellow;
+    height: 200Px;
+    width:200px
+}
+
+#two {
+    color:blueviolet
+}
+
