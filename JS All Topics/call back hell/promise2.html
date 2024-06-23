@@ -1,0 +1,43 @@
+<script>
+    function add(a, b) {
+        let res;
+        res = a + b;
+        return res;
+    }
+    let addResult = add(10, 20);
+    console.log(addResult);
+
+
+    function sub(a, b) {
+        let res;
+        setTimeout(() => {
+            res = a - b;
+        }, 1000);
+        return res;
+        // return res before the line 14 code executing.
+    }
+    let subResult = sub(20, 10);
+    console.log(subResult);
+
+
+    function mul(a, b) {
+        let promise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (isNaN(a) || isNaN(b)) {
+                    reject('Please pass numbers')
+                } else {
+                    resolve(a * b)
+                }
+            }, 2000);
+        })
+        return promise;
+        // will wait upto timeout
+    }
+    let mulPromise = mul(10, 20); // Return promise
+    mulPromise.then(  // consuming promise
+        // Resolved promise
+        (res) => { console.log(res) },
+        // Rejected promise
+        (err) => { console.log(err) }
+    )
+</script>

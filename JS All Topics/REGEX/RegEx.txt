@@ -1,0 +1,100 @@
+•	REGEX:
+# Regular Expressions (Regex) in JavaScript:
+    1.Introduction to Regular Expressions:
+        -What are regular expressions?
+        -Why use regular expressions in JavaScript?
+    2.Syntax Basics:
+        -Literal characters vs. metacharacters
+        -Creating regular expression patterns using literals
+    3.Regex Methods in JavaScript:
+        -test(): Testing a string for a match
+        -exec(): Executing a search for a single match
+    4.Metacharacters and Escaping:
+        -Special characters in regular expressions (e.g., . , *, +, ?, \, etc.)
+        -Escaping special characters using \
+    5.Character Classes:
+        -Matching specific sets of characters ([...] syntax)
+        -Predefined character classes (\d, \w, \s, etc.)
+    6.Quantifiers:
+        -Matching repeated characters or patterns (*, +, ?, {n}, {n,}, {n,m})
+    7.Anchors and Boundaries:
+        ^: Beginning of a string
+        $: End of a string
+        \b: Word boundary
+    8.Grouping and Capturing:
+        -Creating and using capturing groups ()
+        -Non-capturing groups (?:...)
+    9.Modifiers:
+        i: Case-insensitive matching
+        g: Global search (match all occurrences)
+        m: Multiline matching
+    10.Alternation:
+        -Matching alternatives using | (OR operator)
+    11.Lookaheads and Lookbehinds:
+        -Positive and negative lookahead assertions ((?=...), (?!...))
+        -Positive and negative lookbehind assertions (?<=...), (?<!...)
+    12.Practical Applications:
+        -Validating input (e.g., email addresses, phone numbers)
+        -Extracting data from strings
+        -Replacing text based on patterns
+    13.Regex Objects:
+        -Creating regular expression objects using RegExp()
+        -Using flags and options with RegExp constructor
+    14.Error Handling and Best Practices:
+        -Handling exceptions and errors in regex operations
+        -Writing efficient and maintainable regex patterns
+    15.Advanced Topics:
+        -Recursive patterns
+        -Using backreferences
+        -Unicode support in regex
+
+
+
+
+------------------------------------------------
+Introduction to Regular Expressions:
+
+Overview: Explanation of what regular expressions are and their importance in string manipulation tasks.
+Syntax: Introduction to the basic syntax of regular expressions, including delimiters and special characters.
+Literal Characters: Understanding how literal characters are matched in regular expressions.
+Basic Patterns
+
+Metacharacters: Explanation of special characters with unique meanings in regular expressions, such as ., ^, $, and \.
+Character Classes: Understanding character classes and their usage in matching sets of characters, including examples like [aeiou].
+Quantifiers: Explanation of quantifiers for specifying the number of occurrences of a pattern, such as *, +, ?, {n}, {n,}, {n,m}.
+Alternation: Introduction to alternation with the pipe symbol (|) for matching multiple patterns.
+Anchors and Boundaries
+
+Anchors: Understanding anchors like ^ (start of string) and $ (end of string) for matching specific positions in the input string.
+Word Boundaries: Explanation of word boundaries \b and \B for matching the beginning or end of a word.
+Character Classes
+
+Predefined Character Classes: Introduction to predefined character classes like \d, \w, \s, and their opposites.
+Custom Character Classes: Explanation of how to create custom character classes to match specific sets of characters.
+Grouping and Capturing
+
+Grouping: Understanding how to use parentheses () for grouping subexpressions in regular expressions.
+Capturing Groups: Explanation of capturing groups and how to extract parts of the match for later use.
+Modifiers and Flags
+
+Modifiers: Introduction to modifiers like i (case-insensitive), g (global), and m (multiline) for modifying matching behavior.
+Flags: Understanding how to use flags with regular expressions to enable specific matching options.
+Escaping Special Characters
+
+Escaping: Explanation of how to escape special characters in regular expressions using the backslash \.
+Methods for Regular Expressions
+
+test() Method: Explanation of the test() method for testing if a pattern exists in a string and returning true or false.
+exec() Method: Understanding the exec() method for searching a string for a specified pattern and returning the first match, along with additional details.
+match() Method: Introduction to the match() method for returning an array containing all matches of a pattern in a string.
+search() Method: Explanation of the search() method for searching a string for a specified pattern and returning the index of the first match.
+replace() Method: Understanding the replace() method for searching a string for a specified pattern and replacing matches with a replacement string.
+Advanced Regular Expressions
+
+Backreferences: Introduction to backreferences for referencing previously captured groups within a regular expression.
+Lookahead and Lookbehind Assertions: Explanation of lookahead (?=...) and lookbehind (?<=...) assertions for asserting patterns ahead or behind the current position.
+Non-capturing Groups: Understanding non-capturing groups (?:...) for grouping subexpressions without capturing the match.
+Practice and Application
+
+Practical Examples: Hands-on exercises and examples to practice applying regular expressions to real-world scenarios.
+Applications: Discussion of common applications of regular expressions in tasks such as validation, parsing, and data extraction.

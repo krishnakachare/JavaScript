@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="email" name="email" id="email" placeholder="enter email"><br><br>
+        <input type="password" name="passwrod" id="password" placeholder="Enter password"> <br><br>
+        <button type="submit">Login</button>
+        <p>If not registered, <a href="./signup.html">Signup</a></p>
+    </form>
+    
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDhyXg_1D_w5oHvyqORtsH2itVWUtU_4gU",
+            authDomain: "fir-30a0a.firebaseapp.com",
+            projectId: "fir-30a0a",
+            storageBucket: "fir-30a0a.appspot.com",
+            messagingSenderId: "988474708812",
+            appId: "1:988474708812:web:a9234a7fc7b60eea80f5e9"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+    </script>
+</body>
+</html>

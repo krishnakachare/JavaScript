@@ -1,0 +1,42 @@
+1.Destructuring -The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
+Example:
+const obj = { a: 1, b: 2 };
+const { a, b } = obj;
+// is equivalent to:
+// const a = obj.a;
+// const b = obj.b;
+2.Template Literals – Template literals provide an easy way to interpolate variables and expressions into strings using backticks.The method is called string interpolation.
+Syntax : ${..}
+Example:
+const day = 27;
+const month = ‘October’;
+const year= 2024;
+String literal: “On the “+day+” of “+month+” in “+year
+Template literal: On the ${day} of ${month} in ${year}
+3.Spread syntax - Spread syntax(…) can be used when all elements from an object or array need to be included in a new array or object, or should be applied one-by-one in a function call's arguments list.
+Syntax: let variablename1 = [...value]; 
+Example:
+let arr = [1, 2, 3];
+let arr2 = [4, 5];
+arr = [...arr, ...arr2];
+console.log(arr); // [ 1, 2, 3, 4, 5 ]
+4.Loops – Array functions like map(), filter(), reduce() etc should be used in the place of for and forEach loops since the latter is mutable.
+5.Async-Await – Async-Await should be used to avoid multiple then() while performing asynchronous operations.
+6.Let, const, var – var declarations are globally scoped, while let and cons are block scoped.
+Let can be updated but not redeclared. Variables declared with the const maintain constant values. Depending on the requirement, the variables should be declared appropriately.
+7.=== vs == - For comparison, === should be used rather than ==. === does both type and value comparison, while == does only value comparison.
+8.&& and ?: - To avoid multiple if statements, the logical AND && and the ternary operator ?: should be used.
+Syntax:
+condition ? exprIfTrue : exprIfFalse
+Example:
+const marks = 72; 
+const result = marks>= 60 ? "Pass" : "Fail";
+console.log(result); // "Pass"
+Bonus tips and tricks
+9. console.log() – Objects can be called in console.log() by using one statement like below:
+const foo= {a:1, b:2};
+const bar={c:3,d:4)
+Instead of logging them like this: console.log{foo};
+ console.log(bar);
+They can be logged as: console.log(foo,bar); 
+10.console.table() – Arrays and iterable objects can be logged using console.table().

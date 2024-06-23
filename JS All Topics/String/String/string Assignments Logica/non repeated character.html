@@ -1,0 +1,14 @@
+<script>
+    // 3. WAP to print the first non - repeated character in a string :
+    // input: - 'entertainment'
+    // output: - r
+
+    let str = 'entertainment';
+    for (let char of str) {
+        if (str.indexOf(char) === str.lastIndexOf(char)) {
+            console.log("First non-repeated character : ", char); // First non-repeated character :  r
+            break;
+        };
+    };
+
+</script>

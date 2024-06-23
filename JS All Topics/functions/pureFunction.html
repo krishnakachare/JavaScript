@@ -1,0 +1,25 @@
+<script>
+    let a = 10;
+    function test1() { // impure,  shouldn't update the data outside it's scope
+        a = 12;
+        console.log(a)
+    }
+    test1();
+
+    function test2() {  // impure , pure functions must return a value
+        console.log('Helloooooo, I am test2');
+    }
+    test2();
+
+    function test3(a) { // impure
+        console.log('I am test3')
+        return 5;
+    }
+    test3(5);
+
+
+    function add(a, b) { // pure
+        return a + b;
+    }
+    console.log(add(2, 3))
+</script>

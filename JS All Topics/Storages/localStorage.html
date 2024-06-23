@@ -1,0 +1,37 @@
+<script>
+    /*
+      browser->inspect->Application
+  
+      1. Local Storage
+      2. Session Storage
+  
+      -Data is stored in key:value pair
+      -Only string type data can be stored
+      -data up to 5mb can be stored 
+    
+        1. The localStorage Object
+        The localStorage object provides access to a local storage for a particular Web Site. It allows you to store, read, add, modify, and delete data items for that domain.
+        The data is stored with no expiration date, and will not be deleted when the browser is closed.
+        The data will be available for days, weeks, and years. */
+
+
+    // Add data in local storage:
+    localStorage.setItem("testKey", "Ram");
+
+    // Retrive/Get data from local storage:
+    console.log(localStorage);
+    let value = localStorage.getItem("testKey");
+    console.log(value);
+    // Retrive the property by index number:
+    localStorage.key(3);
+
+    // Returns the number of data items stored in the Storage object
+    console.log(localStorage.length);
+
+    // // Remove/Delete data from local storage:
+    // localStorage.removeItem("keyName");
+    // delete localStorage["keyName"];
+
+    // // clear local storage:
+    // localStorage.clear();
+</script>

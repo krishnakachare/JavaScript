@@ -1,0 +1,35 @@
+# Use of Regular Expression in JavaScript:
+    The term Regex stands for Regular expression. The regex or regexp or regular expression is a sequence of different characters which describe the particular search pattern. It is also referred/called as a Rational expression.
+
+    # Regular Expression Characters:
+        There are following different type of characters of a regular expression:
+           1. Metacharacters
+           2. Quantifier
+           3. Groups and Ranges
+           4. Escape Characters or character classes
+
+
+
+    You can easily use the regular expression in the JavaScript code by the help of following two string methods:
+    
+    Examples of Regular Expression in JavaScript:
+        Example 1: This example uses the search() method in the JavaScript script for understanding the regular expression.
+            search(): This method searches the regular expression in the string and also returns the position where the match found.
+
+            var string = "Our Site is helpfull for studying about technical courses.!";   
+            pattern="technical";  
+            var res = string.search(pattern); /* This statement stores the position of the pattern in a string, if it is found in a string. */  
+            document.write("Position of the pattern in a string:");   
+            document.write(res);   
+
+        
+        Example 2: This example uses the replace() method in the JavaScript script for understanding the regular expression.
+            Replace(): This method is used to return the string after the replacement of a matched character in a string.
+
+            var string = "You are a Bad Student";   
+            var pattern=/Bad/;  
+            var replace="Good";  
+            var res = string.replace(/Bad/,replace);    
+            /* The above statement replaces the Bad word from the string by the Good word using the replace method. */  
+            document.write("After replacing the substring, the modified string is:"+ '<br>');  
+            document.write(res); 

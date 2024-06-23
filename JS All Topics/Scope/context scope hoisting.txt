@@ -1,0 +1,11 @@
+Let us delve into the concepts of context, scope and hoisting in Javascript in today’s article.
+1.In Javascript, the execution context refers to the separation of code into pieces by the javascript engine to execute code.
+2.There are two execution contexts: the global context and a function context.
+3.The global context is created first and it has the window(global) object and the ‘this’ object.When there are variables in this context, those are declared and set with a value of undefined. If there are functions, these are set in memory.
+4.The process of setting variables with a default value of undefined by the global context is called hoisting.
+5. Anytime a function is invoked, it creates the function context with the list of arguments and added to the execution stack. Once it has finished executing, it is popped off the execution stack.
+6. When there are local variables and arguments in the function, these are declared and set with a default value of undefined in the creation phase of the function execution context.
+7.During the execution phase of the function context, these variables are assigned values and removed after the function gets executed.
+8.Scope is about variable visibility. It refers to the current context of execution. There are three scopes in Javascript:  function scope, block scope and lexical scope.
+9.Let and const are block scoped while var is function scoped. Hoisting occurs only for var while for let and const, the variable is declared, but not set with the default value of undefined.
+10.Lexical scope refers to the fact that when there are nested functions, the variables in the outer function are available to the inner function.

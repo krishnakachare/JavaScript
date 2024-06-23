@@ -1,0 +1,107 @@
+Array functions in Javascript are a powerful way to manipulate arrays which is very useful for different applications. Here we will discuss some of the most common array functions. I found this link very informative to learn about all 33 array functions: https://www.youtube.com/watch?v=RVxuGCWZ_8Ehttps://youtu.be/RVxuGCWZ_8E
+ 1.Array.forEach() :The forEach method is used when we want to execute the same code on all elements of an array.
+Syntax:
+array.forEach((element)=>{
+/*--code--*/
+}
+ 2. Array.map(): The map method performs exactly the same operation as the forEach, but the difference is it returns a new array. It does not modify the original array like forEach().
+Syntax:
+array.map((element)=>{
+/*---code--*/
+return newElement
+}
+ 3.Array.filter(): The filter method  filters out all the elements in the array based on the condition it returns. The new array it returrns contains the elements that evaluate to true on the condition.
+Syntax:
+array.filter(element)=>{
+/*--code--*/
+return condition
+}
+ 4. Array.concat(): The concat method returns a new array that is obtained by merging the two arrays or array with a value.
+Syntax:
+array.concat(value0)
+array.concat(value0, array1)
+array.concat(array1, array2,….arrayN)
+ 5.Array.find() : The find method is used to find an element in an array.It is almost like filter.
+Syntax:
+array.find((element)=>{
+/*code*/
+return /*a condition*/
+}
+ 6.Array.some(): The some method is used when we want to to know if  at least one element satisfying a condition. It returns true or false
+array.some((element)=>{
+/*code*/
+return /* a condition */
+ 7.Array.every(): The every method does the opposite of some(). It checks if every item in the array satisfies a condition.
+array.every((element)=>{
+/*code*/
+return /* a condition */
+ 8.Array.includes(): The includes method takes an element as a parameter and returns true or false if the element is present in the array or not.
+Syntax:
+array.includes(searchElement);
+array.includes(searchElement,fromIndex)
+ 9.Array.push():The push method adds a new element to the end of an array.
+Syntax: array.push(element)
+ 10.Array.unshift(): The unshift method does the opposite of push. It adds the new element to the beginning of the array.
+Syntax: array.unshift(element)
+
+------------------------------------
+
+Array
+=====
+-Arrays are used to store multiple values in a single variable.
+	ex: var arr = [10,20,30,40,50]
+-An array can hold many values under a single name, and we can access the values by referring to an index number.
+	ex: console.log(arr[1]);
+-Usually in other programming languages array stores similar type of elements,but in 
+ JavaScript array can have heterogeneous elements.
+	ex: var arr = [10,'sachin',true,{}]
+
+properties: length , delete
+
+instance functions:    	at(),concat(),entries(),every(),fill(),filter(),find(),findLast(),findIndex(),flat(),
+flatMap(),forEach(),includes(),indexOf(),join(),keys(),lastIndexOf(),map(),pop(),push()
+reduce(), reverse(), shift(),slice(),sort(),some(), splice(),unshift(),values()
+
+static functions : from(),isArray(),of()
+
+
+
+To add/remove elements:
+	push(...items) – adds items to the end,
+	pop() – extracts an item from the end,
+	shift() – extracts an item from the beginning,
+	unshift(...items) – adds items to the beginning.
+	splice(pos, deleteCount, ...items) – at index pos delete deleteCount elements and insert items.
+	slice(start, end) – creates a new array, copies elements from position start till end (not inclusive) into it.
+	concat(...items) – returns a new array: copies all members of the current one and adds items to it. If any of items is an array, then its elements are taken.
+	
+To search among elements:
+	at(index) - takes an integer and returns the item at that index.allows negative index aswell.
+	indexOf/lastIndexOf(item, pos) – look for item starting from position pos, return the index or -1 if not found.
+	includes(value) – returns true if the array has value, otherwise false.
+	find(func) – filter element through the function, return first value that make it return true.
+	findLast(func) – filter element through the function, return last value that make it return true.
+	filter(func) – filter elements through the function, return all values that make it return true.
+	findIndex(func)  - it is like find(), but returns the index instead of a value.
+	
+
+==========================================================================================================================================================================
+
+To transform the array:
+	map(func) – creates a new array from original array by calling func for every element.
+	sort(func) – sorts the array in-place, then returns it.
+	reverse	() – reverses the array in-place, then returns it.
+	split/join – convert a string to array and back.
+	reduce(func, initial) – calculate a single value over the array by calling func for 	each element and passing an intermediate result between the calls.
+	flat()   - creates a new array with the elements of the subarrays concatenated into it.flat(Infinity) , flat() also removes holes in array
+	flatMap() - maps each element in an array using a mapping function and then flattens the results into a new array
+	
+To iterate over elements:
+	forEach()	– calls func for every element, does not return anything.
+	
+	
+Additionally:
+	Array.isArray(arr) checks arr for being an array.
+	Array.from()  change array-like or iterable into true array
+	Array.of()  create array from every arguments passed into it.
+

@@ -1,0 +1,25 @@
+<html>
+
+<body>
+  <script>
+    function alphabet_char_Shift(input) {
+      let charArr = input.split('');
+
+      let str = '';
+      for (char of charArr) {
+        if (char == 'z' || char == 'Z') {
+          char = char.charCodeAt(0) - 25;
+        } else {
+          char = char.charCodeAt(0) + 1;
+        }
+        str = str + String.fromCharCode(char);
+      }
+
+      return str;
+    }
+    console.log(alphabet_char_Shift("abcxyz"));
+    console.log(alphabet_char_Shift("ABCZXY"));
+  </script>
+</body>
+
+</html>

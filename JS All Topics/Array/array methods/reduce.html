@@ -1,0 +1,26 @@
+<script>
+    let arr = [10, 20, 30, 40, 50];
+
+    // Find the sum of all the numbers in this array
+    let sum = arr.reduce((acc, ele) => {
+        console.log(acc, ele)
+        return acc + ele;
+    });
+    console.log(sum);
+
+    // reverse a string using reduce()
+    let str = 'Helloo';
+    let rev = str.split('').reduce((prev, cur) => {
+        return cur + prev;
+    });
+    console.log(rev);
+
+    // print the occurance of characters, using reduce()
+    let myStr = 'entertainment';
+    let res = myStr.split('').reduce((obj, char) => {
+        obj[char] = obj[char] ? obj[char] + 1 : 1;
+        return obj;
+    }, {});
+    console.log(res);
+
+</script>

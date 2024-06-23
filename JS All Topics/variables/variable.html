@@ -1,0 +1,16 @@
+<script>
+    // TDZ - Temporal Dead Zone
+    console.log(a);
+    // console.log(b); 
+    // console.log(c); 
+    var a = 10;
+    let b;
+    const c = 30;
+    console.log(a, b, c);
+
+
+    // var variables can be accessed before initialization statement
+    // let,const variables can be accessed only after their initialization statement
+    // from the starting of the script till the line where let/const variables are initialized
+    // that area is called temporal Dead zone
+</script>

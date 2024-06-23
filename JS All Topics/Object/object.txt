@@ -1,0 +1,241 @@
+19.	Object:
+      -Object ?     
+      -Symbol
+      -CURD operations
+       -ways of object create
+            ├── Dot notation
+            └── Bracket notation
+      -loop on object
+    | ├── Object properties & Methods:
+          prototype, __proto__
+    | | └── inheritance(extend-super, prototype)
+    | | └── Object destructuring
+    | | └── object spread operator
+    | ├── this keyword  
+    | ├── Call , bind , apply 
+    | ├── Getter, setter
+    • Map
+    • Set
+    | ├── JSON
+    • Date and time    
+-------------------------------------------------------
+# Non-Primitive:
+
+# object: 
+ - What is the object ?
+    -Non-Primitive/ mutable (can update original value) datatype in js
+    -Objects are variables that can contain many values inside it.
+    -Collection of (key)properties & values.  ex: {prop1:val1,prop2:val2}       
+    -Object properties are written in 'key:value' pairs. ex: let user = {name:'sachin' , age:35, add:'mumbai'}
+    -Keys are strings or Symbols, and the values can be any data type.
+  -------------------------
+ - CURD operations :
+
+      C -> Create object
+         - 5 Ways of object creation : 
+            1. object literal ex: var obj1 = {};
+            2. new Object (obj)   ex: var obj3 = new Object();
+            3. Object.create(obj) ex: var obj2 = Object.create({});
+            4. class (es6)   ex: var obj4 = new Employee();
+               - Explain static and instance properties.
+            5. Constructor Function 
+            6. Factory Functions
+	
+            -How to get the length of the object --> Object.keys(obj).length;                     
+
+      R -> retrive/get properties
+            ├── Dot notation .
+            └── Bracket notation [' ']
+      -we can access object properties in two ways:
+            objectName.propertyName;       user.name;
+            objectName["propertyName"];    user['age'];
+
+      U -> update properties 
+            - Update property
+            - Add property
+      
+            let person = new Object();
+            person.name = 'John';
+            person.age = 30;
+            person.greet = function() {
+            console.log('Hello, ' + this.name);
+            };
+            person.greet(); // Hello, John
+      --------------------------------------------      
+      D -> Delete properties -> delete objectName.propertyName            
+            -The delete keyword does not delete inherited properties, but if you delete a prototype property, it will affect all objects inherited from the prototype.
+
+
+# Object class properties and methods:
+# Properties :
+      1. length
+      2. prototype
+---------------------------------------
+# Methods :
+
+      1. hasOwnProperty(propertyName) : only checks direct properties (doesn't includes prototype properties)
+         Action : checking if a property exists in an object
+         Return : Boolean     
+      obj.hasOwnProperty(propertyName)   
+
+      # 'in' operator : checks both direct and prototype properties
+      console.log(propertyName in obj)  
+------------------------------------------------------
+     -Object class static functions : 
+
+	1.keys()- Returns an array of keys
+            Object.keys(objectName);
+                 Action: collecting object keys
+                 Return: array
+      --------------------------------------------------------
+	2.values() - Returns an array of values
+            Object.values(objectName);
+                 Action : collecting object values
+                 Return : array
+      --------------------------------------------------------
+	entries() - returns an array of [key, value] pairs
+            Object.entries(objectName);
+                Action : collecting object keys and values
+                Return : 2D array
+      --------------------------------------------------------
+	fromEntries() - transforms an array/Map into an Object
+            Action : creating object from 2D array
+            Return : object
+      
+       Transforms a list of key-value pairs into an object.
+            let entries = [['a', 1], ['b', 2]];
+            let obj = Object.fromEntries(entries);
+            console.log(obj); // {a: 1, b: 2}
+
+      // Returns all properties as an array
+Object.getOwnPropertyNames(object)
+
+// Accessing the prototype
+Object.getPrototypeOf(object)
+      --------------------------------------------------------
+	assign() - Copies properties from one or more source objects to a target object.
+      arg1 --> Target object
+      arg2, arg3, ... --> source objects
+      Action: Creating object by using source object
+      Return: object
+            Object.assign(target, ...sources)
+            Copies the values of all enumerable own properties from one or more source objects to a target object.
+                  let target = {a: 1};
+                  let source = {b: 2};
+                  let result = Object.assign(target, source);
+                  console.log(result); // {a: 1, b: 2}
+      --------------------------------------------------------
+	create() -  creates a new object, using an existing object as the prototype of the newly created object
+                  Action: creating object
+                  Return: object
+            Object.create(proto, [propertiesObject])
+            Creates a new object with the specified prototype object and properties.
+
+                  let personPrototype = {
+                              greet: function() {
+                                    console.log('Hello!');
+                        }
+                  };
+                  let person = Object.create(personPrototype);
+                  person.greet(); // Hello!
+
+      --------------------------------------------------------
+	freeze() - Freezes an object. neither the structure nor values can be changed
+
+      --------------------------------------------------------
+	isFrozen() - Determines if an object was frozen
+
+      --------------------------------------------------------
+	seal()  - structure of the object cann't be modified, value of the properties can be changed.
+
+      --------------------------------------------------------
+	isSealed() - Determines if an object is sealed.
+
+      --------------------------------------------------------
+	preventExtensions() -new properties cann't be added to an object, properties can be deleted, value of the properties can be changed
+
+      --------------------------------------------------------
+      isExtensible() - Determines if extending of an object is allowed
+
+
+
+
+-------------------------------------------------------
+# loop on object:
+      **NOTE: Dot notation not work in the loop.Need to use only bracket notation
+
+      1. for-in loop:
+            for(let index/key in object){
+                  //code execution
+            }
+
+      -for-of not directly working on the object. bcoz its not iterable.
+      2. for-of loop:
+      for(let value of IterableObject){
+            //code execution
+      }
+---------------------------------------------------------
+-shallow copy : Object.assign()
+                obj2 = {...obj1}
+-deep cloning :  JSON.parse(JSON.stringify(obj))  
+				 obj2 = structuredClone(obj1)
+Note: structuredClone() cann't copy the functions from original object to copied object.
+
+-A shallow copy of an object is a copy whose nested properties share the same references.
+ (Nested objects will not be copied by value)
+-A deep copy of an object is a copy whose nested properties do not share the same references.
+
+--------------------------------------------------------
+#### Building a CRUD Application:
+
+                  let items = [];
+
+                  function createItem(name) {
+                  items.push({ id: items.length + 1, name });
+                  }
+
+                  function readItems() {
+                  return items;
+                  }
+
+                  function updateItem(id, newName) {
+                  let item = items.find(item => item.id === id);
+                  if (item) {
+                        item.name = newName;
+                  }
+                  }
+
+                  function deleteItem(id) {
+                  items = items.filter(item => item.id !== id);
+                  }
+
+                  createItem('Item 1');
+                  createItem('Item 2');
+                  console.log(readItems()); // Output: [{id: 1, name: 'Item 1'}, {id: 2, name: 'Item 2'}]
+                  updateItem(1, 'Updated Item 1');
+                  console.log(readItems()); // Output: [{id: 1, name: 'Updated Item 1'}, {id: 2, name: 'Item 2'}]
+                  deleteItem(2);
+                  console.log(readItems()); // Output: [{id: 1, name: 'Updated Item 1'}]
+-------------------------------------------------------------------------
+#### Form Validation:
+            function validateForm(data) {
+            let errors = {};
+            if (!data.name) {
+                  errors.name = 'Name is required';
+            }
+            if (!data.email) {
+                  errors.email = 'Email is required';
+            } else if (!/\S+@\S+\.\S+/.test(data.email)) {
+                  errors.email = 'Email is invalid';
+            }
+            return errors;
+            }
+
+            let formData = { name: '', email: 'invalid-email' };
+            console.log(validateForm(formData)); // Output: { name: 'Name is required', email: 'Email is invalid' }
+-----------------------------------------------------------
+
+
+
+
+

@@ -1,0 +1,105 @@
+# Escape Characters:
+   Escape characters in JavaScript are used to represent special characters in strings that are otherwise difficult or impossible to type directly. 
+   An escape character in JavaScript is denoted by a backslash (`\`). 
+   This backslash signals that the character following it has a special interpretation.
+----------------------------------------------------------------------------------------------
+### Practical Usage : 
+Escape sequences are particularly useful for:
+
+   - Including special characters in strings.
+   - Formatting output for readability or structured layout.
+   - Avoiding syntax errors caused by using characters that have special meanings in JavaScript (like quotes within quotes).
+
+   For example, consider needing to include both single and double quotes within a string:
+
+      console.log('He said, "It\'s a sunny day."');
+      // Output:  He said, "It's a sunny day."
+--------------------------------------------------------------------------------------------
+
+Code	Result	Description
+\'	       '	Single quote
+\"	       "	Double quote
+\\	       \	Backslash
+
+let text = "We are the so-called \"Vikings\" from the north.";
+let text= 'It\'s alright.';
+
+1. **Newline (`\n`)**: Inserts a new line.
+ 
+   console.log("Hello\nWorld");
+   // Output:
+   // Hello
+   // World
+
+--------------------------------------------
+2. **Carriage Return (`\r`)**: Moves the cursor to the beginning of the line.
+
+   console.log("Hello\rWorld");
+   // Output (depending on the environment):
+   // World
+  
+--------------------------------------------
+3. **Tab (`\t`)**: Inserts a horizontal tab.
+
+   console.log("Hello\tWorld");
+   // Output:
+   // Hello   World
+ 
+---------------------------------------------
+4. **Backspace (`\b`)**: Moves the cursor back one position (non-printing character).
+  
+   console.log("Hello\bWorld");
+   // Output:
+   // HellWorld
+ 
+----------------------------------------------------
+5. **Form Feed (`\f`)**: Moves the cursor to the beginning of the next logical page.
+
+   console.log("Hello\fWorld");
+   // Output:
+   // Hello
+   //       World
+ 
+-----------------------------------------------------------------
+6. **Single Quote (`\'`)**: Inserts a single quote character.
+
+   console.log('It\'s a beautiful day');
+   // Output:
+   // It's a beautiful day
+
+--------------------------------------------------------------
+7. **Double Quote (`\"`)**: Inserts a double quote character.
+
+   console.log("She said, \"Hello!\"");
+   // Output:
+   // She said, "Hello!"
+
+----------------------------------------------------------
+8. **Backslash (`\\`)**: Inserts a backslash character.
+
+   console.log("This is a backslash: \\");
+   // Output:
+   // This is a backslash: \
+
+-------------------------------------------------------------
+9. **Unicode (`\uXXXX`)**: Inserts a Unicode character specified by the hexadecimal number `XXXX`.
+  
+   console.log("\u00A9 2024");
+   // Output:
+   // © 2024
+  
+-------------------------------------------------------------------------
+10. **Hexadecimal (`\xXX`)**: Inserts a character specified by the hexadecimal number `XX`.
+
+    console.log("\x41");
+    // Output:
+    // A
+
+----------------------------------------------------------------------
+11. **Null Character (`\0`)**: Inserts a null character.
+
+    console.log("Null character\0test");
+    // Output (non-printing character, usually no visible effect):
+    // Null character test
+
+----------------------------------------------------------------------

@@ -1,0 +1,38 @@
+<script>
+    let str = 'This is javascript class.';
+    let strArr = str.split(' ');
+
+    let longestWord = '';
+
+    for (let char of strArr) {
+        if (char.length > longestWord.length) {
+            longestWord = char;
+        };
+    };
+    console.log(longestWord);
+
+</script>
+
+<!-- <script>
+    function findLongestWord(str) {
+        words = str.split(" ");
+
+        words.sort((a, b) => b.length - a.length);
+
+        return words[0];
+    }
+    result = findLongestWord("The quick brown fox jumped over the lazy dog");
+    alert(result);
+</script> -->
+
+<!-- <script>
+    function findLongestWord(str) {
+        words = str.split(' ');
+
+        words.sort((a, b) => b.length - a.length)
+
+        return words[0]
+    }
+    result = findLongestWord("The quick brown fox jumped over the lazy dog");
+    alert(result);
+</script> -->

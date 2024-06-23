@@ -1,0 +1,19 @@
+Interview Experience on JavaScript's promise methods !!
+
+💢 Promise.all - The Group Project
+Imagine you're working on a group project with several friends. Everyone has their own part to complete. The project can only be turned in once everyone has finished their section. If even one person misses their deadline or messes up, the whole project is delayed. 🚧 It waits for all promises to be resolved. If any promise rejects, `Promise.all` immediately rejects with that reason. It's great when you need everything to succeed before moving forward.
+
+💢 Promise.allSettled - The Class Survey
+Now think of a class survey where the teacher wants feedback from every student, whether it's good or bad. The teacher will only look at all the responses once everyone has submitted their feedback. 🚧 It waits for all promises to settle, meaning each one can either resolve or reject. When they're all done, you get an array of objects describing the outcome of each promise. It's useful when you want to know the result of every promise, regardless of whether they succeeded or failed.
+
+💢 Promise.any - The Fastest Chef
+Imagine you're a judge in a cooking competition, and you want to taste the first dish that any of the chefs present. You're not concerned about who finishes first or last; you just want the first completed dish to taste. If the first few chefs fail to complete their dish, you'll wait until at least one of them succeeds. 🚧 It waits for the first promise to resolve and ignores any that reject. If all promises reject, it rejects with an `AggregateError`. This method is perfect when you just need one successful result quickly.
+
+💢 Promise.race - The Marathon
+Picture a marathon race where you only care about the first runner to cross the finish line. It doesn’t matter how the other runners perform or even if some drop out of the race. You’re only interested in who finishes first. 🚧 It waits for the first promise to settle, whether it resolves or rejects. As soon as one promise settles, it moves on. This is handy when you need the quickest response, no matter if it's successful or not.
+
+💥 Recap
+Promise.all: Like a group project, it needs everyone to succeed.
+Promise.allSettled: Like a class survey, it gathers all responses, good or bad.
+Promise.any: Like a cooking competition, it takes the first successful dish.
+Promise.race: Like a marathon, it waits for the first person to cross the finish line.

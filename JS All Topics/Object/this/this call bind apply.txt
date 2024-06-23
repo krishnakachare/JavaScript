@@ -1,0 +1,77 @@
+Understanding the this keyword is often a challenge for Javascript developers. Here, I have tried to explain how the this keyword is interpreted in various situations in Javascript.
+ 
+1.      The this keyword is a reference to the object that is executing the current  function.
+        For example:
+            const bird ={
+                name=”Pigeon”
+                function fly(){
+                    console.log(this.name)
+                }
+            }
+            bird.fly();   //output: Pigeon
+ 
+2.      One tip to identify the object calling the function is to look to the left of the function. In the above example, it is bird. So, this denotes the object bird. This is implicit binding.
+ 
+3.      In the case of a function called inside a function or a callback function, the rules are different.
+        const bird ={
+        name=”Pigeon”;
+        chicks=[chick1, chick2]
+        listChicks: function()
+        {
+        this.chicks.forEach(function(chick){
+        console.log(this.name);
+        console.log(chick);
+        })}}
+        bird.listChicks(); //output: undefined, chick1, undefined, chick2
+ 
+In the above case, the this keyword is not pointing to the bird object, as the callback function is not being called from the bird object. So this.name returns undefined. So, a nested function does not have the capability to reference the object using this.
+ 
+4.      In order to alleviate the above situation, especially for forEach(), Javascript allows the this reference to be passed as a parameter .So in the above case, we can pass the parameter as shown below:
+            const bird ={
+            name=”Pigeon”;
+            chicks=[chick1, chick2]
+            listChicks: function()
+            {
+            this.chicks.forEach(function(chick){
+            console.log(this.name);
+            console.log(chick);
+            }), this}}
+            bird.listChicks(); //output: Pigeon, chick1, Pigeon, chick2
+5.However, arrow functions behave differently from normal nested functions.
+    For example: 
+        const bird ={
+        name=”Pigeon”
+        function fly(){
+        const arrowFunction = ()=>{
+        console.log(this.name)
+        }}}
+        bird.fly();   //output: Pigeon
+In the above case, the arrow function inherits the scope of the nearest containing regular function   that surrounds it. This is a big advantage of using arrow functions.
+6.For objects created by the new keyword using constructors, the this keyword references the newly created object.
+For example:
+function Bird(name){
+ this.name=name;
+ console.log(this);
+} 
+const pigeon = new Bird(“Pigeon”); //output: Bird{name:Pigeon} name:”Pigeon” [[Prototype]]:Object
+ 
+7. When a function is outside an object and we want to call that function in the context of the object, we can use the call() function.
+For example:
+fly(){
+ console.log(this.name);
+}
+const bird ={
+name=”Pigeon”
+}
+We can call fly() on bird object like: fly.call(bird); //output:Pigeon
+In this case, this references the object passed as the first argument to call().This is explicit binding.
+We can also pass additional parameters separated by comma to call().
+ 
+8. The apply() function is same as call()., except we can pass additional parameters as an array to it.
+Example: fly.apply(bird, arrayofparams[]);
+ 
+9.The bind() function serves the exact same purpose as call() and apply(), but it returns a brand new function instead of invoking the function.
+ Ex: func1= fly.call(bird);
+ func1(); Here, the this still references the bird object.
+ 10.If we do not specify an object that the function needs to be called on, the this keyword references  the Window object.
+ In the above example: if we just call: fly(), without call(), apply() or bind() and no object to the left, it returns the window object.

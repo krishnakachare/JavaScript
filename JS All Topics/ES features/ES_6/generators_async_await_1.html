@@ -1,0 +1,29 @@
+<script>
+  let promise1 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 3000, 'Response-1');
+  });
+  let promise2 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 2000, 'Response-2');
+  });
+  let promise3 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 4000, 'Response-3');
+  });
+
+  async function* generatorFun() {
+    yield await promise1;
+    yield await promise2;
+    yield await promise3;
+  }
+  async function getData() {
+    let generatorObj = generatorFun();
+    /*  console.log(await generatorObj.next());
+     console.log(await generatorObj.next());
+     console.log(await generatorObj.next()); */
+
+    console.log(generatorObj);
+    for await (let response of generatorObj) {
+      console.log(response);
+    }
+  }
+  getData();
+</script>

@@ -1,0 +1,25 @@
+<script>
+    let dateObj = new Date();
+
+    console.log(dateObj.getDate())
+    console.log(dateObj.getMonth() + 1)
+    console.log(dateObj.getFullYear())
+    console.log(dateObj.getDay())
+
+    console.log(dateObj.getHours())
+    console.log(dateObj.getMinutes())
+    console.log(dateObj.getSeconds())
+
+    console.log(dateObj.toDateString())
+    console.log(dateObj.toTimeString())
+    
+    console.log(dateObj.toLocaleDateString())
+    console.log(dateObj.toLocaleTimeString())
+</script>
+
+<script>
+    let dateObj = new Date();
+    let monthNames = ['jan', 'feb', 'march', 'april', 'may', 'june', 'july']
+    const monthNumber = dateObj.getMonth();
+    console.log(monthNumber, monthNames[monthNumber])
+</script>

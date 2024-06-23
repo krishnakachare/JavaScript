@@ -1,0 +1,5 @@
+JavaScript Reserved Words: 
+    In JavaScript you cannot use these reserved words as variables, labels, or function names
+
+    https://www.w3schools.com/js/js_reserved.asp
+

@@ -1,0 +1,10 @@
+1. Javascript is a synchronous single-threaded language but with the help of event-loop and promises, it is used to do asynchronous programming. 
+2.Synchronous code is executed sequentially, from top to bottom with each task waiting for the previous task to be completed.
+3.Asynchronous code executes numerous tasks simultaneously and finishes them quickly. The execution of one task is not dependent on the previous task.
+4.Asynchronous code can be implemented using callbacks and Promises.
+5.Callback functions are functions that are passed to another function as an argument. They can easily get messy and difficult to understand.
+6. A Promise is a proxy for a value not necessarily known when the promise is created. It allows the code to run like synchronous code, as it returns a Promise while waiting for the actual response which will be eventually returned.
+7.A Promise is in one of three states: Pending, Resolved, Rejected. When either of these options (Resolved/Rejected) occur, the  Promise's then method is called.
+8. Async/Await is a syntactic sugar for promises, a wrapper making the code execute more synchronously. It has better error handling capabilities than Promise.
+9.Asynchronous programming is best suited for I/O bound operations like reading/writing from database, file system or network. Whereas, synchronous programming is suited for CPU bound operations like expensive calculations, which can be done using asynchronous code as well.
+10. Asynchronous programming can often help with performance by parallelizing a task. The main benefit comes from making code more scalable. The scalability feature of a system relates to how it handles a growing amount of work.

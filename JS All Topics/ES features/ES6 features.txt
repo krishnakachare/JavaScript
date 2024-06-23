@@ -1,0 +1,102 @@
+# New Features in ES6:
+
+The let keyword
+The const keyword
+Arrow Functions
+The ... Operator
+For/of
+Map Objects
+Set Objects
+Classes
+Promises
+Symbol
+Default Parameters
+Function Rest Parameter
+String.includes()
+String.startsWith()
+String.endsWith()
+Array.from()
+Array keys()
+Array find()
+Array findIndex()
+New Math Methods
+New Number Properties
+New Number Methods
+New Global Methods
+Object entries
+JavaScript Modules
+
+======================================================================
+
+# ES6 stands for ECMAScript 6. ECMAScript was created to standardize JavaScript, and ES6 is the 6th version of ECMAScript, it was published in 2015, and is also known as ECMAScript 2015.
+A lot of very useful features were introduced in ES6. A few of these like destructuring, spread syntax, Promises etc were discussed in the previous articles.
+Now let us take a look at some of the other useful ES6 features.
+1.Array functions: Array functions like map(), reduce(), find(), concat(), slice(), splice() etc were introduced in ES6.
+
+2. Map/Set : These datastructures were introduced in ES6. Map stores key/value pairs, while Set stores values with no duplicates.
+
+3. for..of: The for..of syntax allows to loop through an array or iterable object one by one in sequential order.
+Syntax:
+for (variable of iterable)
+ statement
+Example:
+const iterable = [10, 20, 30];
+for (const value of iterable) {
+ console.log(value);
+}
+// 10
+// 20
+// 30
+
+4. Rest parameter: Rest parameter does the opposite of spread syntax. It bundles up all the arguments to be passed to a function , thus allowing an indefinite number of parameters to be passed to a function.
+It has the same syntax as spread (…), but Javascript has a way of distinguishing one from the other.
+Example:
+function sum(...theArgs) {
+ let total = 0;
+ for (const arg of theArgs) {
+ total += arg;
+ }
+ return total;
+}
+console.log(sum(1, 2, 3));
+// Expected output: 6
+console.log(sum(1, 2, 3, 4));
+// Expected output: 10
+
+5.Arrow functions: The arrow function(=>) is a concise way of writing Javascript functions . The main advantage of arrow functions is that it does not redefine the ‘this’, like normal functions do. Hence, ‘this’ can be accessed in a more predictable way like in other programming languages.
+ Example:
+function func(a,b){
+ let c=a+b; 
+ return (c);
+}
+Can be written using arrow functions as:
+func = (a,b) =>{
+let c=a+b; 
+ return (c);
+}
+
+
+6.Classes : The concept of classes was introduced in ES6. Classes are a template for creating objects. They encapsulate data with code to work on that data. Classes are in fact "special functions” and can be declared in the same way like functions. They have member variables and methods or constructor.
+
+7.Default function arguments: This is a very useful feature, as it allows a function to take a default value for its arguments, when no value is provided,, thereby preventing additional logic to check if the argument value is provided.
+Example:
+function multiply(a, b = 1) {
+ return a * b;
+}
+console.log(multiply(5, 2));
+// Expected output: 10
+console.log(multiply(5));
+// Expected output: 5
+
+8.Object literals: ES6 provides enhanced object literals which make it easy to quickly create objects with properties inside the curly braces.
+function getImage(id, url,) {
+ return {
+ id, url
+ }
+ }
+ getImage("1001", "../assets/images/1001.png");
+Returns an object with the assigned values.
+
+9.Import..export - The export declaration is used to export values from a JavaScript module. Exported values can then be imported into other programs with the import declaration. The value of an imported module is subject to change and is reflected in the imported value.
+
+10.String functions: New string repeating and searching functions like repeat(), startsWith(), endsWith(), includes() etc have been introduced.

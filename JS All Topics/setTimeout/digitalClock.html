@@ -1,0 +1,15 @@
+<body>
+    <center>
+        <h1></h1>
+    </center>
+    <script>
+        // get the time and print on the screen
+        // repeat this process every 1 sec
+        function getCurrentTime() {
+            let dateObj = new Date();
+            let timeNow = dateObj.toLocaleTimeString();
+            document.querySelector("h1").innerHTML = timeNow;
+        }
+        setInterval(getCurrentTime, 1000);
+    </script>
+</body>

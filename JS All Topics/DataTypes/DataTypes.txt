@@ -1,0 +1,122 @@
+# To know the lang:
+1.variable
+2.data types
+3.operators
+4.controls statements
+5.loops
+
+----------------------------------------------------
+- Read js code: let a = 10;
+   -variable decleration Keywords, variable, operator, value(datatype)
+   -variable define/declaration vs not defined/undeclared
+   -variable initialization
+   -variable update/reassign vs mutate
+   -variable redeclared
+
+------------------------------------------------------
+# Miscellaneous operators in js -> Action, return
+1. Comma -> ,
+2. typeof, typeof()
+  - Cover datatypes
+3. instanceof -> 
+  - The instanceof operator returns true if an object is an instance of a specified object
+  - Syntax : object instanceof constructor
+4. void -> void expression (return undefined)
+----------------------------------------------------------
+
+# Data types in js:- typeof()- Action, Return
+1. Primitive Data types(6):- immutable(can't update original value)
+    1. string 
+    2. Boolean
+    3. Undefined
+    4. Null
+    5. Number
+    6. Bigint
+    7. Symbol
+    
+2. Non-Primitive data types:- mutable (can update original value)
+    1. Object (E.g.Date,);
+    2. Array
+    3. Function  
+    4. RegEx  
+
+------------------------------------------------------------
+1. string- 
+  3 ways : Anything in '' "" ``
+  - made by 2 ways - 1. ''-> Literal, 2. String() 3. new String()
+  - string concatination
+  - Templete literal ES6 `${}` & multiline string ``
+  - everything on dom is string
+-----------------------------------------------------
+2. Boolean - Represents true or false values.
+           - Boolean(variable/expression) OR !(variable/expression)
+
+# Truthy values in js:
+- true
+- 1 (Any non zero number)
+- 'JS' (Non empty string)
+- [1,2] or [] (Any array)
+- {} (Any object)
+- Any function
+
+# Falsy values in js :
+- false
+- Null
+- Undefined
+- NaN
+- 0
+- '' (empty string)
+--------------------------------------------------------
+3. Undefined - not containing any values or  not updated till now
+             - Global object property- value undefined
+             - Decleared but not assign - value undefined
+             - Function not returns anything - value undefined
+----------------------------------------------------                       
+4. Null - not containing any values and value is not there...
+         - represent absence of value
+         - its value, datatypes-object, can return null
+         - isNaN()
+-----------------------------------------------------
+5. Number - Number(+,-,0,integer,float)
+          - new Number()
+          - Number.MAX_SAFE_INTEGER
+-----------------------------------------------------
+6. Bigint - Represents large integers beyond the limit of the Number type. 
+          - syntax -> anyNumber n
+                -> new BigInt('10')
+         // n => nth power 
+        // ** => Exponential operator
+        // 2n ** 2n, 2n
+        - Not mix with number, not work with Math()
+--------------------------------------------------------------
+7. Symbol 
+   - ES6
+   - Represents a unique and immutable data type used as the key of an object’s property.
+   - Not object property and iterate on loop
+-------------------------------------------------------
+# Non-Primitive:
+
+1. object:
+- 1. object literal 2. Object (obj), 3. Object.create(obj), 4. class (es6), 5. Constructor Function 6. Factory Functions:
+-----------------------------
+2. Array:-
+- Waht is array ?
+let arr = [];
+// Class/Constructor:
+let arr = new Array(length);
+let arr = new Array(1,2,3);
+//Global Methods:
+let arr = Array.from('JS'); 
+--------------------------------------
+4. RegExp:
+- //, RegExp(//),RegExp(""),--> object
+------------------------------------------------
+
+Q. What diff bt Null, undefined and NaN?
+* NaN - 
+- Not a number, datatypes-Number
+- Global object property
+- In mathematical operation with arithmetic operators reflecting
+- 10/"Hi" --> NaN
+- isNaN()
+

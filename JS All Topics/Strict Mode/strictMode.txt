@@ -1,0 +1,11 @@
+    // js strict mode- js applied standard/best practices
+    // normal js running in without strict mode
+
+    'use strict'
+    // js script will execte in strict mode
+    // Where its introduce from there strict mode activates
+
+    a = 10;
+    // With strict mode : Uncaught ReferenceError: a is not defined
+    // Without strict mode : 10
+    console.log(a);

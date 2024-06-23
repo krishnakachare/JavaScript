@@ -1,0 +1,23 @@
+<script>
+  // object should have either 'string' or 'symbol' type keys
+  let user = {};
+  user["name"] = "sanjay";
+  user["role"] = "trainer";
+
+  let address = Symbol("address");
+  user[address] = "bangalore";
+
+  let salary = Symbol("salary");
+  user[salary] = 5000;
+
+
+  for (key in user) {
+    console.log(key+"------"+user[key]);
+  }
+
+  console.log(Object.keys(user));
+  console.log(Object.getOwnPropertyNames(user));
+
+
+  console.log(Object.getOwnPropertySymbols(user));
+</script>

@@ -1,0 +1,37 @@
+# Debouncing and throttling are two techniques in Javascript that optimize performance by preventing a function from being executed too soon. Let us discuss more about these two techniques in our article today.
+
+1. Debouncing makes sure an event handler does not get triggered multiple times or too quickly within a short time window.
+
+2. As an example, let us take the case where a user is searching for a string in a search box. We do not want to trigger the search during every keyPress or onChange event. Instead, we want to trigger the event once when the entire search string has been typed. This can be achieved using debouncing.
+
+3. To implement debouncing, we are going to add some functionality between the time the user clicks and the event handler runs. This decides whether we really want to handle the click.
+
+4. In order to achieve this, we use a function that accepts two arguments – the function that needs to execute when the event occurs(event handler function) and a time delay. The function waits for the time delay to be completed before running the event handler. If a click occurs in between, the function clears the delay and waits again with a fresh time delay. This continues until the delay is completed without any new clicks.
+Code: Here f is the event handler function, and ms represents the time delay.
+function debounce(f, ms){
+ let timeout;
+return function(){
+ if (timeout){ clearTimeOut(timeout);}
+ timeout = setTimeOut()=>{
+ f();
+}, ms);}}
+
+5. As we see from the code above, debounce does not trigger right away. As soon as the event occurs, it goes into a delay or waits for the next click. If the next click occurs after the set delay, it fires the event. Else, it keeps delaying. So, it is really interested only in the final state.
+
+6. Throttling on the other hand is a little different. It is fired immediately after the first click and then, it goes into a delay. After that, it keeps firing the event at intervals after each delay.
+
+7. As an example of throttling, let us consider an event handler attached to the window’s scroll event. We do not want to trigger the event every time the user triggers the event. This would result in rapid scrolling. To prevent this, we can apply throttling where the event is triggered only at predefined intervals.
+
+8. Code: Here f represents the event handler function, ms is the time delay, and the flag is used to detect the first click
+function throttle(f, ms){
+ let timeout, flag=true;
+return function(){
+ if (flag){ f(); flag=false};}
+ if (timeout){ clearTimeOut(timeout);}
+ timeout = setTimeOut()=>{
+ f();
+}, ms);}}
+
+9. Thus, throttling runs the event handler for the first click, then delays and fires again after each delay.
+
+10. So debouncing and throttling are very useful functions to improve on-screen performance, but differ in the way they limit the function being invoked.

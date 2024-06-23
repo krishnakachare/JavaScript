@@ -1,0 +1,86 @@
+# String :  Primitive/Immutable datatype(can't update original value)
+            E.g.Everything on DOM in string.
+            Strings are used for alphanumerics.
+
+# Way's of string define : 
+  1. String Literal --> let str = "JS"
+  2. Global method --> String()
+  3. Inbuild class in js --> new String()
+
+- Anything in '', "", `` are string.
+    Single quote --> ' '
+    Double quote --> " "
+    Backticks --> ` `
+
+        let str = "JS"  // all string
+        str = 'JS'
+        str = `JS`
+        console.log(str, typeof str)
+
+    use reverse comb of quotes: " ' ' " OR  ' " " '
+    Meaning: "He said, 'Hi'"  OR  'He said, "Hi"'
+    css selector:  "tagName[attr='attrValue']"
+
+        let a = 10;
+        let b = 10;
+        console.log(a + b) // 20
+# String concatination : means addition of string with + operator
+    "Hi"+"JS" --> "HiJS" --> joining LHS & RHS
+    console.log('Addition of' + a + 'and' + b + 'is equal to :' + (a + b)) 
+
+# Template literal (ES6):  can read variable value in string   
+        Backticks: ``
+        Place holders: ${}
+        console.log(`Addition of ${a} and ${b} is equal to : ${a+b}`)
+   
+# Multiline string : using backticks--> ``
+
+# Corecion.
+
+# String properties and methods:
+
+----------------------------
+# String properties:
+    1. length
+    2. prototype
+    3. __proto__
+----------------------------
+# String methods:
+    1.	charAt();
+    2.	charCodeAt();
+    3.	codePointAt(index)
+    4.	concat();
+    5.	startsWith('x')
+    6.	endsWith(searchString, length)
+    7.	includes();
+    8.	indexOf();
+    9.	lastIndexOf();
+    10.	localeCompare(compareString, locales, options)
+    11.	match(regex);
+    12.	matchAll(regexp)
+    13.	normalize(form)
+    14.	padEnd(targetLength, padString)
+    15.	padStart(targetLength, padString)
+    16.	repeat(count)
+    17.	replace();
+    18.	replaceAll();
+    19.	search(regex)
+    20.	slice(start, end)
+    21.	split(separator, limit)
+    22.	startsWith(searchString, position)
+    23.	substring(indexStart, indexEnd)
+    24.	substr(start, length)
+    25.	toUpperCase();
+    26.	toLowerCase();
+    27.	toLocaleLowerCase()
+    28.	toLocaleUpperCase()
+    29.	trim()
+    30.	trimStart()
+    31.	trimEnd()
+    32.	valueOf()
+    33.	at()          
+
+    34. eval(): eval() is from Window Object
+    35. array.join(separator)
+
+NOTE: substring() cannot accept negative indexes. slice() does.

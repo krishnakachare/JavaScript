@@ -1,0 +1,28 @@
+<html>
+
+<body>
+  <script>
+    let arr = ['tata', 'honda', 'maruti', 'hundai', 'toyota'];
+
+    let keys = arr.keys(); // indexes
+    for (key of keys) {
+      console.log(key);
+    }
+
+    let myvalues = arr.values();
+    for (val of myvalues) {
+      console.log(val);
+    }
+
+    let myEntries = arr.entries(); //[[0,tata],[1,honda],[2,maruti]]
+    for (entry of myEntries) {
+      console.log(entry);
+    }
+
+    for (let ind in arr) {
+      console.log(ind + " " + arr[ind]);
+    }
+  </script>
+</body>
+
+</html>

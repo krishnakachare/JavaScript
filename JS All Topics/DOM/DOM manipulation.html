@@ -1,0 +1,59 @@
+The Document Object Model is an API for manipulating HTML documents.It provides methods to add, remove and modify parts of the document effectively.
+Let us discuss some of the useful methods that can be used to manipulate the DOM.
+I. Selecting elements using DOM:
+1.getElementById()   - returns the first element with the id
+2.getElementsByName() -returns all elements with the name
+3.getElementsByTagName() – returns all elements with the tag name
+4.getElementsByClassName() - returns all elements with the class name
+5.querySelector() -returns the first element that matches one or more query selectors
+6.querySelectorAll() - returns all element that match oe or more query selectors
+ 
+II. Traversing elements:
+ 1.selecting parent element – element.parentNode()
+ 2.selecting child element – element.firstElementChild(), 
+ element.lastELementChild(), 
+ element.childNodes()
+ 3.selecting sibling element – element.previousELementSibling(). 
+ element.nextELementSibling()
+ 
+III. Manipulating HTML elements:
+ 1.createElement()   - creates a new node with element tag given
+ 2.appendChild() – adds a node to the end of the list of child nodes of a specific parent node
+ 3.textContent – gets/sets the text content of a node and its descendants – 
+ ignores style
+ 4.innerHTML – used to add the HTML content on the web page
+ 5.after() – to insert one or more nodes after a specified element
+ 6.append() -adds multiple nodes to the end of the list of child nodes, can add 
+ string as well
+ 7.prepend() – adds a new node as the first element to the list of child nodes.
+ 8.insertAdjacentHTML(position, text) – adds text at the specified 
+ position(beforebegin, afterbegin, beforeend, afterend)
+ 9.replaceChild(newChild, oldChild) – replaces the child node oldChild with 
+ newChild
+ 10.removeChild(childNode) – removes child node specified
+IV. Attribute methods:
+ 1.getAttribute()
+ 2.setAttribute()
+ 3.hasAttribute()
+ 4.removeAttribute()
+V. Manipulating element styles:
+ 1. style property – returns the inline CSS properties defined for an element
+ 2.cssText -sets the css property of an element
+ 3.window.getComputedStyle(element, pseudoElement) – gets the CSS style 
+ properties of an element
+ 4.className property – returns/adds the classname property of an element
+ 5.classList property – returns a collection of the classes of an element, can be 
+ used to add or remove classes of an element. Provides methods like replace(), contains() etc to manipulate the class list.
+VI.Javascript events
+ 1.An event is an action that occurs on the web browser. Eg: click, mouseOver, 
+ mouseDown etc
+ 2.There are two event models – Event Bubbling and event capturing.
+ 3.Event Bubbling – Event flow from the most specific element to the least 
+ specific element
+ 4.Event Capturing – Event flow from the least specific element to the most 
+ specific element.
+ 5.Event listener/handler – A piece of code that executes when an event occurs.
+ Example: onClick – event handler of the click event
+ 6.When the event occurs, Javascript passes the event object to the event 
+ handler. The target element attributes can be accessed using event.target.
+ 7. Event handler methods: addEventListener, removeEventListener()

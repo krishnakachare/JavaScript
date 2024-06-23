@@ -1,0 +1,13 @@
+<script>
+  var emp = {
+    name: "sachin",
+    age: 35,
+    address: { street: "marathahalli", city: "bangalore", pin: 560037 },
+    cars: ["tata", "honda", "maruti"],
+  };
+  let myEntries = Object.entries(emp);
+  console.log(myEntries);
+
+  let empObj = Object.fromEntries(myEntries);
+  console.log(empObj);
+</script>

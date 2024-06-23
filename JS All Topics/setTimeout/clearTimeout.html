@@ -1,0 +1,10 @@
+<script>
+    function printHello() {
+        console.log('Hellloooooooooooo');
+    };
+    let timerId = setTimeout(printHello, 5000);
+
+    setTimeout(() => {
+        clearTimeout(timerId);
+    }, 3000);
+</script>

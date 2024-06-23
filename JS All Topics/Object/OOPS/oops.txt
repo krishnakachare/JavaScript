@@ -1,0 +1,61 @@
+
+OOP
+----
+class - structure/blueprint/template for creating Object 
+		class has only logical existance
+		class doesn't have physical existance
+		
+object - Real Entity
+		 every instance of a class
+		 Object has physical existance
+
+-a class in javascript is created using constructor function(ES-5).
+-a class in javascript is created using class keyword.(ES-6).
+-class contains variables(states/properties) and methods(behaviours) inside it.
+
+
+OOP
+----
+
+ Object-Oriented Programming (OOP) in JavaScript
+
+#### Classes (ES6+)
+**Defining and Using Classes:**
+```javascript
+class Person {
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    fullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+}
+let person = new Person('John', 'Doe');
+console.log(person.fullName()); // Output: John Doe
+```
+
+#### Static Methods
+```javascript
+class MathHelper {
+    static add(a, b) {
+        return a + b;
+    }
+}
+console.log(MathHelper.add(2, 3)); // Output: 5
+```
+
+#### Private Fields and Methods
+```javascript
+class User {
+    #password;
+    constructor(username, password) {
+        this.username = username;
+        this.#password = password;
+    }
+    checkPassword(password) {
+        return this.#password === password;
+    }
+}
+let user = new User('john_doe', '1234');
+console.log(user.checkPassword('1234')); // Output: true

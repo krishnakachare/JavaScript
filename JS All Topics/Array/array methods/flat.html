@@ -1,0 +1,36 @@
+<script>
+    let arr1 = [10, 20, [30, 40, [50, 60, [70, 80]]]];
+
+    console.log(arr1.length);
+    console.log(arr1);
+
+    let arr2 = arr1.flat();
+    console.log(arr2, arr2.length);
+
+    let arr3 = arr1.flat(2)
+    console.log(arr3, arr3.length);
+
+    let arr4 = arr1.flat(Infinity)
+    console.log(arr4, arr4.length);
+</script>
+
+<!-- <script>
+    let arr1 = [10, 20, [30, 40, [50, 60, [70, 80]]]];
+
+    // flatten this array using reduce()
+    function flatten(arr) {
+        let res = arr.reduce((resultArr, currentEle) => {
+            if (!Array.isArray(currentEle)) {
+                resultArr.push(currentEle);
+                return resultArr;
+            } else {
+                let nestedElements = flatten(currentEle);
+                return resultArr.concat(nestedElements);
+            }
+        }, []);
+        return res;
+    }
+
+    console.log(flatten(arr1))
+
+</script> -->

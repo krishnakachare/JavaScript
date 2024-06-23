@@ -1,0 +1,28 @@
+<script>
+    // ECMASCRIPT - 5
+    function Trainer(name, course, time) {  // Constructor function ( class )
+        this.name = name;
+        this.course = course;
+        this.time = time;
+    }
+    let trainer1 = new Trainer('sanjay', 'angular', '8.30 PM')
+    let trainer2 = new Trainer('Satish', 'Python', '4.00 PM')
+    let trainer3 = new Trainer('Harikrishna', 'core java', '9.00 AM')
+    console.log(trainer1.name, trainer1.course)
+    console.log(trainer2)
+    console.log(trainer3)
+
+
+    // ECMASCRIPT - 6
+    class Student {
+        constructor(roll, name, course) {
+            this.roll = roll;
+            this.name = name;
+            this.course = course;
+        }
+    }
+    let std1 = new Student(101, 'Deepak', 'Angular')
+    let std2 = new Student(102, 'Manjusha', 'NodeJS')
+    let std3 = new Student(103, 'Varun', 'ReactJS')
+    console.log(std1, std2, std3)
+</script>

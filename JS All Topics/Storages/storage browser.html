@@ -1,0 +1,25 @@
+<script>
+    // Read all the data from session storage
+    sessionStorage;
+
+    // read only 1 item from session storage
+    sessionStorage['isNotFirstVisit']
+    sessionStorage.getItem('isNotFirstVisit');
+
+    // how to add data in session storage
+    sessionStorage.name = 'sanjay';
+    sessionStorage.setItem('address', 'bangalore');
+
+    // how to remove data from session storage
+    delete sessionStorage['isNotFirstVisit']
+    sessionStorage.removeItem('address');
+
+    // How to clear everything from session storage
+    sessionStorage.clear();
+
+    // Session storage data gets removed, when session expires(tab is closed)
+    // Local storage data remains until we clear them
+
+    // Sensitive data should be stored in session so that it gets deleted
+
+</script>

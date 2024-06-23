@@ -1,0 +1,80 @@
+# Global Methods :-
+
+1. String(arg)
+    Action: converting arg into string
+    Return: String
+------------------------------------------
+2. Number(arg)
+    Action: converting arg into number
+    Return: number
+--------------------------------------------------------------------
+3. Math : is in global object and its object
+NOTE: Math methods only accepting(argument) number datatype and returning only number datatype.
+   # Math Properties:   1. Math.PI     
+   # Math Methods:
+        1. Math.sqrt(num)
+           Action: calculating the square root of num
+           Return: number
+        2. Math.cbrt(num)
+           Action: calculating the cube root of num
+           Return: number
+        3. Math.pow(x,y)
+           Action: calculating the result of x power y
+           Return: number
+        4. Math.log(x)
+           Action: calculating logarithemic value of x
+           Return: number
+        5. Math.exp(x)
+           Action: calculating result of e power x
+           Return: number
+        6. Math.ceil(x)
+           Action: calculating the largest near possible number in decimal number line.
+           Return: number
+        7. Math.floor(x) 
+           Action: calculating the smallest near possible number in decimal number line
+           Return: number
+        8. Math.round(num) -->(0.5>= round for max value and 0.5< round for min value)
+           Action: will round figure the value of num
+           Return: number
+        9. Math.random()
+           Action: will generate random value from 0.0-1.0
+           Return: number     
+        10.Math.abs(-x) ---> will remove the negitivity and print results
+           Action: calculating the square root of num
+           Return: number
+        11.Math.max(x,y) & Math.min(x,y) 
+           Action: will generate maximum and minimum values from given values
+           Return: number  
+
+Q. Generate 4 digit OTP.
+Q. write a js code to input three numbers a,b,c and output roots by quadratic formula 
+input: a:1 , b: -5, c:6 ==> answers will be 2 and 3   
+------------------------------------------------------------------------
+4. alert(msg),
+   Action: Show alert msg to user on browser
+   Return:Undefined
+-------------------------------------------------
+5. confirm(msg)--> return boolean,
+   Action: show confirm msg to user on browser
+   Return: Boolean (true/false)
+        OK=true
+        Cancel=false
+-------------------------------------------------
+6. prompt(arg1:msg, arg2:input box text)
+    Action : collecting data from user on browser
+    Return : String
+        OK=user input data
+        cancel=null
+--------------------------------------------------
+7. console methods: Debugging in js
+        console.log(msg)
+        console.table(array/object)
+        console.error(msg)
+        console.warn(msg)
+        console.assert(condition, msg)
+        console.time()
+        console.timeLog()
+        console.timeEnd()
+        
+ - Browser console, source tab and breakpoints
+--------------------------------------------------

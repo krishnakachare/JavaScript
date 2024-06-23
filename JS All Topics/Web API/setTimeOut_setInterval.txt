@@ -1,0 +1,55 @@
+setTimeout/setInterval (Window)
+====================================
+-setTimeout allows to run a function once, after a specified amount of time.
+-setInterval allows to run a function repeatedly after the specified interval of time.
+-Methods setTimeout(func, delay, ...args) and setInterval(func, delay, ...args) allow us to run the func once/regularly after delay milliseconds.
+-To cancel the execution, we should call clearTimeout/clearInterval with the value returned by setTimeout/setInterval.
+-Zero delay scheduling with setTimeout(func, 0) (the same as setTimeout(func)) is used to schedule the call “as soon as possible, but after the current script is complete”.
+-setTimeout expects a reference to a function, the function shouldn't be invoked.
+	setTimeout( f1 , 3000);    // correct
+	setTimeout( f1() , 3000);  // wrong
+-For setInterval the function stays in memory until clearInterval is called.
+-use recursive setTimeout() insteadof setInterval() if execution duration is longer than
+ interval time.
+-Recursive setTimeout guarantees a delay between the executions, setInterval – does not.
+-While this pattern does not guarantee execution on a fixed interval, it does guarantee that 
+the previous interval has completed before recursing.
+
+	(function loop(){
+	   setTimeout(function() {
+		  // Your logic heres
+		  loop();
+	  }, delay);
+	})();
+
+
+id = setTimeout();
+id = setInterval();
+clearTimeOut(id);
+clearInterval(id);
+
+N.p - setTimeout(fn,0) means execute after all current functions in the present queue gets executed
+
+
+*Assignment:
+1. Blink the UI text
+2. Digital clock
+
+------------------------------
+
+
+
+https://www.google.co.in/search?q=javascript+micro+vs+macrotask+queue&tbm=isch&ved=2ahUKEwjF87j61Iz4AhVOkdgFHZd0BXIQ2-cCegQIABAA&oq=javascript+micro+vs+macrotask+queue&gs_lcp=CgNpbWcQAzoECCMQJzoFCAAQgAQ6BggAEB4QCDoECAAQGFCm_BJYh7MTYNq0E2gBcAB4AIAB3QKIAb4kkgEIMC4xMy42LjSYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=gpKXYsWqGM6i4t4Pl-mVkAc&bih=569&biw=1280#imgrc=a3KGFGZQG96R6M
+https://www.jsv9000.app/
+
+-------------------------------------
+
+let x=0
+for(var i=0;i<5;i++){
+ // for(let i=0;i<5;i++){
+    setTimeout(()=>{
+        console.log(i)
+       // x++
+       // console.log(x)
+    },1000)
+}

@@ -1,0 +1,61 @@
+1. Using Console Methods:
+   console.log(msg)
+   console.table(array/object)
+   console.error(msg)
+   console.warn(msg)
+   console.assert(condition, msg)
+   console.time()
+   console.timeLog()
+   console.timeEnd()
+
+2. Debugging Tools in Browsers:
+    Browser Console: Open the browser's developer console (usually F12 or Cmd + Option + I) to view console messages, errors, and warnings.
+    Debugger: Set breakpoints in your code to pause execution and inspect variables, call stack, and the current state of your application.
+    Network Tab: Debug AJAX requests and responses, monitor network activity, and check HTTP status codes.
+    Sources Tab: View and debug JavaScript files, set breakpoints, and step through code execution line by line.
+
+3. Using debugger Statement:
+    Insert the debugger statement into your code to pause execution and launch the debugger when it's reached.
+
+        function calculateSum(a, b) {
+        debugger;
+        const sum = a + b;
+        return sum;
+        }
+        calculateSum(10, 20); // Code execution will pause at the debugger statement
+
+4. Common Debugging Techniques:
+    Inspecting Variables: Check the values of variables at different points in your code to identify unexpected values or changes.
+    Commenting Out Code: Temporarily comment out sections of code to isolate the source of an error.
+    Simplified Test Cases: Create simplified test cases or use console-based experiments to narrow down the problem area.
+    Reading Error Messages: Pay attention to error messages in the console to understand what type of error occurred and where.
+
+5. Debugging Asynchronous Code:
+    Use console.log() or breakpoints within promise chains or async/await functions to trace the flow of execution.
+    Handle uncaught promise rejections with .catch() to debug errors in asynchronous operations.
+
+6. Code Linting and Static Analysis:
+    Use code linting tools like ESLint to catch common errors and enforce coding standards.
+
+    npm install eslint --save-dev OR yarn add eslint --dev
+    npx eslint --init (eslint.config.js created)
+    Create: .eslintrc.js
+
+    module.exports = {
+        env: {
+            browser: true,
+            node: true,
+            es6: true,
+        },
+        extends: ['eslint:recommended'], // Use recommended rules
+        rules: {
+            // Add custom rules here
+        },
+    };
+
+    * Run : npx eslint your-file.js OR npx eslint .
+-------------------------------------------------------------------
+
+
+
+

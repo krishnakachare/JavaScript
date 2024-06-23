@@ -1,0 +1,55 @@
+<!-- <script>
+    console.log(a)
+    var a = 10;
+    let b = 20;
+    const c = 30;
+    console.log(a, b, c)
+</script>
+
+<script>
+    console.log('line-2 ', a); // undefined
+    var a = 10;
+    console.log('line-4 ', a); // 10
+
+    function test() {
+        console.log('line-7 ', a); // undefined
+        var a = 20;
+        console.log('line-9 ', a); // 20
+    }
+    test();
+    console.log('line-12 ', a); // 10
+</script> -->
+
+<script>
+    console.log('line-2 ', a); // undefined
+    var a = 10;
+    console.log('line-4 ', a); // 10
+
+    function test() {
+        console.log('line-7 ', a); // 10
+        a = 20;
+        console.log('line-9 ', a); // 20
+    }
+    test();
+    console.log('line-12 ', a); // 10
+</script>
+
+<!-- <script>
+    console.log('line-2 ', a); // undefined
+    var a = 10;
+    console.log('line-4 ', a); // 10
+
+    function test() {
+        console.log('line-7 ', a); // 10
+        var a = 20;
+        console.log('line-9 ', a); // 20
+
+        if (true) {
+            console.log('line-12 ', a); // 20
+            var a = 30;
+            console.log('line-14 ', a); // 20
+        }
+    }
+    test();
+    console.log('line-17 ', a); // 10
+</script> -->

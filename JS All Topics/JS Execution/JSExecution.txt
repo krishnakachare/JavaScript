@@ -1,0 +1,13 @@
+How Javascript Works
+====================
+-When JavaScript engine executes a script, it creates N execution contexts.
+-Execution context is the environment within which the current code is being executed.
+-Each execution context has two phases: 
+	1. creation phase. (Allocates memory - variables & functions and assign 'undefined' to variables)
+	2. execution phase. (Code gets Executed - assign values to variables & method invocation)
+-When a script executes for the first time,JavaScript engine creates a 'Global Execution Context' and pushes to callstack.
+-For every function call,JavaScript engine creates a new Function Execution Context and that gets added to callstack.
+
+https://www.youtube.com/watch?v=iLWTnMzWtj4&t=1044s
+https://www.jsv9000.app/
+https://www.linkedin.com/posts/gaurav-patel-engineer_javascript-visualized-event-loop-activity-7173332195871219712-Q4pR?utm_source=share&utm_medium=member_android

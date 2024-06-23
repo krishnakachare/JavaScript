@@ -1,0 +1,31 @@
+Eliminate Render-Blocking JavaScript
+====================================
+-With HTML5, we got two new boolean attributes for the <script> tag : async and defer.
+ ex:- <script src='demo.js' async/defer></script>
+-async/defer attribute should only be used on external scripts, not with internal scripts.
+-These attributes only make sense while using the script in the head portion of the page.
+-A good strategy is to use async when possible, and then defer when async isn’t an option.
+-With async, the file gets downloaded asynchronously and then executed as soon as it’s downloaded.
+-With defer, the file gets downloaded asynchronously, but executed only when the document parsing is completed.
+-With defer, scripts will execute in the same order as they are called. 
+ defer is useful when a script depends on another script.
+ https://flaviocopes.com/javascript-async-defer/
+ 
+
+ 1. No defer or async, script tag in the head section
+ 2. No defer or async, script tag in the body section
+ 3. With async, script tag in the head section
+ 4. With defer, script tag in the head section
+
+
+Javascript - is a programming language, follows ECMASCRIPT Standards.
+ECMA - European Computer Manufacturers Association.
+ECMASCRIPT -  is a standard for the scripting languages.
+
+ES-5  2009-2015
+ES-6  2015   (template literal,multiline string, module, class,............)
+ES-7  2016  (2-3 new features)
+ES-8  2017  (2-3 new features)
+ES-9  2018
+.......
+

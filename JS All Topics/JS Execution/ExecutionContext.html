@@ -1,0 +1,63 @@
+<!-- <script>
+    console.log('Global code startes here')
+    let a = 10;
+    let b = 20;
+    console.log(a + b);
+
+    function f1() {
+        console.log('f1 starts')
+        console.log('I am f1....')
+        console.log('f1 ends')
+    }
+    f1();
+
+    console.log('Global code Ends  here')
+</script> -->
+
+<!-- <script>
+    console.log('Global code startes here')
+
+    function f3() {
+        console.log('f3starts')
+        console.log('f3 ends')
+    }
+    function f2() {
+        console.log('f2 starts')
+        console.log('I am f2....')
+        f3();
+        console.log('f2 ends')
+    }
+    function f1() {
+        console.log('f1 starts')
+        console.log('I am f1....')
+        f2();
+        console.log('f1 ends')
+    }
+    f1();
+
+    console.log('Global code Ends  here')
+</script>
+
+<script>
+    console.log('Global code startes here')
+
+    function add(a, b) {
+        return a + b;
+    }
+    let res1 = add(2, 3);
+    let res2 = add(3, 4);
+
+    console.log('Global code Ends  here')
+</script> -->
+
+<script>
+    function logA() { console.log('A') }
+    function logB() { console.log('B') }
+    function logC() { console.log('C') }
+    function logD() { console.log('D') }
+
+    logA();
+    setTimeout(logB, 0);
+    Promise.resolve().then(logC);
+    logD();
+</script>

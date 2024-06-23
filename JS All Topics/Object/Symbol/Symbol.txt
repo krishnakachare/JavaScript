@@ -1,0 +1,75 @@
+#### Symbols- ES6   
+   - Represents a unique and immutable data type used as the key of an object’s property.
+   - Not object property and iterate on loop
+
+            let sym = Symbol('key');
+            let obj = {};
+            obj[sym] = 'value';
+            console.log(obj[sym]); // Output: value
+
+
+// Symbol:
+// Its ES6 feature
+// Define datatype --> Syntax --> Symbol(string,Number,undefine)
+// like-> array --> [,,,], {key:value}
+// let arr = []
+ let a = Symbol("Hi");
+ // "Hi" --> Value
+ console.log(a)  // Symbol(Hi)
+ let b =Symbol(20); 
+ console.log(b) // Symbol(20)
+ console.log(typeof b)  // symbol
+
+ // Symbol always create new momery address for its value: always we have diffrent address
+ console.log(Symbol("Hi") == Symbol("Hi"))  // false
+
+ // Symbol:
+// Symbol always create new momery address for its value: always we have diffrent address
+console.log(Symbol("Hi") == Symbol("Hi"))  // false
+
+
+// Application of symbol:
+// in object:
+// cant store duplicate keys:
+
+let obj = {
+    "name": "JS"
+}
+console.log(obj.name); // JS
+// cant store duplicate keys:
+// obj.name = "TS"  // update name value
+console.log(obj.name);
+
+console.log("name" == "name") // true
+console.log(Symbol("Hi") == Symbol("Hi")) // false
+
+let b = Symbol("name")
+console.log(b, typeof b)  // Symbol(name) symbol
+obj.b = "TS"
+// obj[Symbol("name")] = "TS"
+console.log(obj);  // { name: 'TS', [Symbol(name)]: 'TS' }
+obj[Symbol("name")] = "TS2"
+console.log(obj); // { name: 'TS', b: 'TS', [Symbol(name)]: 'TS2' }
+
+// added symbol data in object not considered as its own property: hidden properties in obj
+
+console.log(obj.hasOwnProperty("name"))  // true
+console.log(obj.hasOwnProperty("kk"))   // false
+console.log(obj.hasOwnProperty(b))   // false
+
+// not iterating:
+for (let key in obj) {
+    console.log(key)  // name, b
+    console.log(key, obj[key])
+}
+
+
+const sym1 = Symbol('sym');
+const sym2 = Symbol('sym');
+
+const obj = {
+  [sym1]: 'value1',
+  [sym2]: 'value2'
+};
+
+console.log(obj[sym1], obj[sym2], sym1 === sym2)

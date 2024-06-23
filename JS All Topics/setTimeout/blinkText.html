@@ -1,0 +1,21 @@
+<body>
+    <center>
+        <h1></h1>
+        <!-- <h1>Hi I AM Blinking...!!!</h1> -->
+    </center>
+    <script>
+        let text = "Hi I AM Blinking...!!!"
+        function blinkTxt() {
+            document.querySelector("h1").innerHTML = text;
+            setTimeout(() => {
+                document.querySelector("h1").innerHTML = "";
+            }, 500);
+
+            // document.querySelector('h1').style.display = 'block';
+            // setTimeout(() => {
+            //     document.querySelector('h1').style.display = 'none';
+            // }, 500);
+        };
+        setInterval(blinkTxt, 1000);
+    </script>
+</body>

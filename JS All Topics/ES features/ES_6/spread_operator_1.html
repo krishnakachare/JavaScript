@@ -1,0 +1,14 @@
+<html>
+  <body>
+    <script>
+      let arr1 = [10, 20];
+      let arr2 = arr1; // Reference Copy
+      arr2.push(30);
+      console.log(arr1, arr2);
+
+      let arr3 = [...arr1]; // Value Copy - Shallow Copy
+      arr3.push(40);
+      console.log(arr1, arr3);
+    </script>
+  </body>
+</html>

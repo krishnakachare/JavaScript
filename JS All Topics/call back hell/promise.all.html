@@ -1,0 +1,42 @@
+<script>
+    // fetch data from 3 apis , then display the data in a table
+    // Below 3 are not dependent on each
+    let url1 = 'https://api.github.com/users/defunkt'
+    let url2 = 'https://api.github.com/users/evanphx'
+    let url3 = 'https://api.github.com/users/sanjaysamantra1';
+
+    let promise1 = fetch(url1)
+    let promise2 = fetch(url2)
+    let promise3 = fetch(url3)
+
+    // Using promise: [parallel execution]
+    /* 
+    Promise.all([promise1, promise2, promise3]).then(([response1, response2, response3]) => {
+        Promise.all([response1.json(), response2.json(), response3.json()]).then(([data1, data2, data3]) => {
+            console.log(data1, data2, data3)
+        })
+    }) 
+    */
+
+    // Using async await: [parallel execution]
+    async function fetchData() {
+        let [response1, response2, response3] = await Promise.all([promise1, promise2, promise3]);
+        let [data1, data2, data3] = await Promise.all([response1.json(), response2.json(), response3.json()]);
+        console.log(data1, data2, data3)
+    }
+    fetchData();
+
+    // Using async await: [sequential execution]
+    async function fetchDataSequentially() {
+        let response1 = await promise1;
+        let data1 = await response1.json();
+        console.log(data1)
+        let response2 = await promise2;
+        let data2 = await response2.json();
+        console.log(data2)
+        let response3 = await promise3;
+        let data3 = await response3.json();
+        console.log(data3)
+    }
+    fetchDataSequentially();
+</script>

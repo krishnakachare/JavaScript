@@ -1,0 +1,36 @@
+# operators in js:
+- coercion in js: js automatically converting datatypes for operations & giving output
+  var result = 5 + '5';
+  console.log(5 == '5'); 
+  var num = Number('10');
+  console.log(0 || "Default");
+  
+==========================================================================================
+# Control flow(loops) in js:
+- continue,break in loop
+
+* Tasks:
+1. print odd numbers from 1 to 20 in reverse order
+2. print Each and every letter of your name in reverse order
+    (input:prasad, output: d a s a r p )
+3. count the no of vowels and consonants in your name
+4. print days on user input
+5. Find out max and min number from given 3 numbers using if-else statement.
+ 
+
+
+==========================================================================================
+# How to convert between different data types in JavaScript ?
+    1. number to string --> String(10)
+    2. string to number --> Number('10')
+
+    3. array to string --> arr.join("")
+    4. string to array --> str.split("")
+
+    5. number to booleans --> !!0, !!1
+    6. boolean to number --> +true, +false
+
+    7. object to JSON --> JSON.stringify({ name: "John", age: 30 })
+    8. JSON to object --> JSON.parse('{"name":"John","age":30}')
+
+==========================================================================================

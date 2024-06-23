@@ -1,0 +1,58 @@
+# Today’s topic is JSON. Let’s look at what JSON is and what it is used for.
+ 
+1. JSON stands for Javascript Object Notation. It is a data representation format similar to XML and YAML.
+
+2.JSON is used for transferring data between servers and web applications. The common use cases are in APIs and config.
+
+3.JSON is lightweight and easy to write, compared to XML, and integrates easily with most languages.
+
+4.JSON files have the .JSON extension. Inside the file, the data is represented in key-value pairs in an object.
+
+5. Strings, numbers, Boolean, null, arrays and objects are the JSON data types.
+
+6. Inside the JSON file, keys and string values should be enclosed in quotes. Each key-value pair should be separated by a comma from the other pair.
+
+7. A sample JSON file looks like this:
+ {
+ “name”: “Jack”,
+ “age”:30,
+ “isSportsman”: true,
+ “hobbies”:[“weight lifting”, “Bowling”],
+ “friends”:[{“name” : ”Tom”,
+ “age”: 28,
+ “isSportsman”: true,
+ ….
+ ….
+ }]}
+
+8. While receiving JSON from a web server, the JSON string needs to be converted to a Javascript object. This can be achieved by using: JSON.parse().
+
+9. To convert a Javascript object to a JSON string, we can use the JSON.stringify() method and send it to the web server.
+
+10. Thus, JSON is much easier to parse and is faster than XML. It is shorter, doesn’t use end tags, is quicker to read and write and can use arrays, unlike XML.
+
+
+
+-----------
+----------------------	
+-JSON.stringify()  converts object to string.
+-JSON.parse()      converts string to object.
+
+--------------------
+
+
+Working with JSON
+
+#### Introduction to JSON
+JSON (JavaScript Object Notation) is a lightweight data interchange format.
+
+#### JSON Methods
+**`JSON.stringify()` and `JSON.parse()`:**
+```javascript
+let obj = { name: "John", age: 30 };
+let jsonString = JSON.stringify(obj);
+console.log(jsonString); // Output: {"name":"John","age":30}
+
+let parsedObj = JSON.parse(jsonString);
+console.log(parsedObj); // Output: { name: 'John', age: 30 }
+```

@@ -1,0 +1,22 @@
+<script>
+  // Function Declaration
+  function add(a, b) {
+    console.log(a + b);
+  }
+  add(2, 3);
+
+  // Function Expression
+  let sub = function (a, b) {
+    console.log(a - b);
+  }
+  sub(10, 8);
+
+  //Self Invoked(IIFE)
+  (function (a, b) {
+    console.log(a * b)
+  })(3, 5);
+
+  // Arrow Function
+  let div = (a, b) => console.log(a/b);
+  div(8, 2)
+</script>

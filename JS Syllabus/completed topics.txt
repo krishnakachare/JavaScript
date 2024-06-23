@@ -1,0 +1,87 @@
+    JavaScript intoduction
+
+1.	What JavaScript is?
+    Application of JavaScript
+2.	First JavaScript script.
+
+3.	Comments in JS
+4.	Internal JS
+5.	External JS File
+
+6.	Variables:
+    | ├── var
+    | ├── let
+    | └── const
+    | const for object.
+
+7.  Strict mode in js
+
+8.	Variable Hoisting, TDZ
+9.	variable scopes:
+    | ├── Global scope
+    | ├── Local scope
+    | ├── Block scope
+
+10.	Data types in JS:
+    1. Primitive/immutable Data types(6):- 
+        1. string 
+        2. Boolean
+        3. Undefined
+        4. Null
+        5. Number
+        6. Bigint
+        7. Symbol
+        
+    2. Non-Primitive/mutable data types:- 
+        1. Object (E.g.Date,);
+        2. Array
+        3. Function  
+        4. RegEx 
+
+11.	| ├── window methods: String(), Number(), Maths methods
+    | ├── Dialogue boxes : alert(),confirm(),prompt()
+
+12.	Operators:
+    | ├── Arithmetic
+    | ├── Assignment
+    | ├── Comparison
+    | ├── Logical
+    | ├── Unary
+    | └── Ternary (Conditional)
+
+13. Corecion
+    shallow, Deep copy
+    Pass by value, Pass by address/referance
+
+14.	Control Flow/Conditionals:
+    | ├── if statement
+    | ├── else statement
+    | ├── else if statement
+    | ├── switch statement(case, default)
+    
+15.	Loops
+    | ├── for loop
+    | ├── while loop
+    | └── do-while loop
+    | ├── for...in
+    | └── for...of (Object methods)
+    | break
+    | continoue
+    | return
+    | Nested for loop ( Pattern print)
+
+16.	Functions:
+    | ├── Function declaration
+    | ├── Function expression
+    | ├── Arrow function
+    | ├── IIFE (Immediately Invoked Function Expression)
+    | ├── Higher order function
+    | ├── Callback function
+    | └── Constructor Function 
+    | └── Generators function
+    | └── Function Hoisting:
+    | └── Closures (Lexical scope)
+    | └── Default Parameters in function-ES6
+    | └── 'this' In short 
+    | └── function recursion (factorial)
+  

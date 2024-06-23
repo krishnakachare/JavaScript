@@ -1,0 +1,70 @@
+<script>
+    'use strict'
+    a = 10;
+    console.log('a value is ', a);
+
+    // In normal mode few mistakes are ignored, in strict mode error is thrown for those mistakes
+</script>
+
+<script>
+    'use strict'
+    function f1() {
+        a = 10;
+        console.log(a)
+    }
+    function f2() {
+        let b = 20;
+        console.log(b)
+    }
+    f1();
+    f2();
+</script>
+
+<script>
+    'use strict'
+    /* function add(a, a, a) {
+        console.log(a + a + a);
+    } */
+    function add(a, b, c) {
+        console.log(a + b + c);
+    }
+    add(2, 3, 4);
+</script>
+
+<script>
+    'use strict'
+    
+    var NaN = 10;
+    var undefined = 20;
+    var Infinity = 30;
+</script>
+
+<script>
+    'use strict';
+    
+    let obj = { a: 10, b: 20, c: 30 };
+    delete obj.c;
+    console.log(obj);
+
+    var a = 10;
+    delete a;
+</script>
+
+<script>
+    'use strict';
+    var a = b = c = 3;
+    console.log(a, b, c)
+</script>
+
+<script>
+    'use strict';
+    
+    var name = 'NareshIT';
+    function test() {
+        console.log(this); // window
+        console.log(this.name)
+    }
+    test();
+
+
+</script>

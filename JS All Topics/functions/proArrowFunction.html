@@ -1,0 +1,49 @@
+<script>
+    class Employee {
+        name = 'sanjay';
+        sal = 5000;
+
+        displayInfo = function () {
+            console.log(this) // this = emp / window   (From Where it is called)
+            console.log(this.name, this.sal)
+        }
+        displayData = () => {
+            console.log(this)
+            console.log(this.name, this.sal)  // this = emp (all the time, no matter from where it is called)
+        }
+    }
+    let emp = new Employee();
+    // emp.displayInfo();  // displayInfo(), this = emp 
+    // emp.displayData();  // displayData() , this = emp
+
+    setTimeout(emp.displayInfo, 2000);
+    setTimeout(emp.displayData, 4000);
+</script>
+
+<!-- <script>
+    class Employee {
+        name = 'sanjay';
+        sal = 5000;
+
+        displayInfo = function () {
+            console.log(this) // this = emp / window   (From Where it is called)
+            console.log(this.name, this.sal)
+        }
+        displayData = () => {
+            console.log(this)
+            console.log(this.name, this.sal)  // this = emp (all the time, no matter from where it is called)
+        }
+    }
+    let emp = new Employee();
+    /*  emp.displayInfo();  // displayInfo(), this = emp 
+     emp.displayData();  // displayData() , this = emp */
+
+    let a = emp.displayInfo;
+    // a();
+
+    let b = emp.displayData;
+    b();
+
+    let c = b;
+    c();
+</script> -->

@@ -1,0 +1,43 @@
+<script>
+    // // Reverse the string :
+    let str = "HelloJs";
+    let revStr = '';
+
+    // // for loop
+    // for (let i = 0; i <= str.length - 1; i++) {
+    //     revStr = str[i] + revStr;
+    // }
+    // console.log(revStr); // sJolleH
+
+    // // reverse for loop
+    // for (let i = str.length - 1; i >= 0; i--) {
+    //     // revStr = revStr + str[i];
+    //     revStr += str[i];
+    // }
+    // console.log(revStr); // sJolleH
+
+    // // New for loop
+    // for (let char of str) {
+    //     revStr = char + revStr;
+    // }
+    // console.log(revStr); // sJolleH
+
+    // // New for loop on indexing
+    // for (let ind in str) {
+    //     revStr = str[ind] + revStr;
+    // }
+    // console.log(revStr); // sJolleH
+
+    // using methods:
+    revStr = str.split("").reverse().join("");
+    console.log(revStr); // sJolleH
+</script>
+
+<!-- <script>
+    var a = 'sachin'
+    var b = a.split('').reduce((rev, c) => {
+        rev = c + rev;
+        return rev;
+    })
+    console.log(b)
+</script> -->

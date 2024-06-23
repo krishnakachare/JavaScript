@@ -1,0 +1,34 @@
+<html>
+
+<body>
+	<h1>
+		<script>
+			class Employee {
+				/* id;
+				fName;
+				lName;
+				sal; */
+				constructor(id, fName, lName, sal) {
+					this.id = id;
+					this.fName = fName;
+					this.lName = lName;
+					this.sal = sal;
+					//this.classVariable = localVariable;
+				}
+				fullName() {
+					console.log(this.fName + " " + this.lName);
+				}
+				annualSal = function () {
+					return this.sal * 12;
+				}
+			}
+			let emp1 = new Employee(101, 'sachin', 'tendulkar', 4000);
+			let emp2 = new Employee(102, 'rahul', 'dravid', 5000);
+			console.log(emp1, emp2);
+
+			emp1.fullName();
+			console.log(emp1.annualSal());
+		</script>
+</body>
+
+</html>
