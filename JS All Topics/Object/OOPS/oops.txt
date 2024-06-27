@@ -1,6 +1,6 @@
-
-OOP
-----
+# OOP :
+ Object-Oriented Programming (OOP) : is aparadigm based on the concept of "objects"which can contain data and methods. It's allabout organizing code for better reusabilityand scalability.
+------------------------------------------------------------
 class - structure/blueprint/template for creating Object 
 		class has only logical existance
 		class doesn't have physical existance
@@ -8,20 +8,39 @@ class - structure/blueprint/template for creating Object
 object - Real Entity
 		 every instance of a class
 		 Object has physical existance
-
+- An instance of a class. It's created from aclass and represents a real-world entity.
 -a class in javascript is created using constructor function(ES-5).
 -a class in javascript is created using class keyword.(ES-6).
 -class contains variables(states/properties) and methods(behaviours) inside it.
 
 
-OOP
-----
+1. Encapsulation: 
+    Is the practice of wrapping data(variables) and methods (functions) into a singleunit called a class.
+    Even if we have no idea what encapsulation is, we can guess just by the word that we are “enclosing” or hiding something, that’s exactly what is! With encapsulation, object’s methods and properties are enclosed within the object, so there are not exposed.
 
- Object-Oriented Programming (OOP) in JavaScript
+2. Inheritance : allows one class to inherit fields andmethods from another class.
+
+3. Polymorphism :
+    Allows methods to do differentthings based on the object they act upon.
+    We think of polymorphism as somet hing having multiple forms. In this instance, polymorphism means the same met hod can be used on different objects.
+
+    1. Overloading :
+        same class , same method name (same declaration), different signature(different defination).
+    2. Overriding :
+        different class , same method name (different declaration), same signature(same defination).
+        Existing functionality override.        
+    # Signature : type of arguments, no of arguments, order of arguments.
+
+4. Abstraction : 
+    Involves hiding complex implementation details and showing only the necessary features of an object.
+    If we look at t he car, we can only see what is outside. We see wheels, doors, windows and so on. But what we don’ t see is the complex engine and all t hose inner par ts. 
+    That ’s what abstraction is: hiding complex details and showing simple ones. It helps the 
+    code to be more understandable.
+
 
 #### Classes (ES6+)
 **Defining and Using Classes:**
-```javascript
+
 class Person {
     constructor(firstName, lastName) {
         this.firstName = firstName;
@@ -33,20 +52,20 @@ class Person {
 }
 let person = new Person('John', 'Doe');
 console.log(person.fullName()); // Output: John Doe
-```
+------------------------------------------------------------
 
 #### Static Methods
-```javascript
+
 class MathHelper {
     static add(a, b) {
         return a + b;
     }
 }
 console.log(MathHelper.add(2, 3)); // Output: 5
-```
+-------------------------------------------------------------
 
 #### Private Fields and Methods
-```javascript
+
 class User {
     #password;
     constructor(username, password) {
@@ -59,3 +78,9 @@ class User {
 }
 let user = new User('john_doe', '1234');
 console.log(user.checkPassword('1234')); // Output: true
+--------------------------------------------------------------
+
+
+
+
+

@@ -1,5 +1,5 @@
 #### Getters and Setters
-```javascript
+
 let user = {
     firstName: 'John',
     lastName: 'Doe',
@@ -12,3 +12,78 @@ let user = {
 };
 user.fullName = 'Jane Smith';
 console.log(user.fullName); // Output: Jane Smith
+
+-----------------------------------------------------------
+
+In JavaScript, getters and setters are methods that allow you to define how to access and mutate the properties of an object. They can be used to control how a property's value is read and written, and to add logic to these operations.
+
+### Getter and Setter Syntax
+
+#### Getter
+A getter is a method that gets the value of a specific property. It is defined using the `get` keyword.
+
+#### Setter
+A setter is a method that sets the value of a specific property. It is defined using the `set` keyword.
+
+### Example
+
+Let's illustrate this with an example:
+
+```javascript
+class Person {
+  constructor(firstName, lastName) {
+    this._firstName = firstName;
+    this._lastName = lastName;
+  }
+
+  // Getter for the full name
+  get fullName() {
+    return `${this._firstName} ${this._lastName}`;
+  }
+
+  // Setter for the full name
+  set fullName(name) {
+    const parts = name.split(' ');
+    if (parts.length !== 2) {
+      throw new Error('Full name must include first and last name');
+    }
+    this._firstName = parts[0];
+    this._lastName = parts[1];
+  }
+}
+
+let person = new Person('John', 'Doe');
+
+// Using the getter
+console.log(person.fullName); // Output: John Doe
+
+// Using the setter
+person.fullName = 'Jane Smith';
+
+console.log(person.fullName); // Output: Jane Smith
+console.log(person._firstName); // Output: Jane
+console.log(person._lastName); // Output: Smith
+
+// Attempting to set an invalid full name
+try {
+  person.fullName = 'Jane'; // This will throw an error
+} catch (e) {
+  console.log(e.message); // Output: Full name must include first and last name
+}
+```
+
+### Explanation
+
+1. **Constructor (`constructor` method)**: The `Person` class has a constructor that initializes the private properties `_firstName` and `_lastName`.
+
+2. **Getter (`get fullName()`)**: The `fullName` getter method returns the full name by concatenating `_firstName` and `_lastName`.
+
+3. **Setter (`set fullName(name)`)**: The `fullName` setter method splits the input `name` string into two parts (first name and last name). If the input doesn't include exactly two parts, it throws an error.
+
+4. **Using the Getter and Setter**:
+   - When `person.fullName` is accessed, the getter is called, and it returns `John Doe`.
+   - When `person.fullName = 'Jane Smith'` is executed, the setter is called, and it updates `_firstName` to `Jane` and `_lastName` to `Smith`.
+
+5. **Error Handling**: If the setter is given an invalid full name (not exactly two parts), it throws an error, which can be caught and handled appropriately.
+
+This example demonstrates how getters and setters can encapsulate and manage the internal state of an object, providing a way to validate and control the assignment of property values.

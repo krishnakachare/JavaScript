@@ -1,0 +1,133 @@
+Encapsulation and abstraction are two fundamental concepts in object-oriented programming (OOP), and while they are related, they serve different purposes.
+
+### Encapsulation
+
+Encapsulation is the practice of bundling the data (properties) and methods (functions) that operate on the data into a single unit, typically a class. It also involves restricting direct access to some of the object's components, which is a means of preventing unauthorized parts of the code from modifying or relying on the internal workings of the class. This is usually achieved by making some properties or methods private.
+
+### Example of Encapsulation
+
+```javascript
+class BankAccount {
+  #balance; // private field
+
+  constructor(initialBalance) {
+    this.#balance = initialBalance;
+  }
+
+  // Public method to deposit money
+  deposit(amount) {
+    if (amount > 0) {
+      this.#balance += amount;
+    }
+  }
+
+  // Public method to withdraw money
+  withdraw(amount) {
+    if (amount > 0 && amount <= this.#balance) {
+      this.#balance -= amount;
+    }
+  }
+
+  // Public method to get the balance
+  getBalance() {
+    return this.#balance;
+  }
+}
+
+const account = new BankAccount(1000);
+account.deposit(500);
+console.log(account.getBalance()); // Output: 1500
+account.withdraw(200);
+console.log(account.getBalance()); // Output: 1300
+
+// Trying to access the private field directly will result in an error
+// console.log(account.#balance); // SyntaxError: Private field '#balance' must be declared in an enclosing class
+```
+
+In this example, `BankAccount` encapsulates the `#balance` property and provides public methods (`deposit`, `withdraw`, `getBalance`) to interact with it. The `#balance` property is private and cannot be accessed or modified directly from outside the class.
+
+### Abstraction
+
+Abstraction is the concept of hiding the complex implementation details and showing only the essential features of an object. It simplifies the interface to interact with the object by exposing only the necessary methods and properties, and hiding the implementation details.
+
+### Example of Abstraction
+
+Consider the same `BankAccount` class example. The `BankAccount` class provides an abstract view of a bank account:
+
+- Users of the `BankAccount` class do not need to know how the `#balance` is stored or how the methods `deposit`, `withdraw`, and `getBalance` work internally.
+- They only need to know that they can deposit money, withdraw money, and check the balance using these methods.
+
+Let's extend this with an example where abstraction is more pronounced:
+
+```javascript
+class Shape {
+  constructor() {
+    if (new.target === Shape) {
+      throw new TypeError("Cannot construct Shape instances directly");
+    }
+  }
+
+  // Abstract method
+  getArea() {
+    throw new Error("Method 'getArea()' must be implemented.");
+  }
+}
+
+class Circle extends Shape {
+  constructor(radius) {
+    super();
+    this.radius = radius;
+  }
+
+  getArea() {
+    return Math.PI * this.radius * this.radius;
+  }
+}
+
+class Rectangle extends Shape {
+  constructor(width, height) {
+    super();
+    this.width = width;
+    this.height = height;
+  }
+
+  getArea() {
+    return this.width * this.height;
+  }
+}
+
+const shapes = [
+  new Circle(5),
+  new Rectangle(10, 20)
+];
+
+shapes.forEach(shape => {
+  console.log(shape.getArea());
+});
+```
+
+In this example:
+
+- `Shape` is an abstract class that defines a common interface (`getArea`) for all shapes.
+- `Circle` and `Rectangle` are concrete classes that extend `Shape` and provide specific implementations of the `getArea` method.
+
+The abstraction here is that users can work with the `Shape` type and call the `getArea` method without needing to know the specifics of each shape. They don't need to know how a circle's area is calculated versus how a rectangle's area is calculated. This simplifies the interface for interacting with different shapes.
+
+### Key Differences
+
+- **Encapsulation** is about bundling the data and methods that operate on the data into a single unit and restricting access to some of the object's components.
+- **Abstraction** is about hiding the complex implementation details and exposing only the necessary features of an object.
+
+Encapsulation helps achieve abstraction by hiding the internal state and requiring all interactions to be performed through an object's methods.
+
+### Summary
+
+- **Encapsulation**:
+  - Focuses on how data and methods are bundled and access is controlled.
+  - Example: Private fields and public methods in the `BankAccount` class.
+
+- **Abstraction**:
+  - Focuses on hiding the implementation details and exposing only the necessary features.
+  - Example: Abstract `Shape` class with concrete `Circle` and `Rectangle` subclasses.
+
+By combining these concepts, you can create well-structured and maintainable code that hides complexity and protects the integrity of the data.
