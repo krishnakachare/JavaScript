@@ -1,5 +1,4 @@
-Understanding the this keyword is often a challenge for Javascript developers. Here, I have tried to explain how the this keyword is interpreted in various situations in Javascript.
- 
+
 1.      The this keyword is a reference to the object that is executing the current  function.
         For example:
             const bird ={

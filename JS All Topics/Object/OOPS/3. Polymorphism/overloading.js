@@ -11,6 +11,7 @@
 
 */
 
+//  1. Overloading : Examples-->
 function add(a, b) {
     console.log(a + b);
 }
@@ -24,6 +25,10 @@ add(3);
 add(3, 2);
 add(3, 2, 5);
 add(3, 2, 5, 4);
+
+// .should()
+
+//   2. Overriding : Examples--> override push, alert method
 //-------------------------------------
 
 // class Addition {
