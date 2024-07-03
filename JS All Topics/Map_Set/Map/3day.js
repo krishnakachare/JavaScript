@@ -1,27 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // objects 
 // let days = {
 //     monday:1,
@@ -104,12 +81,10 @@
 
 //console.log(Object.entries(person))
 
-
 person = {
     fullName:"chinmay",
     age:34,
-    skills:['python',"c++"],
-    
+    skills:['python',"c++"],    
 }
 
 for(let arr of Object.entries(person)){
@@ -127,17 +102,11 @@ for(let arr of Object.entries(person)){
 //     [ 'skills', [ 'python', 'c++' ] ]
 //   ]
 
-
-
 // let h = [
-
 //     {namee:"chinmay",rollNo:45},
-//     {namee:"chinmayr",rollNo:454},
-    
+//     {namee:"chinmayr",rollNo:454},    
 //   ]
-
 
 // for(let {namee,rollNo} of h){
 //     console.log(namee,rollNo)
-
 // }

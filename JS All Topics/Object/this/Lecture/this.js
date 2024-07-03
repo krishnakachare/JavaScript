@@ -1,5 +1,4 @@
 /* 
-
 browser ==> window object --> this
 Node.js ==> global object --> globalThis
 
@@ -26,7 +25,6 @@ Q. what is 'this'?
     - Enclosing lexical context/scope        
 
 */
-
 
 // console.log(Window) --> constructor
 // console.log(window) --> instance object
@@ -64,6 +62,14 @@ function printName(name) {
   console.log("function constructor", this)
 }
 // let obj2 = new printName("js");
+
+class abc {
+  constructor() {
+    console.log("class constructor", this) // abcNew
+  }
+}
+let abcNew = new abc()
+console.log(abcNew)
 //----------------------------------------------------------------------
 
 /* 
@@ -72,6 +78,13 @@ function printName(name) {
 let obj = {
   fNmae: "I am Obj",
   lastName: this,  // window
+
+  // printName1: function () {
+  //   console.log("NormalFun", this) // obj 
+  // },
+  // printName2: () => {
+  //   console.log("arrowFun", this) // window
+  // },
 
   // printName1: function () {
   //   console.log("NormalFun", this) // obj 

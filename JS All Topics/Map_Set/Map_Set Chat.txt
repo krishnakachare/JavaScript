@@ -1,0 +1,177 @@
+In JavaScript, `Map` and `Set` are built-in objects that allow you to store collections of values. 
+
+## Map
+
+### What is a Map?
+A `Map` object holds key-value pairs where any value (both objects and primitive values) can be used as either a key or a value.
+
+### Creating a Map
+There are several ways to create a `Map`:
+
+1. **Using the `Map` constructor:**
+    ```javascript
+    let map = new Map();
+    ```
+
+2. **Using the `Map` constructor with an iterable:**
+    ```javascript
+    let map = new Map([
+        ['key1', 'value1'],
+        ['key2', 'value2']
+    ]);
+    ```
+
+### Methods of Map
+1. **`set(key, value)`**: Adds a new key-value pair or updates an existing key with a new value.
+    ```javascript
+    map.set('key3', 'value3');
+    ```
+
+2. **`get(key)`**: Returns the value associated with the key, or `undefined` if the key doesn't exist.
+    ```javascript
+    console.log(map.get('key1')); // Outputs: value1
+    ```
+
+3. **`has(key)`**: Returns `true` if a key exists in the map, otherwise `false`.
+    ```javascript
+    console.log(map.has('key2')); // Outputs: true
+    ```
+
+4. **`delete(key)`**: Removes a key-value pair by key.
+    ```javascript
+    map.delete('key2');
+    ```
+
+5. **`clear()`**: Removes all key-value pairs from the map.
+    ```javascript
+    map.clear();
+    ```
+
+6. **`size`**: Returns the number of key-value pairs in the map.
+    ```javascript
+    console.log(map.size); // Outputs: 0 (after clear)
+    ```
+
+7. **`keys()`**: Returns an iterator of all the keys in the map.
+    ```javascript
+    for (let key of map.keys()) {
+        console.log(key);
+    }
+    ```
+
+8. **`values()`**: Returns an iterator of all the values in the map.
+    ```javascript
+    for (let value of map.values()) {
+        console.log(value);
+    }
+    ```
+
+9. **`entries()`**: Returns an iterator of all key-value pairs in the map.
+    ```javascript
+    for (let [key, value] of map.entries()) {
+        console.log(`${key}: ${value}`);
+    }
+    ```
+
+### Example of Map
+```javascript
+let map = new Map();
+map.set('a', 1);
+map.set('b', 2);
+map.set('c', 3);
+
+console.log(map.get('a')); // Outputs: 1
+console.log(map.has('b')); // Outputs: true
+map.delete('b');
+console.log(map.has('b')); // Outputs: false
+
+for (let [key, value] of map.entries()) {
+    console.log(`${key}: ${value}`);
+}
+```
+
+## Set
+
+### What is a Set?
+A `Set` object lets you store unique values of any type, whether primitive values or object references.
+
+### Creating a Set
+There are several ways to create a `Set`:
+
+1. **Using the `Set` constructor:**
+    ```javascript
+    let set = new Set();
+    ```
+
+2. **Using the `Set` constructor with an iterable:**
+    ```javascript
+    let set = new Set([1, 2, 3, 4, 5]);
+    ```
+
+### Methods of Set
+1. **`add(value)`**: Adds a new element with the given value to the set.
+    ```javascript
+    set.add(6);
+    ```
+
+2. **`has(value)`**: Returns `true` if a value exists in the set, otherwise `false`.
+    ```javascript
+    console.log(set.has(1)); // Outputs: true
+    ```
+
+3. **`delete(value)`**: Removes a value from the set.
+    ```javascript
+    set.delete(5);
+    ```
+
+4. **`clear()`**: Removes all elements from the set.
+    ```javascript
+    set.clear();
+    ```
+
+5. **`size`**: Returns the number of elements in the set.
+    ```javascript
+    console.log(set.size); // Outputs: 0 (after clear)
+    ```
+
+6. **`keys()`**: Returns an iterator of all the values in the set (same as `values()`).
+    ```javascript
+    for (let key of set.keys()) {
+        console.log(key);
+    }
+    ```
+
+7. **`values()`**: Returns an iterator of all the values in the set.
+    ```javascript
+    for (let value of set.values()) {
+        console.log(value);
+    }
+    ```
+
+8. **`entries()`**: Returns an iterator of all the values in the set as `[value, value]` pairs (to keep the same interface as `Map`).
+    ```javascript
+    for (let entry of set.entries()) {
+        console.log(entry);
+    }
+    ```
+
+### Example of Set
+```javascript
+let set = new Set([1, 2, 3, 4, 5]);
+set.add(6);
+console.log(set.has(3)); // Outputs: true
+set.delete(4);
+console.log(set.has(4)); // Outputs: false
+
+for (let value of set.values()) {
+    console.log(value);
+}
+```
+
+### Properties and Usage
+
+- Both `Map` and `Set` are part of the ECMAScript 2015 (ES6) specification.
+- `Map` is ideal for storing keyed collections, while `Set` is great for storing unique values.
+- Both provide iterators which can be used with loops like `for...of`.
+
+These objects are highly efficient and provide a number of useful methods for managing collections of data in JavaScript.

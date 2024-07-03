@@ -1,0 +1,79 @@
+The nullish coalescing operator (`??`) in JavaScript is used to provide a default value when dealing with `null` or `undefined`. It is especially useful in situations where a value might be `null` or `undefined`, and you want to use a fallback value in those cases, but still allow other falsy values (like `0`, `NaN`, `false`, or an empty string) to be considered valid.
+
+### Syntax
+The basic syntax of the nullish coalescing operator is:
+```javascript
+let result = expression1 ?? expression2;
+```
+If `expression1` is `null` or `undefined`, `result` will be `expression2`. Otherwise, `result` will be `expression1`.
+
+### Examples
+
+#### Basic Usage
+```javascript
+let name = null;
+let defaultName = 'Anonymous';
+
+let displayName = name ?? defaultName;
+console.log(displayName); // Outputs: Anonymous
+```
+Here, since `name` is `null`, `displayName` will take the value of `defaultName`.
+
+#### Differentiating from the OR (`||`) Operator
+The OR operator (`||`) can be used for similar purposes but treats all falsy values (like `0`, `NaN`, `false`, and `''`) as needing the fallback value, which is often not desired.
+
+```javascript
+let count = 0;
+let defaultCount = 5;
+
+let displayCount = count || defaultCount;
+console.log(displayCount); // Outputs: 5
+
+displayCount = count ?? defaultCount;
+console.log(displayCount); // Outputs: 0
+```
+In this example, `count` is `0`. Using the OR operator, `displayCount` becomes `5` because `0` is falsy. However, using the nullish coalescing operator, `displayCount` remains `0` because `0` is not `null` or `undefined`.
+
+#### Using with Optional Chaining
+Combining the nullish coalescing operator with optional chaining (`?.`) can be very powerful when working with deeply nested objects.
+
+```javascript
+let user = {
+    profile: {
+        name: 'Alice',
+        age: null
+    }
+};
+
+let userName = user?.profile?.name ?? 'Guest';
+console.log(userName); // Outputs: Alice
+
+let userAge = user?.profile?.age ?? 30;
+console.log(userAge); // Outputs: 30
+```
+In this example, `userName` gets the value `'Alice'` because `user?.profile?.name` is not `null` or `undefined`. However, `userAge` gets the value `30` because `user?.profile?.age` is `null`.
+
+### Real-Time Example
+
+#### Configurations with Default Values
+Consider a situation where you are working with configurations for a web application, and you want to ensure default values are used when certain settings are not provided.
+
+```javascript
+let config = {
+    title: 'My Application',
+    timeout: 0,
+    theme: null
+};
+
+let appTitle = config.title ?? 'Default App';
+let appTimeout = config.timeout ?? 3000; // Allowing 0 as a valid value
+let appTheme = config.theme ?? 'light';
+
+console.log(appTitle);   // Outputs: My Application
+console.log(appTimeout); // Outputs: 0
+console.log(appTheme);   // Outputs: light
+```
+Here, `config.title` and `config.timeout` are used directly because they are not `null` or `undefined`, while `config.theme` is `null`, so `appTheme` gets the default value `'light'`.
+
+### Conclusion
+The nullish coalescing operator (`??`) is a useful addition to JavaScript that allows you to provide default values only when dealing with `null` or `undefined`. This is particularly beneficial when working with values that can be validly falsy, such as `0`, `false`, `NaN`, or an empty string. By using `??`, you can avoid unintentionally overriding these falsy values with a default.
