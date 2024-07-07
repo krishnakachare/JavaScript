@@ -113,13 +113,17 @@
       -loop on object
     | ├── Object properties & Methods:
           prototype, __proto__, prototype chain
-    | | └── inheritance(extend-super, prototype) 
+    | | └── inheritance(extends-super, prototype) 
     | ├── this keyword  
-    | ├── Call , bind , apply 
+    | ├── Call() , bind() , apply() 
     | ├── Getter, setter
-    • Map
-    • Set
-19.	OOPS
+    | ├── Map Set
+   
+19.	OOPS :
+    | ├── Inheritance (extends-super, prototypal) 
+    | ├── Polymorphism (overloading, overriding)
+    | ├── Abstraction
+    | ├── Encapsulation (Private feild in class, getter setter)
    
 31. JSON:
     |── JSON (JavaScript Object Notation)
