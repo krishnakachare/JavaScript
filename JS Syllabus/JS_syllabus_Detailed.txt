@@ -1,14 +1,22 @@
-1.	What JavaScript is?
-•	Applications of javascript: 
-2.	First JavaScript script.
-3.	Comments in JS
-4.	Internal JS
-5.	External JS File
+# History and Evolution
+    Origin and development of JavaScript
+    ECMAScript standards
+
+# JavaScript Basics
+    1.	What JavaScript is?
+        Setting up the development environment
+    2.	First JavaScript script.
+    3.	Comments in JS
+    4.	Internal JS
+    5.	External JS File 
+    •	Difference between Front-End Js & Back-End javascript
+    •	Applications of javascript:
 
 6.	Variables:
     | ├── var
     | ├── let
     | └── const
+    | └── Variable declaration without var, let, const  
     | const for object.
 
 7.  Strict mode in js
@@ -16,8 +24,9 @@
 8.	Variable Hoisting, TDZ
 9.	variable scopes:
     | ├── Global scope
-    | ├── Local scope
-    | ├── Block scope
+    | ├── Local scope / script scope
+    | ├── Block scope : if-else block, for loop block
+    | ├── function scope
 
 10.	Data types in JS:
     1. Primitive/immutable Data types(6):- 
@@ -29,28 +38,33 @@
         6. Bigint
         7. Symbol
         
-    2. Non-Primitive/mutable data types:- 
+    2. Referance/Non-Primitive/mutable data types:- 
         1. Object (E.g.Date,);
         2. Array
         3. Function  
         4. RegEx 
 
-11.	| ├── window methods: String(), Number(), Maths methods
-    | ├── Dialogue boxes : alert(),confirm(),prompt()
+11.	window methods: String(), Array()
+    | | └──  Number() methods
+    | | └──  Maths () methods
+    | | └──  Dialogue boxes : alert(),confirm(),prompt()
 
 12.	Operators:
     | ├── Arithmetic
     | ├── Assignment
     | ├── Comparison
     | ├── Logical
+    | | └── Short Circuiting
     | ├── Unary
-    | └── Ternary (Conditional)
+    | ├──Ternary (Conditional)
+    | ├── Nullish 
+    | ├── Optional operator  
 
 13. Corecion
 
 14.	Control Flow/Conditionals:
     | ├── if statement
-    | ├── else statement
+    | ├── if-else statement
     | ├── else if statement
     | ├── switch statement(case, default)
     
@@ -66,19 +80,21 @@
     | Nested for loop ( Pattern print)
 
 16.	Functions:
-    | ├── Function declaration
-    | ├── Function expression
+    | ├── Function declaration(named)
+    | ├── Function expression(Anonymous)
     | ├── Arrow function
+    | └── 'this' scope   
     | ├── IIFE (Immediately Invoked Function Expression)
     | ├── Higher order function
     | ├── Callback function
+    | ├── function recursion (factorial, fibonacci)
+    | ├── Function Curring
+    | ├── Pure Function
     | └── Constructor Function 
     | └── Generators function
     | └── Function Hoisting:
     | └── Closures (Lexical scope)
     | └── Default Parameters in function-ES6
-    | └── 'this' In short 
-    | └── function recursion (factorial, fibonacci)
     | └── Memoization
 
 •	Pass by value, Pass by address/referance
@@ -104,54 +120,75 @@
     | ├── Array iteration (loop)
    
 19.	Object:
-     -Object ?     
-      -Symbol
-      -CURD operations
-       C-ways of object create
-          R-├── Dot notation
-            └── Bracket notation
-      -loop on object
+    | ├── Object ?     
+    | ├── Symbol
+    | ├── CURD operations
+      └── ways of object create(C)
+          └── Class
+                └── static, instance properties & Methods
+                └── public, private properties & Methods
+      └── Retrive(R & U) properties
+          └── Dot notation
+          └── Bracket notation
+    | ├── loop on object
     | ├── Object properties & Methods:
-          prototype, __proto__, prototype chain
-    | | └── inheritance(extends-super, prototype) 
-    | ├── this keyword  
+          └── prototype, __proto__
+          └── prototype inheritance, prototype chain
+    | ├── Getter, setter 
+    | ├── 'this' keyword, this scope
     | ├── Call() , bind() , apply() 
-    | ├── Getter, setter
-    | ├── Map Set
+    
    
 19.	OOPS :
-    | ├── Inheritance (extends-super, prototypal) 
+    | ├── Inheritance (extends-super, prototype) 
     | ├── Polymorphism (overloading, overriding)
     | ├── Abstraction
-    | ├── Encapsulation (Private feild in class, getter setter)
+    | ├── Encapsulation (Private feild in class, getter-setter)
+
+21.	Map() & Set()
+    | ├── Defination
+    | ├── Ways of creation
+    | ├── Properties & Methods
+
+21.	Date & Time
+    | ├── Ways of creation
+    | ├── Methods: toString(),toLocaleString(),toDateString(),toLocaleDateString(),toTimeString(),toLocaleTimeString();
+    | ├── get Methods
+    | ├── set Methods
    
 31. JSON:
     |── JSON (JavaScript Object Notation)
     |── JSON.stringify(), JSON.parse()
 
-21.	Date & Time
-
-•	Destructuring
-•	Object spread operator, REST Parameter
+•	array Destructuring, object Destructuring
+•	spread operator, REST Parameter
 
 •	REGEX:
 
-•	Promise:
-    | ├── Promise states
-    | | ├── Pending
-    | | ├── Fulfilled
-    | | └── Rejected
-    | ├── Promise methods
-    | | ├── then()
-    | | ├── catch()
-    | | └── finally()
-    | └── Promise.all()
-
-•	async await:
-    |── Asynchronous JavaScript
-    | ├── Callbacks
-    | ├── Promises
+•	Asynchronous JavaScript (AJAX):
+    | ├── Callbackss
+    | ├── Promise:
+        | ├── Promise states : Pending, Fulfilled, Rejected
+        | ├── Promise methods : then(), catch(), finally()
+        | └── Promise.all()
     | └── Async/Await
+
+Callbacks
+
+Understanding callbacks
+Callback hell and how to avoid it
+Promises
+
+Creating and using promises
+Chaining promises
+Handling errors with promises
+Async/Await
+
+Converting promise-based code to async/await
+Error handling with try/catch in async functions
+
+
+
 
 25.	setInterval, SetTimeout
     |── Web APIs:
@@ -162,7 +199,7 @@
     | └── Web Storage API
 
 •	Working with API:
-|── Fetch API
+    | ├──Fetch API
 
 x. DOM:
     |── DOM Manipulation:
@@ -170,12 +207,33 @@ x. DOM:
     | ├── Modifying elements
     | └── Creating elements
     
-    |── Events:
+    |── Event Handling:
     | ├── Event listeners
     | ├── Event propagation
     | └── Event delegation
     •  Event Object
     •  Bubbling and Capturing
+
+8. Browser APIs
+Document Object Model (DOM)
+
+Selecting elements (getElementById, querySelector, querySelectorAll)
+Modifying elements (text content, HTML content, attributes, styles)
+Creating and removing elements
+Event handling (adding and removing event listeners)
+Event delegation
+Browser Storage
+
+localStorage and sessionStorage
+Cookies
+Fetch API
+
+Making HTTP requests with fetch
+Handling responses and errors
+
+
+
+
 
 26.	BOM(Browser Object Model)
 
@@ -204,9 +262,6 @@ x. Left-hand-side expressions:
     •  import()
 
 ***********************************************************
-•	AJAX:
-    |── AJAX (Asynchronous JavaScript and XML)
-
 •	Debugging:
     | ├── Console.log()
     | ├── Breakpoints
@@ -252,40 +307,10 @@ x. Left-hand-side expressions:
 20. Tail Calls
 
 
+# JavaScript Projects:
+
   
-|── Libraries and Frameworks
-| ├── React
-| ├── Angular
-| └── Vue.js
-|
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# JS Libraries and Frameworks
+    | ├── React
+    | ├── Angular
+    | └── Vue.js

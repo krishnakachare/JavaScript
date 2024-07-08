@@ -1,12 +1,12 @@
 /* 
-  JavaScript stores dates as number of milliseconds since January 01, 1970.
+- JavaScript stores dates as number of milliseconds since January 01, 1970.
 # Ways of Creating Date Objects :
     1. new Date()
     2. new Date(milliseconds)
     3. new Date(date string)
-        e.g : new Date("2023-03-28")
+       e.g : new Date("2023-03-28")
     4. new Date(year,month,day,hours,minutes,seconds,ms)
-        JavaScript counts months from 0 (January) to 11 (December).
+       -JavaScript counts months from 0 (January) to 11 (December).
 */
 
 let currentDate = new Date();
@@ -27,8 +27,8 @@ let currentDate = new Date();
 */
 
 // 1. toString()
-    // Action = converting date object into string
-    // Return = string
+// Action = converting date object into string
+// Return = string
 
 // console.log(currentDate.toString())  // Wed Apr 05 2023 08:21:09 GMT+0530 (India Standard Time)
 // console.log(typeof currentDate.toString()) // string
@@ -48,11 +48,6 @@ let currentDate = new Date();
 
 // console.log(currentDate.toLocaleString('default', { month: "2-digit", day: "2-digit" }).split("/").reverse().join("/"))
 
-/* 
- configurable object :
-  { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
-*/
-
 // 3. toDateString()
 // Action = Collecting only date portion from date object
 // Return = string
@@ -64,7 +59,7 @@ let currentDate = new Date();
 // console.log(currentDate.toLocaleDateString())
 
 // 5. toTimeString()
-// Action = Collecting only time portion from date object 
+// Action = Collecting only time portion from date object
 // Return = string
 // console.log(currentDate.toTimeString())
 
@@ -72,9 +67,42 @@ let currentDate = new Date();
 // Action = Collecting only time portion from date object using locale conventions.
 // Return = string
 // console.log(currentDate.toLocaleTimeString())
-/* 
- configurable object :
-  { hour: '2-digit', minute: '2-digit', second: '2-digit' }
+
+/*
+# configurable object :
+  toLocalString('default', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false, timeZone: 'UTC' });
+
+  toLocaleDateString('default', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+
+  toLocaleTimeString('default', { hour: '2-digit', minute: '2-digit', second: '2-digit', timeZoneName: 'short' });
+
+# `locales` Parameter:
+    The `locales` parameter is optional and can be a single string or an array of strings. Each string should be a BCP 47 language tag, which specifies the language, country, and optional variant for the formatting. The browser will use the best match from the provided locales to format the date and time.
+# Examples of BCP 47 Language Tags:
+    - `"en-US"`: English (United States)
+    - `"en-GB"`: English (United Kingdom)
+    - `"fr-FR"`: French (France)
+    - `"de-DE"`: German (Germany)
+    - `"zh-CN"`: Chinese (Simplified, China)
+
+# `options` Parameter:
+    The `options` parameter is an optional object that allows for more detailed customization of the date and time format. It includes properties for specifying the desired representation of various date and time components, such as year, month, day, hour, minute, second, time zone, and more.
+# Common `options` Properties:
+    - Date Options:
+        - `weekday`: `"long"`, `"short"`, `"narrow"`
+        - `year`: `"numeric"`, `"2-digit"`
+        - `month`: `"numeric"`, `"2-digit"`, `"long"`, `"short"`, `"narrow"`
+        - `day`: `"numeric"`, `"2-digit"`
+
+    - Time Options:
+        - `hour`: `"numeric"`, `"2-digit"`
+        - `minute`: `"numeric"`, `"2-digit"`
+        - `second`: `"numeric"`, `"2-digit"`
+        - `timeZoneName`: `"short"`, `"long"`
+
+    - Other Options:
+        - `timeZone`: `"UTC"` or an IANA time zone name like `"America/New_York"`
+        - `hour12`: `true` for 12-hour time (AM/PM), `false` for 24-hour time
 */
 
 /*
@@ -96,6 +124,7 @@ let currentDate = new Date();
 // console.log(currentDate.getFullYear())  // 2023
 // console.log(typeof currentDate.getFullYear()) // number
 
+// const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 //2. getMonth()	    Get month as a number (0-11)
 // Jan == 0
 // Dec == 11
@@ -105,7 +134,6 @@ let currentDate = new Date();
 // console.log(currentDate.getMonth())  // 3
 // console.log(typeof currentDate.getMonth()) // number
 
-// const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 // console.log(months[3])  // April
 // console.log(months[currentDate.getMonth()]) // April
 
@@ -163,7 +191,6 @@ let currentDate = new Date();
 // console.log(currentDate)
 // currentDate.setFullYear(getFullYear() + 2) //  currentDate.setFullYear(getFullYear() - 2)
 // console.log(currentDate)
-
 
 // //2. setMonth()	   Set the month (0-11)
 // console.log(currentDate)  // 2023-04-08T02:44:33.553Z
