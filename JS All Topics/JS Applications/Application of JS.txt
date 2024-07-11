@@ -1,11 +1,29 @@
 # Applications of javascript:
- -Front-End Frameworks and Libraries: React, Angular, Vue.js.
- -State Management: Redux, Vuex
- -Server-Side (Node.js) Frameworks: Express.js, Next.js
- -Testing Libraries and Frameworks: JEST, Mocha, Jasmine, Cypress, playwright, Selenium WebDriver, Lighthouse. 
- -Utility Libraries: jQuery, lodash, Moment.js, Sinon.js
- -Data Visualization: D3.js, chart.js 
- -Mobile App Development: React Native, NativeScript
- -Desktop App Development: Electron (e.g VS Code)
- -Game Development: Phaser, Three.js
- -IoT (Internet of Things): Tessel, Espruino, and Johnny-Five.
+    -Front-End Frameworks and Libraries: React, Angular, Vue.js.
+    -State Management: Redux, Vuex
+    -Server-Side (Node.js) Frameworks: Express.js, Next.js
+    -Testing Libraries and Frameworks: JEST, Mocha, Jasmine, Cypress, playwright, Selenium WebDriver, Lighthouse. 
+    -Utility Libraries: jQuery, lodash, Moment.js, Sinon.js
+    -Data Visualization: D3.js, chart.js 
+    -Mobile App Development: React Native, NativeScript
+    -Desktop App Development: Electron (e.g VS Code)
+    -Game Development: Phaser, Three.js
+    -IoT (Internet of Things): Tessel, Espruino, and Johnny-Five.
+
+# FrontEnd JS Libraries and Frameworks:
+    • React
+    • Angular
+    • Vue.js
+
+# BackEnd development:
+    • Node.js
+    • Express.js
+
+# Testing Frameworks:
+    •  Jasmine 
+    •  Mocha
+    •  Jest
+
+# Testing Tools:
+    •  Cypress
+    •  Playwright
