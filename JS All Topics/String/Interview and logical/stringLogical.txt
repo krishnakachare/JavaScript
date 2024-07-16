@@ -37,6 +37,7 @@
    input:- 'hello@#hi&'
    output:- 'hellohi@#&'
 
+
 ==============================================================================================
 1. Print the occurence of each character in a string
    input: 'entertainment'

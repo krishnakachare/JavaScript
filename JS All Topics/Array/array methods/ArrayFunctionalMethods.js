@@ -253,3 +253,75 @@ let output = arr.some((el, index, arr) => {
 // })
 // console.log(output)  // false
 
+
+
+
+//------------------------------------------------------------------------------
+
+// Arrays functional methods (call back function)
+
+// object have properties & methods
+// arr.length  --- > property/variable
+// arr.methodName() ----> method
+
+// Call back function 
+
+// function writing
+// function calling  ---> functionName()
+
+// call back function not need to call--->
+
+// arr.methodName(function(para1,para2){
+
+// })
+
+// arr.methodName((para1,para2)=>{
+
+// })
+
+// function functionName(para1, para2){ }
+// Function expression
+// Arrow function
+
+// let variableName = function writing
+
+
+// let arr = [1, 2, 1, 3, 1, 4, 2, 2]
+
+//  arr.methodName()  ---> method/ function calling
+// arr.methodName(function(para1,para2){
+
+// })
+
+// Function expression ----->
+
+arr.map(function (el, ind, array) {
+
+})
+
+// Arrow function -----> 
+arr.map((el, ind, array) => {
+
+})
+
+
+//// -----------------------------------------------------------
+let callBack = (el, ind, array) => {
+
+}
+
+arr.map(callBack)
+
+// Arrow function & function expression can use as arug to another function
+
+
+
+
+
+
+
+
+// Assignement ---->
+// Difference between function & method
+// Difference between map & filter
+// Diff indexOf & findIndex

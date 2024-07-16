@@ -12,21 +12,21 @@ console.log(num.length)
 // console.log("=====for object:  let{proprtyone:aliasname,propertytwo:aliasname,propertythree:aliasname}=objectname.propertyname =====")
 
 // //For Array
-// // let firstname=["Amol","chinmay","ram","sham","ninad","vijeet"]
-// // // Student1=firstname[0]
-// // // Student2=firstname[1]
-// // // Student3=firstname[2]
-// // // Student4=firstname[3]
-// // // console.log(Student1)
-// // // console.log(Student2)
-// // // console.log(Student3)
-// // // console.log(Student4)
+// let firstname=["Amol","chinmay","ram","sham","ninad","vijeet"]
+// Student1=firstname[0]
+// Student2=firstname[1]
+// Student3=firstname[2]
+// Student4=firstname[3]
+// console.log(Student1)
+// console.log(Student2)
+// console.log(Student3)
+// console.log(Student4)
 
-// // let [Student1,Student2,Student3,Student4]=firstname
-// // console.log(Student1)
-// // console.log(Student2)
-// // console.log(Student3)
-// // console.log(Student4)
+// let [Student1,Student2,Student3,Student4]=firstname
+// console.log(Student1)
+// console.log(Student2)
+// console.log(Student3)
+// console.log(Student4)
 
 // //For Object
 // let student={
@@ -35,77 +35,66 @@ console.log(num.length)
 //     language:["marathi","hindi"]
 // }
 
-// // firstname=student.firstname
-// // age=student.age
-// // language=student.language
-// // console.log(firstname)
-// // console.log(age)
-// // console.log(language)
+// firstname=student.firstname
+// age=student.age
+// language=student.language
+// console.log(firstname)
+// console.log(age)
+// console.log(language)
 
-// // let{firstname,age,language}=student
-// // console.log(firstname)
-// // console.log(age)
-// // console.log(language)
+// let{firstname,age,language}=student
+// console.log(firstname)
+// console.log(age)
+// console.log(language)
 
-// // let body= {
-// //     Student:[
-// //         {
-// //             StudentOne:"Student1",
-// //             age:1
-
-// //         },
-// //         {
-// //             StudentTwo:"Student2",
-// //             age:2
-
-// //         },
-// //         {
-// //             StudentThree:"Student3",
-// //             age:3
-
-// //         },
-// //         {
-// //             StudentFour:"Student4",
-// //             age:4
-
-// //         },
-// //         {
-// //             StudentFive:"Student5",
-// //             age:5
-
-// //         },
-// //         {
-// //             StudentSix:"Student6",
-// //             age:6
-
-// //         },
-// //         {
-// //             StudentSeven:"Student7",
-// //             age:7
-
-// //         },
-// //         {
-// //             StudentEight:"Student8",
-// //             age:8
-
-// //         },
-// //         {
-// //             StudentNine:"Student9",
-// //             age:9
-
-// //         },
-// //         {
-// //             StudentTen:"Student10",
-// //             age:10
-
-// //         },
-// //     ]
-// // }
-
-// // let[one,Two,Three]=body.Student
-// // console.log(one)
-// // console.log(Two)
-// // console.log(Three)
+// let body= {
+//     Student:[
+//         {
+//             StudentOne:"Student1",
+//             age:1
+//         },
+//         {
+//             StudentTwo:"Student2",
+//             age:2
+//         },
+//         {
+//             StudentThree:"Student3",
+//             age:3
+//         },
+//         {
+//             StudentFour:"Student4",
+//             age:4
+//         },
+//         {
+//             StudentFive:"Student5",
+//             age:5
+//         },
+//         {
+//             StudentSix:"Student6",
+//             age:6
+//         },
+//         {
+//             StudentSeven:"Student7",
+//             age:7
+//         },
+//         {
+//             StudentEight:"Student8",
+//             age:8
+//         },
+//         {
+//             StudentNine:"Student9",
+//             age:9
+//         },
+//         {
+//             StudentTen:"Student10",
+//             age:10
+//         },
+//     ]
+// }
+// let[one,Two,Three]=body.Student
+// console.log(one)
+// console.log(Two)
+// console.log(Three)
 
 
 // console.log("=============================================================")
@@ -170,12 +159,12 @@ console.log(num.length)
 // console.log(two)
 // console.log(three)
 
-// // let {id,email,first_name,last_name,avtar}= one
-// // console.log(id)
-// // console.log(email)
-// // console.log(first_name)
-// // console.log(last_name)
-// // console.log(avtar)
+// let {id,email,first_name,last_name,avtar}= one
+// console.log(id)
+// console.log(email)
+// console.log(first_name)
+// console.log(last_name)
+// console.log(avtar)
 // //OR//
 // let {id:a,email:b,first_name:c,last_name:d,avtar:e}= one
 // console.log(a)
@@ -184,22 +173,3 @@ console.log(num.length)
 // console.log(d)
 // console.log(e)
 
-
-console.log("==============Spread Operator===================")
-
-let num1=[33,45,6,77,88,33,99,66,55,44,99]
-function add(a,b,c,d){
-    console.log(a+b+c+d)
-}
-add(...num1)
-
-console.log("==================Rest Operators====================")
-
-
-function add1(...arr){
-return arr.reduce(function(acc,el){
-    return acc+el
-})
-}
-let ff1=add1(22,65,45,837,98,37,98,67,56,45,67,89,05,74,53,76)
-console.log(ff1)

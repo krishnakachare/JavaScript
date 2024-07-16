@@ -1,4 +1,3 @@
-
 // let human = [
 //     {
 //         firstName: "mayuri",
@@ -10,9 +9,7 @@
 //         },
 //         city:'pune',
 //         age:30
-//     }
-//     ,
-
+//     },
 //     {
 //         firstName:"ganesha",
 //         lastName:"rao",
@@ -26,115 +23,115 @@
 //         }
 // ]
 
-// //1. push() =>add element at last and terurn the total length
-// // let a1=human[0].skills.push('mangoDB')
-// // console.log(a1)
-// // console.log(human[0])
+//1. push() =>add element at last and terurn the total length
+// let a1=human[0].skills.push('mangoDB')
+// console.log(a1)
+// console.log(human[0])
 
-// // let a2=human.map((el)=>el.skills.push('all'))
-// // console.log(a2)
+// let a2=human.map((el)=>el.skills.push('all'))
+// console.log(a2)
 
-// // let a3=human.map((el)=>el.skills)
-// // console.log(a3)
-// // let a4=a3.flat()
-// // console.log(a4)
+// let a3=human.map((el)=>el.skills)
+// console.log(a3)
+// let a4=a3.flat()
+// console.log(a4)
 
-// // let aa=new Set(a4)
-// // console.log(aa)
+// let aa=new Set(a4)
+// console.log(aa)
 
-// //2. pop() =>remove element from last and retirn the remove element
-// // human.forEach((el)=>el.skills.pop())
-// // console.log(human)
+//2. pop() =>remove element from last and retirn the remove element
+// human.forEach((el)=>el.skills.pop())
+// console.log(human)
 
-// //3. unshift() =>add the element at first and return new length
-// // human.map((el)=>el.skills.unshift('abc'))
-// // console.log(human)
+//3. unshift() =>add the element at first and return new length
+// human.map((el)=>el.skills.unshift('abc'))
+// console.log(human)
 
-// //4.shift() =>remove element from first and return same element
-// // let aa1=human.map((el)=>el.skills.shift())
-// // console.log(aa1)
+//4.shift() =>remove element from first and return same element
+// let aa1=human.map((el)=>el.skills.shift())
+// console.log(aa1)
 
-// //5. filter() =>return the array for component it match
+//5. filter() =>return the array for component it match
 
-// // let aa2=human.filter((el)=>el.firstName=="mayuri" && el.city=="pune")
-// // console.log(aa2)
+// let aa2=human.filter((el)=>el.firstName=="mayuri" && el.city=="pune")
+// console.log(aa2)
 
-// //6. find() =>retrun the first element 
-// // let aa3=human.find((el)=>el.firstName.startsWith('g'))
-// // console.log(aa3)
+//6. find() =>retrun the first element 
+// let aa3=human.find((el)=>el.firstName.startsWith('g'))
+// console.log(aa3)
 
-// //console.log(human.find((el)=>el.family.mother=="parvati"))
+//console.log(human.find((el)=>el.family.mother=="parvati"))
 
-// //7. map() =>compare each and every value
-// // let aa4=human.map((el)=>el.city)
-// // console.log(aa4)
+//7. map() =>compare each and every value
+// let aa4=human.map((el)=>el.city)
+// console.log(aa4)
 
-// //8.reduced =>reduced the values
-// // let y1=human.reduce((acc,el)=>{
-// //     return acc+el.age
-// // },0)/human.length-1
-// // console.log(y1)
+//8.reduced =>reduced the values
+// let y1=human.reduce((acc,el)=>{
+//     return acc+el.age
+// },0)/human.length-1
+// console.log(y1)
 
-// //9. slice() =>remove the element =>return the remove element in array
-// // let aa5=human[0].skills.slice(0,2)
-// // console.log(aa5)
-// // console.log(human[0])
+//9. slice() =>remove the element =>return the remove element in array
+// let aa5=human[0].skills.slice(0,2)
+// console.log(aa5)
+// console.log(human[0])
 
-// //10.spice() =>reove the element and replace with another one and return remove element in array
-// // console.log(human[0].skills.splice(0,1,"mayu"))
-// // console.log(human[0])
+//10.spice() =>reove the element and replace with another one and return remove element in array
+// console.log(human[0].skills.splice(0,1,"mayu"))
+// console.log(human[0])
 
-// //11.findIndex() =>return index
-// // let ab1=human.findIndex((el)=>el.firstName=="mayuri")
-// // console.log(ab1)
+//11.findIndex() =>return index
+// let ab1=human.findIndex((el)=>el.firstName=="mayuri")
+// console.log(ab1)
 
-// //12.include() =>return boolean value
-// // ~let aa=human.filter((el)=>el.skills.includes("java"))
-// // console.log(aa)
+//12.include() =>return boolean value
+// ~let aa=human.filter((el)=>el.skills.includes("java"))
+// console.log(aa)
 
-// // let y1=human[0].skills.includes('java')
-// // console.log(y1)
+// let y1=human[0].skills.includes('java')
+// console.log(y1)
 
-// //13. indexOf =>return index if found and return -1 if not found
-// // let y1=human[0].skills.indexOf('python')
-// // console.log(y1)
+//13. indexOf =>return index if found and return -1 if not found
+// let y1=human[0].skills.indexOf('python')
+// console.log(y1)
 
-// // let y1=human[0].skills.indexOf('java')
-// // console.log(y1)
+// let y1=human[0].skills.indexOf('java')
+// console.log(y1)
 
-// //14. some() =>return true or false value if some value willl match
-// // let array=[12,10,34,56,76,87,87,98]
-// // let aa3=array.some((el)=>el>20)
-// // console.log(aa3)
+//14. some() =>return true or false value if some value willl match
+// let array=[12,10,34,56,76,87,87,98]
+// let aa3=array.some((el)=>el>20)
+// console.log(aa3)
 
-// //15. every() =>return true orfalse if every value match
-// // let aa3=array.every((el)=>el>20)
-// // console.log(aa3)
+//15. every() =>return true orfalse if every value match
+// let aa3=array.every((el)=>el>20)
+// console.log(aa3)
 
-// //16. join('') =>join the element in array and return string
-// // let mm=array.join("--")
-// // console.log(mm)
+//16. join('') =>join the element in array and return string
+// let mm=array.join("--")
+// console.log(mm)
 
-// //17. flat() => this method convert multifimentional array into single
-// // let a1=[[1,2,3],[4,5,6],[7,8,9]]
-// // let mk=a1.flat()
-// // console.log(mk)
+//17. flat() => this method convert multifimentional array into single
+// let a1=[[1,2,3],[4,5,6],[7,8,9]]
+// let mk=a1.flat()
+// console.log(mk)
 
-// //18. concat()
-// // let a1=[1,2,3]
-// // let b1=[9,8,7]
-// // let aa=a1.concat(b1)
-// // console.log(aa)
+//18. concat()
+// let a1=[1,2,3]
+// let b1=[9,8,7]
+// let aa=a1.concat(b1)
+// console.log(aa)
 
-// //19.forEach() =>dont want anything to return
-// // let arr1=['mayuri','manjiri','magha']
-// // arr1.forEach((el)=>console.log(`Welcome ${el} !`))
+//19.forEach() =>dont want anything to return
+// let arr1=['mayuri','manjiri','magha']
+// arr1.forEach((el)=>console.log(`Welcome ${el} !`))
 
-// //20. reverse() =>reverse the array
+//20. reverse() =>reverse the array
 // let array=[12,10,34,56,76,87,87,98]
 // console.log(array.reverse())
 
-// //21.sort() =>sorting get happen
+//21.sort() =>sorting get happen
 // let b1=array.sort()
 // console.log(b1)
 
