@@ -6,7 +6,7 @@
 // Syntax --> let/const/var [variableName] = Array/ArrayName
 
 // Variable delecration
-//let a = 10
+// let a = 10
 
 // let arr = ["ab", "bc", 10, true]
 // // let [w, x, y, z] = ["ab", "bc", 10, true] 

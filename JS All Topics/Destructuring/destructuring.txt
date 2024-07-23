@@ -1,4 +1,4 @@
 #### Destructuring
-```javascript
+
 let {a, b} = obj2;
 console.log(a, b); // Output: 1, 2

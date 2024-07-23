@@ -1,7 +1,7 @@
 
 
-let num=[4,5,6]
-num[99]=34
+let num = [4, 5, 6]
+num[99] = 34
 console.log(num)
 console.log(num.length)
 

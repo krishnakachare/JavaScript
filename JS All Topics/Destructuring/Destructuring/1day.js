@@ -96,8 +96,7 @@
 // syntax =>  let {keyName:alias, keyName:alias, keyName:alias} = object
 
 // keyName is exact of in object keyName and its comma seperated
-// we can use alias rather than keyName when we print/use property value but first required assign keyName to alias which is above shows
-                        
+// we can use alias rather than keyName when we print/use property value but first required assign keyName to alias which is above shows                        
 
 // let student = {
 //     firstName : 'krishna',

@@ -253,9 +253,6 @@ let output = arr.some((el, index, arr) => {
 // })
 // console.log(output)  // false
 
-
-
-
 //------------------------------------------------------------------------------
 
 // Arrays functional methods (call back function)

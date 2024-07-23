@@ -226,7 +226,6 @@ console.log(xx)
 //FindIndex method()
 let yy=student.findIndex(function(el){
     return el.fullname=="mayuri"
-
 })
 console.log(yy) */
 
@@ -265,8 +264,3 @@ console.log(bk.slice(2,8))
 //splice
 let bk1=bk.splice(2,3,05,02)
 console.log(bk1)
-
-
-
-
-
