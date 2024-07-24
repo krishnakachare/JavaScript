@@ -136,13 +136,3 @@ return oo.test(el)
 })
 console.log(po)
 console.log(po.join("").length)
-
-
-
-
-
-
-
-
-
-

@@ -1,4 +1,3 @@
-
 // let arr=['a','b','c'] 
 // arr[arr.length] = 'd'  // [ 'a', 'b', 'c', 'd' ]     that index not have element then element added
 // console.log(arr)
@@ -75,14 +74,11 @@
 // var {skill:[n,p,q],friends:{fName,skill:[t,t1]}} = person      // we not be used same variables
 // console.log(t,t1)  // play watch
 
-
-
 // Array destructuring
 
 // let arr = [1,2,3,4,5,[6,7]]
-// let [a,b,c,d,e,[x,y]] = arr             // here not need to use custom name(we got error)    // here new memory made
+// let [a,b,c,d,e,[x,y]] = arr // here not need to use custom name(we got error) // here new memory made
 // console.log(a,b,x,y)         // 1,2,6,7
-
 
 
 // String Destructuring
@@ -91,91 +87,7 @@ let str = 'krishna'
 let [a,b] = str
 console.log(a,b)     // k r
 console.log(typeof(a,b))  // string
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let amol = {
-//     fullName:"chinmaydeshpande",
-//     age:34,
-//     rollNo:12,
-//     family:{
-//         father:"Shirish Deshpande",
-//         mother:"Kanchan Deshpande"
-//     },
-//     skills:["Python","Javascript","HTML","CSS"]
-// }
-
-// // Retrive values 
-// // Dot notation and bracket notation 
-// console.log(amol.family.mother)
-// console.log(amol['family']['father'])
-
-
-// // update 
-// amol.skills.push('Java')
-// console.log(amol.skills)
-// // adding new property 
-
-// amol.language = "Marathi"
-// console.log(amol)
-
-// // del 
-// delete amol.language
-// console.log(amol)
-
-// // --------------------------
-
-
-// amol = {
-//     fullName:"chinmaydeshpande",
-//     age:34,
-//     rollNo:12,
-//     family:{
-//         father:"Shirish Deshpande",
-//         mother:"Kanchan Deshpande"
-//     },
-//     skills:["Python","Javascript","HTML","CSS"]
-
-// }
-
-// // let fn = amol.fullName
-// // let age = amol.age
-// // let lenSkills = amol.skills.length
-// // console.log(a)
-
+//------------------------------------------
 
 // chinmay = {
 //     fullName:"chinmaydeshpande",
@@ -184,10 +96,10 @@ console.log(typeof(a,b))  // string
 // }
 
 // let {fullName , age , rollNo } = chinmay
-// // console.log(fullName,age,rollNo)
-// // console.log(chinmay)
+// console.log(fullName,age,rollNo)
+// console.log(chinmay)
 
-// //custome name 
+// custome name :
 // let {fullName:fn , age:ag , rollNo:rn } = chinmay
 // console.log(fn,ag,rn)
 
@@ -252,7 +164,7 @@ console.log(typeof(a,b))  // string
 // //{repsonse,request}
 
 
-// // Nested 
+// Nested 
 // let poorva = {
 //     id:1,
 //     title:'My story',
@@ -263,27 +175,22 @@ console.log(typeof(a,b))  // string
 //     }
 // }
 
-// //actual use
-
+// actual use:
 // let {id,author:{first,lastname}} = poorva
 // console.log(id,first,lastname)
 
-// // custom name
-
+// custom name:
 // let {id:idTwo,author:{first:fn2,lastname:ln2}} = poorva
 // console.log(idTwo,fn2,ln2)
 
+// abhisha = {
+//     id:1,
+//     title:'My story',
+//     fullName:"abhisha ",
+//     skills:["python","java","javscript"]
+// }
 
-// // abhisha = {
-// //     id:1,
-// //     title:'My story',
-// //     fullName:"abhisha ",
-// //     skills:["python","java","javscript"]
-// // }
-
-
-// // Array destructuring
-
+// // Array destructuring:
 
 // let skills = ["python","java","javscript"]
 
@@ -299,42 +206,27 @@ console.log(typeof(a,b))  // string
 
 // let {id:k,title:t,skills:[aa,bb]}= abhisha
 // console.log(k,t,aa,bb)
-
-// // ------------------->
+// -----------------------------------------------------
 
 // let arr = [1,2,[2,3],4,5]
 // let [aaa,bbb,[ccc,ddd],eee,fff] = arr
 // console.log(aaa,bbb,ccc,ddd,eee,fff)
+//-----------------------------------------------------
 
-// //--------------------------------->
 // console.log(arr[2][arr[2].length-1])
 
 // let kk = [22,3,4]
 // console.log(kk[kk.length-1])
-
-// //--------------------------------------
+//-----------------------------------------------------
 
 // arr2 = [1,2,[2,3],4,5]
 // console.log(arr2[2][arr2[2].length-1])
 // let [ab,bc,cd,de,ef,fg]= [1,2,[2,3],4,5].flat()
 
-
-
-
-
-
-
-
-
-
-
-
-
 // let names = ["chinmay","sameer","ramesh",{firstName:"chinmaya",lastName:"deshpande"}]
 // let [a,b,c,{firstName,lastName}] = names
 // console.log(firstName)
 // console.log(lastName)
-
 
 // let  humana = {
 //     fullName:"chinmay deshpande",
@@ -357,53 +249,4 @@ console.log(typeof(a,b))  // string
 //     }
 // }
 // let {skills:{age,roll}} = humana
-
-
-//----------------------------------------> 
-
-
-
-
-
-//rest operator
-
-
-function taxCollection(...arr){
-
-
-    let add = arr.reduce(function(acc,el){
-        return acc + el
-    })
-
-    let add2 = arr.reduce(function(acc,el){
-        return acc + el
-    })
-
-    return [add,add2]
-
-}
-
-let [add,add3] = taxCollection(12,21,12,21,21,12,21,21,2,12,12,1,2,12,12)
-
-
-function taxCollection(...arr){
-
-
-let add = arr.reduce(function(acc,el){
-    return acc + el
-})
-
-let add2 = arr.reduce(function(acc,el){
-    return acc + el
-})
-
-return {'firstName':"chinmay",'age':23}
-
-}
-
-let { firstName:fn ,age:ag} = taxCollection(12,21,12,21,21,12,21,21,2,12,12,1,2,12,12)
-
-
-
-
-
+//-------------------------------------------------------

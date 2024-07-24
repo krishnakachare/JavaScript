@@ -49,31 +49,6 @@ console.log(x)     // [ 'avi-shreepur' ]
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ///^javascript.d$/gim
 //^ multi-line string only
 // $ multi-line ends with only
@@ -157,8 +132,6 @@ console.log(x)     // [ 'avi-shreepur' ]
 // console.log(yy)
 
 
-
-
 // let namesStudents = ["amol","Archit","amit","amey","abhisha",'arman']
 // let ba =  /^[^a-zA-Z0-9_][mr]/
 // let fchar = namesStudents.filter(function(el){
@@ -174,7 +147,6 @@ console.log(x)     // [ 'avi-shreepur' ]
 //     return ba.test(el)
 // })
 // console.log(fchar)
-
 
 // let namesStudents = ["amol","Archit","amit","amey","abhisha",'arman']
 // let ba =  /^[a-zA-Z0-9_][mr]/

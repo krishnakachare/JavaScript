@@ -117,11 +117,3 @@ let fchar = namesStudents.filter(function(el){
     return ba.test(el)
 })
 console.log(fchar)
-
-
-
-
-
-
-
-

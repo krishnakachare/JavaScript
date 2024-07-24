@@ -90,7 +90,6 @@ for(let i = 0; i < names.length; i++){
 
 
 // class person {
-
 //     constructor (firstName,age){
 //         this.firstName = firstName
 //         this.age = age

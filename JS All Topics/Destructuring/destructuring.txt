@@ -1,4 +1,59 @@
-#### Destructuring
+# Destructuring:
+    ES6 feature
+    Can destructure object --> array, string, object
+    De-structure or braking object in seperate address-value pair
 
-let {a, b} = obj2;
-console.log(a, b); // Output: 1, 2
+    For array and string --> address(index no)-value pair
+    For array:   
+    let [first,second,third]=arrayname/array 
+
+    For object --> address(keyName)-value pair
+    for object:  
+    let{proprtyone:aliasname,propertytwo:aliasname,propertythree}=objectname/object 
+    let{proprtyone:{proprtyone:aliasname}}=objectname/object --> For nested object structure
+
+- Assign Default Values during destructuring for array and object
+    const array = [1, 2, 3, 4];
+    const [a, b = 2] = array;
+    console.log(a); // 1
+    console.log(b); // 2
+
+    const user = {id: 1,name: 'Bob'};
+    const { name, email = 'default@example.com' } = user;
+
+
+// Can Destructure any complex structure of object
+let Person = {
+          fname: "abc",
+          age: 10,
+          family: {
+                    son1: {
+                              sName: "abcSon",
+                              skillSon1: ["writing", "Reading"]
+                    },
+                    son2: {
+                              sNameSon2: "xyzSon",
+                              skillSon2: ["writing2", "Reading2"]
+                    },
+          },
+          skill: [{ skill1: "Gamming" }, { Skill2: "Playing" }]
+}
+
+# Interview Que: 
+Skipping Items in Destructuring
+    const array = [1, 2, 3, 4];
+    const [a, , b] = array;
+    console.log(a); // 1
+    console.log(b); // 3
+
+Swapping variable values Using Destructuring
+    let a = 5;
+    let b = 10;
+    console.log(a,b)
+    [a, b] = [b, a];
+    console.log(a,b)
+
+Combining Destructuring with Rest Parameters
+    const numbers = [1, 2, 3, 4, 5];
+    const [first, second, ...rest] = numbers;
+

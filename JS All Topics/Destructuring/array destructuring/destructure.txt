@@ -1,6 +1,0 @@
-For array:   
-let [first,second,third]=arrayname/array 
-
-for object:  
-let{proprtyone:aliasname,propertytwo:aliasname,propertythree}=objectname/object 
-let{proprtyone:{proprtyone:aliasname}}=objectname/object --> For nested object structure

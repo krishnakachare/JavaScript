@@ -1,7 +1,7 @@
 // Destructuring on object
 // Object --> 1. Array  2. Object
 
-//-----------
+//-----------------------------------------------------------
 // 1. Array
 // Syntax --> let/const/var [variableName] = Array/ArrayName
 
@@ -28,7 +28,7 @@
 // let [a, b, [c, d], [e, f]] = arrNested
 // console.log(c) // 10
 
-//-----------------------------------------
+//----------------------------------------------------------
 // 2. Object -->
 // Syntax --> let/const/var {KeyName} = Object/ObjectName
 // KeyName/PropertyName = Custome name
@@ -41,7 +41,7 @@
 // let { fname, age } = acb
 // console.log(fname)  // abc
 
-//----------------------------------------------
+//----------------------------------------------------------
 // We can assign alise/variable for custome name
 // Syntax --> let/const/var {KeyName:xyz} = Object/ObjectName
 
@@ -49,8 +49,8 @@
 // console.log(firstName)  // abc
 // console.log(Age)  // 10
 
-//// // Note - Seperate memory allocate for LHS
-//----------------------------------------------------
+// // Note - Seperate memory allocate for LHS
+//----------------------------------------------------------
 
 // Can Destructure any complex structure of object
 let Person = {
@@ -75,4 +75,3 @@ let { fname, age, family: { son1: { sName, skillSon1: [a, b] }, son2: { sNameSon
 console.log(a)
 console.log(x)
 console.log(skill1)
-
