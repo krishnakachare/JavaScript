@@ -4,9 +4,9 @@
 // let numbers = [1,2,3,4]
 // numbers[99] = 0
 // console.log(numbers.length)
-// console.log(numbers)            // [ 1, 2, 3, 4, <95 empty items>, 0 ]
+// console.log(numbers)   // [ 1, 2, 3, 4, <95 empty items>, 0 ]
 
-//*******************/ 1). Array destructuring   /*****************************************/
+//*******************/ 1). Array destructuring /*****************************************/
 
 // Syntax =>    let [elNames,elNames,elNames] = Array (or object)
 
@@ -17,8 +17,7 @@
 // let n = ['ravi','swapnil','vishwajit','avi','kk']
 
 // let [fone,ftwo,fthree,ffoure] = n
-// console.log(fone,ftwo)                         // ravi swapnil
-
+// console.log(fone,ftwo)       // ravi swapnil
 
 // Example 2 =>  API response body
 
@@ -77,7 +76,6 @@
 //     }
 // }
 
-
 // let [obj1,obj2,obj3] = body.data
 
 // console.log(obj1)
@@ -89,8 +87,7 @@
 //     avatar: 'https://reqres.in/img/faces/1-image.jpg'
 //   }
 
-
-//**************************/2).Object destructuring/*********************************************
+//************************/2).Object destructuring/*****************************************
 
 // syntax =>  let {keyName:alias, keyName:alias, keyName:alias} = object
 
@@ -112,4 +109,4 @@
 
 // console.log(a)     // 25
 // console.log(n)     // krishna
-//----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------

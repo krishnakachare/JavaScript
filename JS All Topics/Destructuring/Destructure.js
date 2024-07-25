@@ -10,9 +10,9 @@
 
 // let arr = ["ab", "bc", 10, true]
 // // let [w, x, y, z] = ["ab", "bc", 10, true] 
-// let [w, x, y, z] = arr           // Position is considered for values
+// let [w, x, y, z] = arr  // Position is considered for values
 
-// // Note - Seperate memory allocate for LHS
+// Note - Seperate memory allocate for LHS
 
 // console.log(w)  // ab
 // console.log(y)  // 10

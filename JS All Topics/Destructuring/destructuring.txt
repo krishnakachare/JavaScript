@@ -46,7 +46,7 @@ Skipping Items in Destructuring
     console.log(a); // 1
     console.log(b); // 3
 
-Swapping variable values Using Destructuring
+Swapping/exchange variable values Using Destructuring
     let a = 5;
     let b = 10;
     console.log(a,b)
@@ -56,4 +56,3 @@ Swapping variable values Using Destructuring
 Combining Destructuring with Rest Parameters
     const numbers = [1, 2, 3, 4, 5];
     const [first, second, ...rest] = numbers;
-
