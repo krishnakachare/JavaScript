@@ -22,7 +22,11 @@ BOM- Browser Object Model
   navigator.appName
   navigator.appVersion
   navigator.appCodeName
-  navigator.platform
-  navigator.language
+  navigator.platform  
   navigator.vendor
   navigator.userAgent
+  navigator.language
+  navigator.onLine
+  navigator.geolocation.getCurrentPosition(pos=>{console.log(pos)})
+
+  event.preventDefault()

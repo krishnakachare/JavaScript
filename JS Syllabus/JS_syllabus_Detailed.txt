@@ -158,15 +158,15 @@
     |── JSON (JavaScript Object Notation)
     |── JSON.stringify(), JSON.parse()
 
-25.	array Destructuring, object Destructuring
-26.	spread operator, REST Parameter
+25.	Destructuring (string, array, object)
+26.	spread & rest operator, Destructure + spread-rest
+
+27.	REGEX:
 
 28.	Web APIs:
     | ├── Local Storage
     | ├── Session Storage
     | ├── Cookies
-    | ├── Offline Storage
-    | └── Web Storage API
     |── setInterval, SetTimeout
 
 29.	Asynchronous JavaScript (AJAX):
@@ -206,37 +206,35 @@
     • Location Object
     • Timers
 
-33. Node.js Specific Concepts
-    •  require()
-    •  Node.js Modules (module.exports)
-    •  File System Module (fs)
-    •  npm (Node Package Manager)
+33. Node.js Specific Concepts 
+    •  npm, npx, node
+    •  npm vs yarn
 
-34.	Read, Right file in js
-
-35. Modules in js:
+34. Modules in js:
     |── Modules
         └── import
         └── export
     |── Import and export Statements (ES6 Modules)
     |── CommonJS Modules (require, module.exports)
 
-37.	Debugging:
+35.	File handling in js
+    •  File System Module (fs)
+    •  Read, Right file in js
+
+36.	Debugging:
     | └──Console.log()
     | └── Breakpoints
     | └── DevTools
     |── ESLint    
 
-38.	Error Handling:
+37.	Error Handling:
     | └── try...catch statement
     | └── throw statement 
 
-39.	JavaScript Execution:
+38.	JavaScript Execution:
      • Execution context
      • callback queue
      • Event loop
-
-27.	REGEX:
 
 # JavaScript Projects:
 
