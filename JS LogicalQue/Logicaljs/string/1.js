@@ -48,7 +48,6 @@
 //     key = Number(key)
 //     if (key === 0 || key === 5) strOutput += key == 0 ? '5' : '0'
 //     else strOutput += 10 - key
-
 // }
 // console.log(strOutput)   // 5987604321 // "0123456789"
 
@@ -71,3 +70,42 @@
 // console.log(pattern)
 
 //console.log("0" != 0, "0" !== 0)
+
+
+
+
+//EXAMPLE ---1.
+// let str = 'AAAAAC2345@#$&6CCCDD%Z'
+// let x = str.split('')
+// //console.log(x)                              // // we can get results with or without
+// let num = 0
+// let special = 0
+// let alpha = 0
+
+// for (let i = 0; i < x.length; i++) {
+//     if (Number(x[i])) {
+//         num = num + 1
+//     }
+//     else if ((x[i] == '@') || (x[i] == '#') || (x[i] == '$') || (x[i] == '&') || (x[i] == '%')) {
+//         special = special + 1
+//     }
+//     else { alpha = alpha + 1 }
+// }
+// console.log(num, special, alpha)
+
+
+//EXAMPLE---2.
+// let caa = "123AAAAbaca3435354@@2222!!!&&&&3534535354sca"
+// let aa = 0
+// let nn = 0
+// let ss = 0
+// for (let i = 0; i < caa.length; i++) {
+//     if (Number(caa[i])) {
+//         nn = nn + 1
+//     }
+//     else if ((caa[i] == '@') || (caa[i] == '!') || (caa[i] == '&') ) {
+//         ss = ss + 1
+//     }
+//     else { aa = aa + 1 }
+// }
+// console.log(aa, nn, ss)  // 11 24 9

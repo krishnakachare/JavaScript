@@ -49,7 +49,7 @@
 
 // let sentence = 'my good name is krishna.'
 // let arr = sentence.split(' ')
-// //console.log(arr)                     
+// //console.log(arr)
 // let x = [ ]
 // function cal(zz){
 //     let sentence2 = ' '
@@ -109,7 +109,7 @@
 //     }else{
 //         con = false
 //     }
-// }   
+// }
 // }
 // console.log(ne)  //  Krishnakachare2
 //========================================================================================================
@@ -151,7 +151,7 @@
 // })
 // console.log(evenPlace)       // [ 1, 3, 5, 7, 9 ]
 
-//=======================================================================================================
+//=========================================================================================
 
 // Q. collect even  numbers
 
@@ -203,7 +203,7 @@
 //----------------------------------------------------------------------------------------------
 
 // problem ------------
-// separate out  alphabets and numbers 
+// separate out  alphabets and numbers
 
 // let sss = ['a',2,'d',6,'y','j',8,55,'e','k']
 
@@ -212,14 +212,13 @@
 
 // for(let i=0; i<sss.length; i++){
 //   if(sss[i] === Number(sss[i])){
-
 //     numarr.push(sss[i])
 //   }
 //   else{
 //     alphaarr.push(sss[i])
 //   }
 // }
-// console.log(alphaarr)  // [ 'a', 'd', 'y', 'j', 'e', 'k' ]  
+// console.log(alphaarr)  // [ 'a', 'd', 'y', 'j', 'e', 'k' ]
 // console.log(numarr)   // [ 2, 6, 8, 55 ]
 
 // -------------------------------------------------------
@@ -257,7 +256,7 @@
 // console.log(n.length) // 7
 //-------------------------------------
 // For loop
-//  let count = 0                    
+//  let count = 0
 // for(let i= 0; i<n.length; i++){
 // count = 1 + i
 // }
@@ -339,12 +338,7 @@
 // }
 // //console.log(arr)
 
-//=============================================================================================================
-
-
-
-//==================================================
-
+//=================================================================================================
 
 // let a = [4, 56, 8, 9, 6, 6, 7]
 
@@ -364,7 +358,7 @@
 
 
 //=======================================================
-
+// A number that can be divided exactly only by itself and 1, for example 3,7.
 // find prime numbers of given range like[ 0 to 10]
 // let arr = []
 // let i = 0
@@ -389,17 +383,17 @@
 
 // let arr = []
 // function prime(n) {
-//     if (n < 2) return false             
+//     if (n < 2) return false
 //     for (let j = 2; j < n; j++) {
 //         if (n % j === 0) {
 //             return false
 //         }
 //     }
-//     arr.push(n)         
+//     arr.push(n)
 // }
 
 // let i = 0
-// while (i <= 10) {    
+// while (i <= 10) {
 //     prime(i)
 //     i++
 // }
@@ -410,7 +404,7 @@
 // let count = 0
 
 // for (let j = 2; j <= 10; j++) {
-//     //console.log(j)    // 2 
+//     //console.log(j)    // 2
 //     for (let i = 1; i <= j; i++) {   // 1 2
 //        // console.log(i)
 //         if (j % i == 0)
@@ -426,16 +420,10 @@
 
 // function prime() {
 // for (let i = 2; i < ra; i++) {
-
 //     for (let j = 1; j <= i; j++) {
-
 //        if(j%2 == 0){
 //         console.log(j)
-
 //        }
-
-
-
 //     }
 // }
 
@@ -443,12 +431,9 @@
 // for (let i = 2; i < 10; i++) {
 //     // console.log(i)
 //     for (let j = 1; j <= i; j++) {
-
 //         if (i % j == 0) {
-
 //             count++
 //         }
-
 //     }
 //     if (count == 2) {
 //         console.log(i)
@@ -458,10 +443,8 @@
 // }
 
 // for (let j = 1; j <= i; j++) {
-
 //    if(j%2 == 0){
 //     console.log(j)
-
 //    }
 // }
 // }
@@ -480,39 +463,7 @@
 //     count = 0
 // }
 
-
-//=======================================================
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //=====================================================================
-
 
 // let str = "Status of Order Detail ID: 93344 has been changed to Return Requested;ProductID: 142063;New Possible Status are: [];Order Status: ReturnRequested;REASON GIVEN: NO REASON;PreviousStatusID:6;NewStatusID:13;"
 // let req = ''
@@ -534,8 +485,3 @@
 // //console.log(req)
 // document.write(req)
 // //document.write(str)
-
-//========================================================================================================
-
-
-

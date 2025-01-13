@@ -7,35 +7,29 @@
 // console.log(strx)
 // let x = [ ]
 
-// function call(strf){ 
+// function call(strf){
 // let revstr =" "
 //     for(let i = 0; i < strf.length; i++){
-
 //         revstr = strf[i] + revstr             // .'anhsirk' ma i ,iH !olleH
-//         //revstr =  revstr + strf[i]             // Hello! Hi, i am 'krishna'.   
-//     } 
+//         //revstr =  revstr + strf[i]             // Hello! Hi, i am 'krishna'.
+//     }
 //     return revstr            // o/p is undefined when not return
 // }
 
 // for(let i = 0; i < strx.length; i++){
-
 //     x.push(call(strx[i]))
 // }
 // console.log(x)
 // let j = x.join(" ")
 // console.log(j)                    // !olleH  ,iH  i  ma  .'anhsirk'
 // console.log(typeof(j))            // string
-
-
-
-
-//---------------------------------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------
 
 //Problem = Seperate the string where we required
 
 // seperate string from . and print elements
 
-// let x ='python.py' 
+// let x ='python.py'
 // let s =x.split(".")             // ['python','py']
 // console.log(s[(s.length)-1])             // py
 // console.log(s[0])                       // python
@@ -54,16 +48,16 @@
 
 // for (let i = 0; i < kk.length; i++){
 
-//     if ((i != 0)&&(i != 1)&&(i != 2)&&(i != 3)&&(i != kk.length-1)){                                 // kk[i] used when perform on elements and index value(i) used when we perform on index 
+//     if ((i != 0)&&(i != 1)&&(i != 2)&&(i != 3)&&(i != kk.length-1)){                                 // kk[i] used when perform on elements and index value(i) used when we perform on index
 
 //         //rkk = kk[i] + rkk
-//         rkk = rkk + kk[i] 
+//         rkk = rkk + kk[i]
 
 //     }
 // }
 // console.log(rkk)                     //  krishna
 
-// Note = in this if condition think more (how its work) 
+// Note = in this if condition think more (how its work)
 
 //--------------------------------------------------------------------------------------------------------------
 
@@ -142,7 +136,7 @@
 // }
 // console.log(unique)       // [ 15, 66, 88, 12, 57 ]
 
-//==============================================================================================================
+//=========================================================================================
 
 // multiple occurance of index of method
 
@@ -166,7 +160,7 @@
 // console.log(indexNo)  // 4
 
 
-//----------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
 
 // Q. collect unique from duplicate elements
 
@@ -177,7 +171,7 @@
 // })
 // console.log(unique)  // [ 15, 88 ]
 
-//----------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
 
 // example 2.
 
@@ -196,21 +190,4 @@
 // })          // compaired with  current index with the second occurance of index
 // console.log(unique)   // [ 1, 5, 4, 2 ]
 
-//=================================================================================================================
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//============================================================================================

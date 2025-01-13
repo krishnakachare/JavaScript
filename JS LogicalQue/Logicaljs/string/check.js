@@ -1,4 +1,4 @@
-// //multiple occurance of index of method
+// multiple occurance of index of method
 
 // let kk = [1,1,2,2,2]
 // //By default index of method find the first occurance of element and return its index no.
@@ -19,7 +19,6 @@
 // let indexNo = kk.indexOf(2,kk.indexOf(2)+2)
 // console.log(indexNo)  // 4
 
-
 // let str = 'AABHTRRRDDCF'
 // for (let i = 0; i < str.length; i++) {
 //     for (let j = 0; j < str.length; j++) {
@@ -34,7 +33,6 @@
 // }
 
 //-----------------------------------------------------------------------------
-
 // let string = 'ABHTRRRRDDDCF'
 // let count = 1
 
@@ -47,16 +45,8 @@
 //     if (strReturn.length !== 1) check(strReturn)
 //     else if (strReturn.length == 1) console.log(strReturn.repeat(count))
 // }
-
 // check(string)
-
-
-
-//-----------------------------------------------------------------------------------------------------
-
-
-
-
+// -------------------------------------------------------------------------------------
 // let string = 'ABHTRRRRDDDDCF'
 // let count = 1
 
@@ -75,20 +65,9 @@
 //     }
 //     else if (strReturn.length == 1) console.log(strReturn.repeat(count))
 // }
-
 // check(string)
 
-
-
-
-
-
-
-
-
 //--------------------------------------------------------------------------
-
-
 // let string = 'ABHTRRRRDDDDCF'
 // let count = 1
 // let countt = 1
@@ -97,7 +76,6 @@
 //     let strReturn = ""//RRRDDD//RRDD//RD
 //     for (let i = 0; i < str.length; i++) {
 //         if (str[i] === str[i + 1]) {
-
 //             strReturn += str[i]
 //         }
 //         else {
@@ -106,12 +84,9 @@
 //             console.log(strReturn)
 //             console.log(strReturn.length)
 //             console.log(strReturn.length == count)
-
-
 //         }
 //         //countt = 0
 //     }
-
 //     console.log(typeof countt)
 //     if (strReturn.length !== 2) {
 //         check(strReturn)
@@ -120,9 +95,6 @@
 //         console.log(strReturn)
 //         console.log(strReturn.length)
 //     }
-
-
-
 //     // else if (strReturn.length == 2) {
 //     //     let a = strReturn.split("")[0].repeat(count)
 //     //     let b = strReturn.split("")[1].repeat(count)
@@ -130,23 +102,11 @@
 //     // }
 //     countt = 0
 // }
-
 // check(string)
-
-
 //---------------------------------------------------------------------------------
 
 // function returnBoolean(){
-
 // }
-
-
-
-
-
-
-
-
 
 // function check (k){
 
@@ -156,7 +116,6 @@
 //     for (let i = 0; i < subStr.length; i++) {
 //         let ind = subStr.indexOf(subStr[i])
 //         if(ind==-1){
-
 //         }
 //     }
 // }
@@ -172,8 +131,6 @@
 //     })
 // }
 // ans(arrQuetion)
-
-
 //----------------------------------------------------------------------------------------------------------
 
 // Qut. => Made function which take array of numbers as argument and return boolean value
@@ -196,8 +153,6 @@
 // }
 // console.log(ans(arrQuetion))
 
-
-
 //==========================================================================================
 // For loop
 /* Quetion: - We have 11 no.in input like
@@ -215,8 +170,6 @@
 //     arrOut.push(arrInput.pop())
 //     arrOut.push(arrInput[i])
 // }
-
-
 
 //------------------------------------
 // while loop
@@ -247,7 +200,6 @@
 // }
 // [110, 10, 100, 20, 90, 30, 80,  40, 70, 50, 60]
 //=================================================================
-
 
 
 for (let i = 0; i < 5; i++) {

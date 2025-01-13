@@ -53,7 +53,7 @@ https://plainenglish.io/blog/50-javascript-output-questions
 
 // Question: What is -5%2
 // Answer:-1. the result of remainder always get the symbol of first operand
-======================================================================================================================================================================
+============================================================================================
 let a = [];
 let b = [];
 console.log(a==b); //false
@@ -847,7 +847,7 @@ data.then((res)=>{
 
 console.log(4); //1 2 4 
 If we are not returning anything it will not print anything .
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
 let a = "true";
 setTimeout(()=>{
   a=false;
@@ -887,7 +887,7 @@ So, after another 2 sec, value of b will be 2, and then immediately after that, 
 
 👉 Output : 1 + 2 + 3 = 6
 👉 Total time: 1 (line 10) + 2 (await b, in line 14) + 0 (await c, in line 14) = 3 sec
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 const fetchData = function(){
   return new Promise((res, reject)=>{
     reject("Error!!")
@@ -906,7 +906,7 @@ fetchData()
 
 Explaination : "First" "Error!!"
 reject("Error!!") gives string value so it will go to THEN block rather than CATCH block.
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------
 displayName();
 var displayName = function(){
   console.log("Priya")
@@ -919,7 +919,7 @@ displayName();
 //Explaination : dolly priya
 
 Normal function will get execute before, because of function Hoisting concept, then function expression wil get execute.
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 const inc = async(x) => {
   x = x + await 1; //2
   return x;
@@ -934,7 +934,7 @@ inc(1)
   increment(x) //2
   .then((x)=>console.log(x)) //3
 })
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------
 const p1 = Promise.resolve("First");
 const p2 = Promise.reject("Second");
 const p3 = Promise.resolve("Third");
@@ -952,7 +952,7 @@ runPromise();
 //output : Second
 
 Promise.all() returns array of resolved promises values and if either any of the promise is rejected, then it directly returns the rejected promise value through catch block.
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------
 console.log("start");
 
 async function getData(){
@@ -1056,15 +1056,7 @@ p.catch((error)=>{
 Explanation: In line 2, we are rejecting the promise 'p' with the argument as Error("Fails!"), which is an 'Error' object with property 'message' set to 'Fails!'. So, in line 5, the error callback passed to catch() method of promise 'p' receives the above passed Error object as the 'error' parameter, and so 'error.message' (Fails!) is printed. 
 
 Now, as this catch handler is not returning any value so, the chained 'then' handler will be called with undefined as parameter.
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 /* 💡"JavaScript-with-JC" - Guess the Output? */
 
 // 👉 MCQ-1
