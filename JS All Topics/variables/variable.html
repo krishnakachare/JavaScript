@@ -13,4 +13,21 @@
     // let,const variables can be accessed only after their initialization statement
     // from the starting of the script till the line where let/const variables are initialized
     // that area is called temporal Dead zone
+
+
+
+
+
+    var obj = {
+        a: 10,
+        b: 20,
+        c: 'hello'
+    };
+
+    with (obj) {
+        var sum = a + b;
+        var greeting = c + ' world';
+    }
+
+    console.log(sum, greeting);
 </script>
