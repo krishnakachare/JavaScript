@@ -1,0 +1,43 @@
+
+
+Event Handling
+--------------
+- onclick,ondblclick,onmouseover,onmouseout (Mouse)
+- onkeypress , onkeydown, onkeyup  (Keyboard)
+- onsubmit, onchange, onblur,onfocus,onpaste,oncopy  (Form)
+- onload, onbeforeUnload , onunload (Document)
+
+
+addEventListner
+---------------
+1. to add events to dynamically added elements.
+2. to add multiple events to an element.
+
+
+Event Delegation
+----------------
+-Event delegation allows to add event listeners to one parent instead of 
+ adding event listeners to many child elements.
+-That particular listener analyzes bubbled events to find a match on the child elements.
+
+
+Event Propagation:-
+1. event Capturing (parent-->child)
+2. event Bubbling  (child-->parent)
+
+bubbling:
+--------
+-When an event gets triggered on an element, it first runs the handlers on it, then on 
+ its parent, then all the way up on other ancestors/parents. (Event Bubbling)
+-Event bubbling is a way of event propagation in the HTML DOM API, when an event occurs in an element 
+ inside another element, and both elements have registered a handle for that event. 
+ With bubbling, the event is first captured and handled by the innermost element and then propagated to outer elements. The execution starts from that event and goes to its parent element. 
+ Then the execution passes to its parent element and so on till the body element.
+
+How to stop that?
+Answer:-
+   stopPropagation()  / cancelBubble (IE)
+   
+   
+   stopImmediatePropagation (Execute the first event handler, and stop the rest of 
+the event handlers from being executed)

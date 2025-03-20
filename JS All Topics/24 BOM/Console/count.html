@@ -1,0 +1,24 @@
+<html>
+  <body>
+    <script>
+      let user = "";
+
+      function greet() {
+        console.count("greet function");
+        return "hi " + user;
+      }
+
+      user = "bob";
+      greet();
+      user = "alice";
+      greet();
+      greet();
+      console.count("global");
+
+      console.count('hello')
+      console.count('hi')
+      console.count('hello')
+      console.count('hi')
+    </script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<script>
+  let a = 10; // window
+  b = 20;     // window
+
+  function f1() {
+    let c = 30;
+    console.log(a, b, c, window.b , window.a)
+
+    function f2() {
+      console.log(c);
+    }
+    f2();
+    console.dir(f2)
+  }
+  f1();
+  console.dir(f1)
+</script>

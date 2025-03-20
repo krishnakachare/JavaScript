@@ -1,0 +1,30 @@
+Error Handling 
+--------------
+1. EvalError - 
+2. RangeError
+3. TypeError
+4. SyntaxError
+5. ReferenceError
+6. URIError
+
+
+when Exception occurs
+1. exception object gets created and thrown
+2. it is checked whether user handles that exception or not(try-catch)
+3. if No, that exception object goes to Default exception handler
+   default exception handler-prints exception information and 
+   stops program execution
+4. if yes, exception goes to developer written exception handling code
+
+
+Terminologies
+-------------
+1. try- containes a block statements where exception might occur
+2. catch - actual exception handling code, this will be executed
+	   only if exception is there in try
+3. finally- contains the statements to be executed at any situation(important 
+statements)
+4. throw- to throw exception explicitely(user-defined exceptions)
+
+N.p: - try block should be immediately followed by either a catch()
+       or a finally{}

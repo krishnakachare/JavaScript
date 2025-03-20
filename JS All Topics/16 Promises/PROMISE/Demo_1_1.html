@@ -1,0 +1,48 @@
+<html>
+
+<head>
+	<script>
+		var add = function (a, b) {
+			let result;
+			result = a + b;
+			return result;
+		}
+		addResult = add(2, 3);
+		console.log("Addition is: " + addResult);
+
+
+		var sub = function (a, b) {
+			let result;
+			setTimeout(() => { result = a - b }, 3000);
+			return result;
+		}
+		subResult = sub(5, 3);
+		console.log("subtraction is: " + subResult);
+
+		var mul = function (a, b) {
+			let promiseObj = new Promise(function (resolve, reject) {
+				setTimeout(() => {
+					if (typeof a == 'number' && typeof b == 'number')
+						resolve(a * b)
+					else
+						reject('wrong inputs')
+				}, 3000);
+			});
+			return promiseObj;
+		}
+		mul(3, 5).then(
+			res => console.log('multiplication is ' + res),
+			err => console.log('Error.......')
+		);
+		/* async function PrintMulres(){
+			let mulRes = await mul(3, 5);
+			console.log(mulRes)
+		}
+		PrintMulres(); */
+	</script>
+</head>
+
+<body>
+</body>
+
+</html>
