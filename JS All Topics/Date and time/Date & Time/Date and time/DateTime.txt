@@ -1,0 +1,15 @@
+Date
+=====
+var ob = new Date();
+ob.getDate();
+ob.getMonth();
+ob.getYear();
+ob.getFullYear();
+ob.getTime();
+ob.getHours();
+ob.getMinutes();
+ob.getSeconds();
+
+ob.toLocaleDateString();
+ob.toLocaleTimeString();
+ob.toLocaleString('en-US', { timeZone: 'America/New_York' })

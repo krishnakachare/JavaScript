@@ -1,0 +1,44 @@
+<script>
+    // Problem:
+    function add(a, b) {
+        console.log(a + b)
+    }
+    add(2, 3);    // 5
+    add(2, 3, 4); // 5
+
+    // ES_5
+    function addition() {
+        let sum = 0;
+        for (ele of arguments) {
+            sum = sum + ele;
+        }
+        console.log(sum)
+        console.log(Array.isArray(arguments) , arguments)
+    }
+    addition(2, 3)
+    addition(2, 3, 4)
+    addition(2, 3, 4, 5)
+</script>
+
+<script>
+    // Solution:
+    function add(...arr) {
+        let sum = 0;
+        for (ele of arr) {
+            sum = sum + ele;
+        }
+        console.log(sum);
+    }
+    add(2, 3)
+    add(2, 3, 4)
+    add(2, 3, 4, 5)
+</script>
+
+<script>
+    // solution:
+    function test(a, b, ...c) {
+        console.log(a, b, c)
+    }
+    test(2, 3); // 2 3 []
+    test(2, 3, 4, 5); // 2 3 [4,5]
+</script>
