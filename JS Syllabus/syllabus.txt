@@ -1,0 +1,76 @@
+🚀Master JavaScript Like a Pro: A Roadmap to Success 🎯
+🔴 JavaScript Roadmap
+├── 🔵 JavaScript Basics
+│  ├── 🟢 Variables & Data Types
+│  ├── 🟢 Operators & Expressions
+│  ├── 🟢 Conditional Statements (if-else, switch)
+│  ├── 🟢 Loops (for, while, do-while)
+
+│  ├── 🟢 Functions
+│  │  ├── Function Declarations & Expressions
+│  │  ├── Arrow Functions
+│  │  ├── Hoisting
+│  │  ├── Scope & Closure
+
+│  ├── 🟢 Error Handling (try-catch-finally)
+│  ├── 🟢 Type Coercion & Conversion
+
+├── 🔵 Advanced JavaScript
+│  ├── 🟢 `this` Keyword
+│  ├── 🟢 Prototypes & Prototype Chain
+│  ├── 🟢 Object-Oriented JavaScript (OOP)
+│  │  ├── Constructor Functions
+│  │  ├── Classes & Inheritance (ES6)
+│  ├── 🟢 Functional Programming
+│  │  ├── Higher-Order Functions
+│  │  ├── Pure Functions & Immutability
+│  │  ├── Closures & Currying
+│  ├── 🟢 Event Loop & Asynchronous Behavior
+
+├── 🔵 DOM Manipulation
+│  ├── 🟢 Selecting Elements (querySelector, getElementById)
+│  ├── 🟢 Modifying Elements (innerHTML, textContent, CSS)
+│  ├── 🟢 Event Handling (addEventListener)
+│  ├── 🟢 Forms & Validations
+│  ├── 🟢 Event Propagation (Bubbling & Capturing)
+
+├── 🔵 ES6+ Modern JavaScript
+│  ├── 🟢 let, const vs var
+│  ├── 🟢 Template Literals
+│  ├── 🟢 Destructuring (Arrays & Objects)
+│  ├── 🟢 Spread & Rest Operators
+│  ├── 🟢 Default Parameters
+│  ├── 🟢 ES6 Modules (import/export)
+│  ├── 🟢 Optional Chaining & Nullish Coalescing
+
+├── 🔵 Asynchronous JavaScript
+│  ├── 🟢 Callbacks
+│  ├── 🟢 Promises (then, catch, finally)
+│  ├── 🟢 Async/Await
+│  ├── 🟢 Fetch API & AJAX
+│  ├── 🟢 Web APIs (setTimeout, setInterval)
+
+├── 🔵 JavaScript Storage & APIs
+│  ├── 🟢 LocalStorage & SessionStorage
+│  ├── 🟢 Cookies
+│  ├── 🟢 IndexedDB
+│  ├── 🟢 WebSockets
+│  ├── 🟢 Service Workers
+
+├── 🔵 JavaScript Modules & Tooling
+│  ├── 🟢 CommonJS vs ES6 Modules
+│  ├── 🟢 Dynamic Imports
+│  ├── 🟢 Module Bundlers (Webpack, Parcel, Vite)
+│  ├── 🟢 Package Managers (npm, yarn, pnpm)
+
+├── 🔵 Error Handling & Debugging
+│  ├── 🟢 Debugging in DevTools
+│  ├── 🟢 Console Methods (log, warn, error)
+│  ├── 🟢 try...catch & Error Objects
+
+├── 🔵 JavaScript Best Practices
+│  ├── 🟢 Code Optimization
+│  ├── 🟢 Performance Tuning
+│  ├── 🟢 Security Best Practices
+│  ├── 🟢 Linting & Formatting (ESLint, Prettier)
+│  ├── 🟢 Testing (Jest, Mocha, Cypress)

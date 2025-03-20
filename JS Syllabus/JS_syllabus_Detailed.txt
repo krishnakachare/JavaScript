@@ -1,0 +1,265 @@
+1. History and Evolution:
+    • Origin and development of JavaScript
+    • ECMAScript standards
+
+2. JavaScript Basics:
+    • What JavaScript is?
+    • Setting up the development environment
+    • First JavaScript script.
+    • Comments in JS
+    • Internal JS
+    • External JS File 
+    • JavaScript Execution : Execution parts 
+    • Difference between Front-End Js & Back-End javascript
+    • Applications of javascript
+
+3.	Variables:
+    | ├── var
+    | ├── let
+    | └── const
+    | └── Variable declaration without var, let, const  
+    | const for object.
+
+4.  Strict mode in js
+
+5.	Variable Hoisting, TDZ
+6.	Variable scopes:
+    | ├── Global scope
+    | ├── Local scope / script scope
+    | ├── Block scope : if-else block, for loop block
+    | ├── function scope
+
+7.	Data types in JS:
+    1. Primitive/immutable Data types(6):- 
+        1. string 
+        2. Boolean
+        3. Undefined
+        4. Null
+        5. Number
+        6. Bigint
+        7. Symbol
+        
+    2. Referance/Non-Primitive/mutable data types:- 
+        1. Object (E.g.Date,);
+        2. Array
+        3. Function  
+        4. RegEx 
+
+8.	window methods: String(), Array()
+    | └──  Number() methods
+    | └──  Maths () methods
+    | └──  Dialogue boxes : alert(),confirm(),prompt()
+
+9.	Operators:
+    | ├── Arithmetic
+    | ├── Assignment
+    | ├── Comparison
+    | ├── Logical
+    | | └── Short Circuiting
+    | ├── Unary
+    | ├──Ternary (Conditional)
+    | ├── Nullish 
+    | ├── Optional operator  
+
+10. Corecion
+
+11.	Control Flow/Conditionals:
+    | ├── if statement
+    | ├── if-else statement
+    | ├── else if statement
+    | ├── switch statement(case, default)
+    
+12.	Loops
+    | ├── for loop
+    | ├── while loop
+    | └── do-while loop
+    | ├── for...in
+    | └── for...of (Object methods)
+        | break
+        | continoue
+        | return
+    | ├── Nested for loop ( Pattern print)
+
+13.	Functions:
+    | ├── Function declaration(named)
+    | ├── Function expression(Anonymous)
+    | ├── Arrow function
+    | └── 'this' scope   
+    | ├── IIFE (Immediately Invoked Function Expression)
+    | ├── Higher order function
+    | ├── Callback function
+    | ├── function recursion (factorial, fibonacci)
+    | ├── Function Curring
+    | ├── Pure Function
+    | └── Constructor Function 
+    | └── Generators function
+    | └── Function Hoisting:
+    | └── Closures (Lexical scope)
+    | └── Default Parameters in function-ES6
+    | └── Memoization
+
+14.	Pass by value, Pass by address/referance
+15.	value comparison, address comparison
+16.	value copy, address/referance copy
+17.	shallow copy, Deep copy
+   
+18.	String:
+    - Intro and defination: literal, object  
+    - quotes, template literal
+    - multiline string
+    - Escape characters
+    - Corecion
+    - string iteration (loop)
+    - string Properties & Methods:   
+    - eval(), valueOf()  
+
+19.	Array:
+    | ├── Into and defination
+    | ├── Array properties & methods  
+    | ├── Array iteration (loop)
+   
+20.	Object:
+    | ├── Object ?     
+    | ├── Symbol
+    | ├── CURD operations
+      ├── ways of object create(C)
+          └── Class
+                └── static, instance properties & Methods
+                └── public, private properties & Methods
+      └── Retrive(R & U) properties
+          └── Dot notation
+          └── Bracket notation
+    | ├── loop on object
+    | ├── Object properties & Methods:
+          └── prototype, __proto__
+          └── prototype inheritance, prototype chain
+    | ├── Getter, setter 
+    | ├── 'this' keyword, this scope
+    | ├── Call() , bind() , apply()     
+   
+21.	OOPS :
+    | ├── Inheritance (extends-super, prototype) 
+    | ├── Polymorphism (overloading, overriding)
+    | ├── Abstraction
+    | ├── Encapsulation (Private feild in class, getter-setter)
+
+22.	Map() & Set()
+    | ├── Defination
+    | ├── Ways of creation
+    | ├── Properties & Methods
+
+23.	Date & Time
+    | ├── Ways of creation
+    | ├── Methods: toString(),toLocaleString(),toDateString(),toLocaleDateString(),toTimeString(),toLocaleTimeString();
+    | ├── get Methods
+    | ├── set Methods
+   
+24. JSON:
+    |── JSON (JavaScript Object Notation)
+    |── JSON.stringify(), JSON.parse()
+
+25.	Destructuring (string, array, object)
+26.	spread & rest operator, Destructure + spread-rest
+
+27.	REGEX:
+
+28.	Web APIs:
+    | ├── Local Storage
+    | ├── Session Storage
+    | ├── Cookies
+    |── setInterval, SetTimeout
+
+29.	Asynchronous JavaScript (AJAX):
+    | ├── Callbacks, Callback hell
+    | ├── Promise: 
+        | ├── Promise states : Pending, Fulfilled, Rejected
+        | ├── Promise methods : then(), catch(), finally()
+        | ├── Promise chain
+        | ├── Promise combinators :
+                └── Promise.all()
+                └── Promise.race()
+                └── Promise.allSettled()
+                └── Promise.any()        
+    | ├── Async/Await
+
+30.	Working with API:
+    | └──Fetch API
+
+31. DOM:
+    |── DOM Manipulation:
+    | └── Selecting elements(getElementById, querySelector, querySelectorAll)
+    | └── Modifying elements(text content, HTML content, attributes, styles)
+    | └── Creating and removing elements
+    
+    |── Event Handling:(adding and removing event listeners)
+    | └── Event listeners
+    | └── Event propagation
+    | └── Event delegation
+    | └── Event Object
+    | └── Bubbling and Capturing
+
+32.	Browser Object Model(BOM)
+    • Window Object
+    • Navigator Object
+    • Screen Object
+    • History Object
+    • Location Object
+    • Timers
+
+33. Node.js Specific Concepts 
+    •  npm, npx, node
+    •  npm vs yarn
+
+34. Modules in js:
+    |── Modules
+        └── import
+        └── export
+    |── Import and export Statements (ES6 Modules)
+    |── CommonJS Modules (require, module.exports)
+
+35.	File handling in js
+    •  File System Module (fs)
+    •  Read, Right file in js
+
+36.	Debugging:
+    | └──Console.log()
+    | └── Breakpoints
+    | └── DevTools
+    |── ESLint    
+
+37.	Error Handling:
+    | └── try...catch statement
+    | └── throw statement 
+
+38.	JavaScript Execution:
+     • Execution context
+     • callback queue
+     • Event loop
+
+# JavaScript Projects:
+
+-----------------------------------------
+# ES Features:
+  1. ES-6(ES-2015) :
+    1. const & let 
+    2. From IIFEs to blocks
+    3. concatenating strings to template literals
+    4. Multi-line strings
+    6. default parameter values
+    7. from arguments to rest parameters(...)
+    8. exponent operator (**)
+    9.  Desturcturing (array/object)
+    10. for-loop to for-in and for-of
+    11. arrow functions
+    12. From apply() to the spread operator (...)
+    13. Enhanced Object Literals
+    14. From constructors to classes
+    15. inheritance - class,extends
+    16. Modules
+    17. collection-Map,weakmap,Set,weakset
+    18. promise and async-await
+    19. generators
+    20. Tail Calls
+-----------------------------------------------------
+
+# JQuery :
