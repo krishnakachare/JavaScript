@@ -1,0 +1,7 @@
+# static method : Its called on the class level.
+ className.method();
+
+ # instance method : Its called on the object level.
+
+ class ---> object
+ object.method();

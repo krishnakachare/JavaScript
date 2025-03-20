@@ -1,0 +1,18 @@
+<script>
+    let obj1 = { a: 10, b: 20 };
+    obj1.c = 30; // adding a new property
+    delete obj1.b; // deleting a property
+    obj1.a = 15; // updating value of a property
+    console.log(obj1);
+
+    let obj2 = { x: 100, y: 200 };
+    Object.freeze(obj2);
+    obj2.z = 300; // add a property - no
+    delete obj2.y; // delete a property - no
+    obj2.x = 150; // update value - no
+    console.log(obj2);
+
+
+    console.log(Object.isFrozen(obj1))
+    console.log(Object.isFrozen(obj2))
+</script>

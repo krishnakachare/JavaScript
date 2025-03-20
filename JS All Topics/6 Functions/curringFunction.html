@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+    <h1># Function Curring</h1>
+    -Function Currying is a concept of breaking a function with many arguments into many functions with single
+    argument in such a way, that the output is same.
+    -its a technique of simplifying a multi-valued argument function into single-valued argument multi-functions.
+    -It helps to create a higher-order function. It is extremely helpful in event handling.
+    <hr>
+    <pre>
+    var add = function (a){
+                  return function(b){
+                        return function(c){
+                                return a+b+c;
+                         }
+                  }
+            }
+       console.log(add(2)(3)(4)); //output 9
+    </pre>
+    <hr>
+    </p>
+
+    <script>
+        // Normal function
+
+        function addNormal(a, b, c) {
+            console.log(a + b + c);
+        };
+        addNormal(1, 2, 3);
+
+        // Curring function
+
+        // function add(a) {
+        //     return function (b) {
+        //         return function (c) {
+        //             console.log("I am curring function", a + b + c);
+        //         };
+        //     };
+        // };
+        // add(1)(2)(3);
+
+        let add = function (a) {
+            return function (b) {
+                return function (c) {
+                    console.log("I am curring function", a + b + c);
+                };
+            };
+        };
+        add(1)(2)(3);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<script>
+    // 16. convert array of letters to array of words
+    // const inputArr = [
+    //     'b', 'a', 'k', 'e', '',
+    //     'c', 'a', 'k', 'e', '',
+    //     'e', 'a', 't'
+    // ];
+    // output = ['bake', 'cake', 'eat'];
+
+    const inputArr = [
+        'b', 'a', 'k', 'e', '',
+        'c', 'a', 'k', 'e', '',
+        'e', 'a', 't'
+    ];
+
+    let word = "";
+    let outputArr = inputArr.reduce((acc, el, ind, arr) => {
+        word += el;
+        if (el == '' || ind == (arr.length - 1)) {
+            acc.push(word)
+            word = "";
+        };
+        return acc;
+    }, []);
+
+    console.log(outputArr); // ['bake', 'cake', 'eat']
+
+</script>

@@ -1,0 +1,25 @@
+<script>
+	// ES-5 Way to write a class
+	function Trainer(id, name, subject, exp, time) {
+		this.id = id;
+		this.name = name;
+		this.subject = subject;
+		this.exp = exp;
+		this.time = time;
+	}
+	let trainer1 = new Trainer(1, 'sanjay', 'Angular', 8, '7.30 PM');
+	let trainer2 = new Trainer(2, 'subba raju', 'Linux', 15, '7.00 AM');
+
+
+	// ES-6 way to write a class
+	class Student {
+		constructor(roll, name, mark, add) {
+			this.roll = roll;
+			this.name = name;
+			this.mark = mark;
+			this.add = add;
+		}
+	}
+	let std1 = new Student(1, 'sameer', 95, 'bangalore')
+	let std2 = new Student(2, 'anil', 90, 'pune')
+</script>

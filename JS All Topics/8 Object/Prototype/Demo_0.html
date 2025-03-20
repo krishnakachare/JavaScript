@@ -1,0 +1,25 @@
+<script>
+  function Student(roll, name, add) {
+    this.roll = roll;
+    this.name = name;
+    this.add = add;
+    // this.clgName = 'nareshIT';
+  }
+  Student.prototype.clgName = 'NareshIT';
+
+  let std1 = new Student(101, "pulkit", "bangalore");
+  let std2 = new Student(102, "Akhilesh", "Hyderabad");
+  let std3 = new Student(103, "Sarita", "Pune");
+  console.log(std1, std2, std3);
+
+  console.log(std1.roll, std1.name, std1.add, std1.clgName);
+  console.log(std2.roll, std2.name, std2.add, std2.clgName);
+
+  std1.clgName = 'naresh Technologies'; 
+  console.log(std1.roll, std1.name, std1.add, std1.clgName);
+  console.log(std2.roll, std2.name, std2.add, std2.clgName);
+  console.log(std3.roll, std3.name, std3.add, std3.clgName);
+
+  std1.course = 'javascript';
+  console.log(std1)
+</script>

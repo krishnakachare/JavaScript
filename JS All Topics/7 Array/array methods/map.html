@@ -1,0 +1,29 @@
+<script>
+    let arr = [10, 20, 30, 40, 50];
+    /* let arr2 = arr.map(function (ele) {
+        return ele + 2;
+    }); */
+    let arr2 = arr.map(ele => ele + 2)
+    console.log(arr2);
+
+    arr.map((val, ind, arr) => {
+        console.log(val, ind, arr)
+    })
+
+    let employees = [
+        { eId: 101, name: 'sanjay', sal: 5000, gender: 'male' },
+        { eId: 104, name: 'geeta', sal: 8000, gender: 'female' },
+        { eId: 103, name: 'sameer', sal: 7000, gender: 'male' },
+        { eId: 102, name: 'sita', sal: 9000, gender: 'female' },
+        { eId: 105, name: 'deepak', sal: 8000, gender: 'male' },
+    ];
+    let updatedEmployees = employees.map(emp => {
+        if (emp.gender === 'male') {
+            emp.name = 'mr. ' + emp.name
+        } else {
+            emp.name = 'miss. ' + emp.name
+        }
+        return emp;
+    })
+    console.log(updatedEmployees)
+</script>

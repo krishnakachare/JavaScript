@@ -1,0 +1,15 @@
+ES-6 Features:
+==============================
+let and const Keywords - Yes
+Arrow Functions   - Yes
+Template Literals  - yes
+Multi-line Strings  - yes
+Default Parameters - Yes
+Object Destructuring - Yes
+Array Destructuring - yes
+Enhanced Object Literals - Yes
+Rest Parameters - Yes
+Spread Operator - yes
+Classes
+Modules
+Promises,async await

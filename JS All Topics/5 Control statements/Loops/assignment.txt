@@ -1,0 +1,79 @@
+1. Write a program to display the square of first 10 natural numbers.
+   Expected Output : 1 4 9 16 25 36 49 64 81 100
+   
+2. Write a program to find the sum of first 10 natural numbers.
+   Expected Output : 55
+ 
+3. Ask user to enter a number. find the sum of digits of that number.
+   input : 125
+   output : 8 
+   
+4. Ask user to enter a number, print the factorial of that number.
+	input: 5 
+	output: 120
+
+5. Ask user to enter a number & check if that number is prime or not.
+   8 : not prime  
+   5 : prime
+	
+6. Write a program to display the first n terms of Fibonacci series.
+   Input number of terms to display : 10
+	Expected Output :
+	Here is the Fibonacci series upto to 10 terms :
+	0 1 1 2 3 5 8 13 21 34
+
+7. String Compression:
+   String input = "aabbcdaav";
+   Output: a2b2c1d1a2v1
+
+8. Character Occurrences in String:
+   Code to find occurrences of each character in a given string
+      Input: Pratima
+      Output: P: 1, r: 1, a: 2, t: 1, i: 1, m: 1
+
+9. How to check whether a string is palindrome or not ?
+
+10. Count vowels(a,e,i,o,u) in given string
+      input:'Krishna' output: i,a
+
+11. Reverse string
+      input:'Krishna' output: 'anhsirK'
+
+12. Reverse words from sentence
+      input:'Hi JS' output: 'JS Hi'
+
+13. Make string in capital case
+      input:'my js first code' output: 'My Js First Code'
+
+14. Find the length of the string(without using method) or count the characters
+      input:'Krishna' output: 7
+
+15. Write code to collect longest word in a sentence.
+      input:'my js first code' output: 'first'
+
+16. Find the length of the number
+      input:8910 output: 4 
+
+17. Find max, min value from array
+      input:[10,2,8,11] output: Max-11, Min-2 
+
+18. Find prime number from given range (1 to 50)
+
+19. Define array of numbers from 1 to 10 and find even, odd numbers from array
+
+20. Define array of numbers from 1 to 10 and find even, odd places numbers from array
+
+21. Define array using some duplicate elements and remove duplicate elements from the arrey
+
+22. Define array of numbers and write code that sorts an array of numbers in ascending order.
+
+23. Define array of numbers and write code that sorts an array of numbers in descending order.
+
+24. Concate subarray in array (remove sub array and made one)
+      let arr = [ [20,30],[40,50,60],[70,80,90]]
+      let array = [ ]
+
+25. Seperate Alphabets,Numbers and Symbols(Special Chara) from given string
+      let str = 'AAAAAC2345@#$&6CCCDD%Z'
+
+

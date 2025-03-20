@@ -1,0 +1,58 @@
+<script>
+    //     4. Swap The case for Each Character in a string 
+    //    input: 'Hello World'
+    //    output: 'hELLO wORLD'
+
+    let str = 'Hello World'
+    let swapStr = '';
+
+
+    for (let char of str) {
+        if ((/[a-z]/.test(char))) {
+            swapStr += char.toUpperCase();
+        } else {
+            swapStr += char.toLowerCase();
+        };
+    };
+
+    console.log(swapStr); // hELLO wORLD
+
+
+</script>
+
+<!-- <script>
+		
+    function swapCase(str){
+        result = ''
+        for(ch of str){
+            ch = (/[a-z]/).test(ch) ? ch.toUpperCase() : ch.toLowerCase();
+            result += ch;
+        }
+        return result;
+    }
+
+    input = 'This is jaVaScRipt claSs'
+    output = swapCase(input)
+    console.log(output);
+</script> -->
+
+<!-- 
+<script>
+    function myFun(inputStr) {
+        resultArr = [];
+
+        let words = inputStr.split(" ");
+        for (i in words) {
+            if (i == words.length - 1) {
+                resultArr[i] = words[i];
+                continue;
+            }
+            resultArr[i] = words[i].charAt(0);
+        }
+        console.log(resultArr);
+        return resultArr.join(".");
+    }
+    var input = prompt("enter a string", "rabindra nath tagore"); //r. n. tagore
+    result = myFun(input);
+    alert(result);
+</script> -->

@@ -1,0 +1,21 @@
+<script>
+  function add(a, b) {
+    return a + b;
+  }
+  let addRes = add(2, 3);
+  console.log(addRes);
+
+  let maxRes = Math.max(10, 20, 30);
+  console.log(maxRes);
+
+
+  let usersPromise = fetch('https://jsonplaceholder.typicode.com/users');
+  console.log(usersPromise);
+
+  usersPromise.then(function (response) {
+    console.log(response);
+  }, function (err) {
+    console.log(err)
+  });
+
+</script>

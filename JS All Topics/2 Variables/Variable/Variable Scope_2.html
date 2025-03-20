@@ -1,0 +1,21 @@
+<script>
+  // var doesn't support block scope
+  function f1() {
+    if (5 == 5) { // block
+      var a = 10; // function
+      console.log('block ', a);
+    }
+    console.log('function ', a); 
+  }
+  f1();
+
+  function f2() {
+    if (5 == 5) { // block
+      let b = 20;
+      console.log('block ', b);
+    }
+    console.log('function ', b);
+  }
+  f2();
+
+</script>

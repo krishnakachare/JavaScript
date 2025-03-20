@@ -1,0 +1,20 @@
+<script>
+    function f1() { // f1 is Higher Order, f1 has the ability to return another function
+        console.log('I am f1...')
+        let f2 = function () {
+            console.log('I am f2...')
+        }
+        return f2;
+    }
+
+    let arr1 = [10, 20, 30, 40, 50];
+    // increase the value of each element in this array by 2
+    function incrementByTwo(ele) {
+        return ele + 2;
+    }
+    let arr2 = arr1.map(incrementByTwo);
+    console.log(arr2);
+
+    // map() is higherOrder , it has ability to take another function as argument
+    // incrementByTwo() is a callBack function
+</script>

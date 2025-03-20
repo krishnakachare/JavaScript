@@ -1,0 +1,21 @@
+<!-- <script>
+    // 9. WAP to remove special character from a string
+    // input: - 'hello@#hi&'
+    // output: - 'hellohi'
+
+    let str = 'hello@#hi&';
+    let filteredStr = str.replace(/[^\w]/g, "");  // only alpha numerics
+    console.log(filteredStr);  // hellohi
+
+</script> -->
+
+<script>
+    // 10. WAP to move all the special characters to the end of the string
+    // input: - 'hello@#hi&'
+    // output: - 'hellohi@#&'
+
+    let str = 'hello@#hi&';
+    let filteredStr = str.replace(/[\w]/g, "");  // only special characters
+    console.log(filteredStr);  // @#&
+
+</script>

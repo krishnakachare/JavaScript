@@ -1,0 +1,149 @@
+In JavaScript, private properties can be denoted using two conventions: the underscore (`_`) prefix and the hash (`#`) prefix. However, they serve different purposes and have different levels of enforcement by the language.
+
+### Underscore (`_`) Prefix
+
+The underscore prefix is a naming convention used by developers to indicate that a property is intended to be private. This convention relies on the honor system, meaning that it's up to the developer to respect the privacy of these properties. The language itself does not enforce this privacy, so the properties can still be accessed and modified directly.
+
+### Example using Underscore (`_`)
+
+```javascript
+class Person {
+  constructor(firstName, lastName) {
+    this._firstName = firstName;
+    this._lastName = lastName;
+  }
+
+  get fullName() {
+    return `${this._firstName} ${this._lastName}`;
+  }
+
+  set fullName(name) {
+    const parts = name.split(' ');
+    if (parts.length !== 2) {
+      throw new Error('Full name must include first and last name');
+    }
+    this._firstName = parts[0];
+    this._lastName = parts[1];
+  }
+}
+
+let person = new Person('John', 'Doe');
+console.log(person._firstName); // Accessible: John
+person._firstName = 'Jane';     // Direct modification: Jane
+console.log(person.fullName);   // Output: Jane Doe
+```
+
+### Hash (`#`) Prefix
+
+The hash prefix is a newer feature in JavaScript (introduced in ECMAScript 2020) that allows for truly private fields. Properties prefixed with `#` are not accessible outside the class definition. This privacy is enforced by the JavaScript engine, making it impossible to access or modify these properties directly from outside the class.
+
+### Example using Hash (`#`)
+
+```javascript
+class Person {
+  #firstName;
+  #lastName;
+
+  constructor(firstName, lastName) {
+    this.#firstName = firstName;
+    this.#lastName = lastName;
+  }
+
+  get fullName() {
+    return `${this.#firstName} ${this.#lastName}`;
+  }
+
+  set fullName(name) {
+    const parts = name.split(' ');
+    if (parts.length !== 2) {
+      throw new Error('Full name must include first and last name');
+    }
+    this.#firstName = parts[0];
+    this.#lastName = parts[1];
+  }
+}
+
+let person = new Person('John', 'Doe');
+console.log(person.#firstName); // SyntaxError: Private field '#firstName' must be declared in an enclosing class
+person.#firstName = 'Jane';     // SyntaxError: Private field '#firstName' must be declared in an enclosing class
+console.log(person.fullName);   // Output: John Doe
+person.fullName = 'Jane Smith';
+console.log(person.fullName);   // Output: Jane Smith
+```
+
+### Differences and Summary
+
+- **Underscore (`_`) Prefix**:
+  - A naming convention to indicate intended privacy.
+  - Does not enforce privacy; properties are still publicly accessible.
+  - Simple and works in all environments.
+
+- **Hash (`#`) Prefix**:
+  - Enforces true privacy at the language level.
+  - Private properties cannot be accessed or modified outside the class.
+  - Available in ECMAScript 2020 and later environments.
+
+**Choosing Between `_` and `#`**:
+- Use `_` if you need backward compatibility with older environments or if you are following an existing codebase's convention.
+- Use `#` for stricter encapsulation and enforced privacy in modern JavaScript environments.
+
+### Full Example with Both Approaches
+
+```javascript
+class PersonWithUnderscore {
+  constructor(firstName, lastName) {
+    this._firstName = firstName;
+    this._lastName = lastName;
+  }
+
+  get fullName() {
+    return `${this._firstName} ${this._lastName}`;
+  }
+
+  set fullName(name) {
+    const parts = name.split(' ');
+    if (parts.length !== 2) {
+      throw new Error('Full name must include first and last name');
+    }
+    this._firstName = parts[0];
+    this._lastName = parts[1];
+  }
+}
+
+class PersonWithHash {
+  #firstName;
+  #lastName;
+
+  constructor(firstName, lastName) {
+    this.#firstName = firstName;
+    this.#lastName = lastName;
+  }
+
+  get fullName() {
+    return `${this.#firstName} ${this.#lastName}`;
+  }
+
+  set fullName(name) {
+    const parts = name.split(' ');
+    if (parts.length !== 2) {
+      throw new Error('Full name must include first and last name');
+    }
+    this.#firstName = parts[0];
+    this.#lastName = parts[1];
+  }
+}
+
+let personWithUnderscore = new PersonWithUnderscore('John', 'Doe');
+console.log(personWithUnderscore._firstName); // Accessible: John
+personWithUnderscore._firstName = 'Jane';     // Direct modification: Jane
+console.log(personWithUnderscore.fullName);   // Output: Jane Doe
+
+let personWithHash = new PersonWithHash('John', 'Doe');
+// console.log(personWithHash.#firstName); // SyntaxError: Private field '#firstName' must be declared in an enclosing class
+// personWithHash.#firstName = 'Jane';     // SyntaxError: Private field '#firstName' must be declared in an enclosing class
+console.log(personWithHash.fullName);   // Output: John Doe
+personWithHash.fullName = 'Jane Smith';
+console.log(personWithHash.fullName);   // Output: Jane Smith
+```
+
+In summary, use the approach that best fits your needs regarding compatibility and privacy enforcement.

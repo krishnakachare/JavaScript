@@ -1,0 +1,25 @@
+<script>
+    let user = { name: 'sachin', age: 35, add: 'mumbai' };
+
+    // Object data cann't be stored in browser storage 
+    sessionStorage.setItem('user', user);
+
+    // Object data cann't be printed in document directly
+    document.write(user);
+
+    // There is a need to convert object data to string data 
+    let userStr = JSON.stringify(user);
+    // stringify() converts object to string
+    sessionStorage.setItem('user', userStr);
+    document.write(userStr);
+
+
+    // Let's try to read data from session storage
+    let myUser = sessionStorage.getItem('user');
+    console.log(typeof myUser)
+    console.log(myUser.name) // No - its not objet , its a string
+
+    // There is a need to convert string to object
+    let myUserObj = JSON.parse(myUser);
+    console.log(myUserObj.name)
+</script>

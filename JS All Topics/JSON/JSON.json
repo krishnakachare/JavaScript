@@ -1,0 +1,9 @@
+{
+  "name": "Jack",
+  "age": 30,
+  "isSportsman": true,
+  "hobbies": ["weight lifting", "Bowling"],
+  "friends": [{ "name": "Tom", "age": 28, "isSportsman": true }]
+}
+
+

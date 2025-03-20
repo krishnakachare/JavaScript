@@ -1,0 +1,16 @@
+<html>
+  <body>
+    <script>
+      function f1() {
+        if (true) {
+          (function(){
+            var name = "sachin";
+            console.log("block ", name); // sachin
+          })();
+        }
+        console.log("function ", name); // sachin
+      }
+      f1();
+    </script>
+  </body>
+</html>

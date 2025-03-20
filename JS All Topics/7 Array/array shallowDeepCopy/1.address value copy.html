@@ -1,0 +1,19 @@
+<script>
+    let arr1 = [10, 20];
+
+    let arr2 = arr1;  // address/reference copy ( Not value copy)
+    // a new array is not being created, rather same address is being assigned to arr2
+    // both arr1 & arr2 are holding the same address
+    arr2.push(30);
+    arr1.push(40);
+    console.log(arr1);
+    console.log(arr2);
+
+    let arr3 = [10, 20];
+    // let arr4 = arr3.slice(); // Value copy
+    let arr4 = [...arr3] // Value copy
+    arr3.push(30)
+    arr4.push(40)
+    console.log(arr3)
+    console.log(arr4)
+</script>

@@ -1,0 +1,41 @@
+# string behaviour with operators:
+# Corecion : forcefully datatype conversion for perform operation
+  1. comparision operator: converting into number datatype
+  2. Arithmetic operations:
+      1. string: + (string concatination): simply addition of string
+      2. string: (-*/) Datatype convert into number & with string perform mathematical operations.
+      3. For unary operands + operator will convert datatype into number.
+
+#Examples:
+    str + str = str
+    str + num = str
+    num + str = str
+    -----------------
+    str - str = num
+    str - num = num
+    num - str = num
+    -Same with *,/
+    -----------------
+    + str + num = num
+    ------------------
+
+       '12' + 12;       // '1212'
+        13 + '1';        // '131'
+        12.34 + '34';    // "12.3434"
+
+        '12' - 10;     // 2
+        '90.10' - 10;  // 80.10
+        '12' * 12;     // 144
+        '12' * '12';   // 144
+        '12' / '12';   // 1
+        'we' - 2;   // NaN
+
+         '10' + 10;   // '1010'
+          // But
+          +'10' + 10;  // 20
+          +'10';   // 10
+          +'';    // 0
+          
+          10 + '0' - 30;             // 70
+          (12 * '12' - 10) / '10';   // 13.4
+          console.log("1"-"-1")

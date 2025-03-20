@@ -1,0 +1,28 @@
+<script>
+    let user = { name: 'sachin', 'last name': 'tendulkar', age: 35, add: 'mumbai' };
+
+    console.log(user.name)
+    console.log(user['age'])
+
+    // 1. if key contains space , [] should be used instead of .
+    console.log(user['last name'])
+    // console.log(user.last name)
+
+    // 2. when the key is dynamic , [] should be used instead of .
+    let a = 'add';
+    console.log(user[a]) // user['add']
+    console.log(user.a)  // it will look for 'a' property in user object
+
+
+    console.log(a)
+</script>
+
+<script>
+    let user = { name: 'sachin', age: 35, add: 'mumbai' };
+
+    let allKeys = Object.keys(user);
+
+    for (let key of allKeys) {
+        console.log(key + " ===== " + user[key])
+    }
+</script>

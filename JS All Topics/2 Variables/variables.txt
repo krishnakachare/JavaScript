@@ -1,0 +1,67 @@
+
+# Read the js code:
+-split it (keywords,variable, operators,value)
+-variable stages:
+ undeclared?
+ declared?
+ undefined?
+ Initialization?
+ update/change/reassign?
+ Redeclared?
+
+# variables:
+ defination?
+
+# variable declaration keywords diff: var, let const
+
+                                var                        let             const
+1. In js                        begining                   ES6              ES6
+2. Initialization              N required                  N  required      Y required
+2. value update                   Y                        Y                N(mutate only)
+4. Redeclared variable            Y                        N                N
+5. TDZ                            N                        Y                Y
+6. Scope:                       F,G                       F,G,B            F,G,B  
+
+#NOTE: Exception for undeclared variable and const keyword
+
+----------------------------------------------------------------
+
+// scope: let -> G,F,B
+// scope: const -> G,F,B
+// scope var -> G, F
+
+  // var a = 10;
+  // console.log(a); // 10
+
+  // function scope() {
+  //   console.log(a); // 10
+  //   var a2 = "fun variable";
+  //   console.log(a2);  //  "fun variable"
+  // }
+  // scope();
+  // // console.log(a2);  //ReferenceError: a2 is not defined
+
+
+  // // Block scope - if, for loop
+  // if (true) {
+  //   var block = "block variable";
+  //   console.log(block); // "block variable"
+  // }
+  // console.log("outsideBlock", block);  // "block variable"
+
+  // console.log("---For Loop-----")
+  // for (let i=0; i<=5; i++){
+
+  //   console.log(i) // 0-5
+  // };
+
+  // console.log(i) // ReferenceError: i is not defined
+
+  for (var a = 0; a <= 5; a++) {
+    console.log(a) // 0-5
+  };
+  console.log("outside of block---------")
+  console.log(a) // 6  ??
+
+
+

@@ -1,0 +1,28 @@
+<script>
+    // Reverse words in statement:
+    // input: - 'This is javascript class'
+    // output: - 'class javascript is this'
+
+    let statement = 'This is javascript class.'
+    let statementArr = statement.split(" ");
+    let reverseStatementArr = [];
+
+    function reverseStr(word) {
+        return (word.split("").reverse().join(""));
+    };
+
+    for (let el of statementArr) {
+        reverseStatementArr.push(reverseStr(el));
+    };
+
+    let reverseWordStatement = reverseStatementArr.join(" ");
+    console.log(reverseWordStatement); // sihT si tpircsavaj .ssalc
+</script>
+
+
+<!-- <script>
+    var str = "I Love My India";
+
+    var rev = str.split("").reverse().join("").split(" ").reverse().join(" ");
+    document.write("<br> After Reverse: " + rev);
+</script> -->

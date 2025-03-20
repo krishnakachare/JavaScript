@@ -1,0 +1,22 @@
+<script>
+    // 7. WAP to print Credit - card number
+    // input: - '1111222233334444'
+    // output: - '1111-2222-3333-4444'
+
+    let str = '1111222233334444';
+    let creditCardNo = "";
+
+    for (let ind in str) {
+        creditCardNo += str[ind];
+        if (ind >= 3 && ind % 3 == 0 && ind < (str.length - 3)) {
+            // creditCardNo += str[ind];
+            creditCardNo += "-";
+            // break;
+         
+        };
+       
+    };
+    console.log(creditCardNo);
+
+
+</script>

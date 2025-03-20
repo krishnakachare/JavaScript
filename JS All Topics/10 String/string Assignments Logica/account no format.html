@@ -1,0 +1,54 @@
+<script>
+    // 6. WAP to print Account number
+    // input: - '12345678987'
+    // output: - '12*******87'
+
+    let str = '12345678987';
+    let outputStr = "";
+
+    for (let ind in str) {
+        if (ind > 1 && ind < (str.length - 2)) {
+            outputStr += "*";
+        } else {
+            outputStr += str[ind];
+        };
+    };
+
+    console.log(outputStr); // 12*******87
+
+</script>
+
+<!-- <script>
+    function myFun(input) {
+        let first_sec = input.substring(0, 2);
+        let second_sec = input.substring(2, input.length - 2);
+        second_sec = second_sec.split("").fill("*").join("");
+        let third_sec = input.substring(input.length - 2, input.length);
+
+        return first_sec + second_sec + third_sec;
+    }
+    var input = prompt("Enter 10 digit Account number", "1234567891");
+    result = myFun(input);
+    alert(result);
+</script> -->
+
+<!-- <script>
+    function maskAccountNumber(input) {
+        if (input.length == 10) {
+            let result = '';
+            for (let i = 0; i < input.length; i++) {
+                if (i < 2 || i > 7) {
+                    result += input[i]
+                } else {
+                    result += '*'
+                }
+            }
+            return result;
+        } else {
+            alert("Invalid Input")
+        }
+    }
+    var input = prompt("Enter 10 digit Account number", 1234567891);
+    result = maskAccountNumber(input);
+    alert(result);
+</script> -->

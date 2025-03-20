@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <script>
+      let urls = [
+        "https://api.github.com/users/iliakan", // 2
+        "https://api.github.com/users/PulkitAgrawal08", //1
+        "https://api.github.com/users/sanjaysamantra1", //3
+      ];
+
+      // map every url to the promise of the fetch
+      let requests = urls.map((url) => fetch(url));
+
+      Promise.all(requests).then(responseArr=>{
+          let convertToJson = responseArr.map(res=>res.json());
+
+          Promise.all(convertToJson).then(finalDataArr=>{
+            console.log(finalDataArr)
+          })
+      })
+    </script>
+  </head>
+  <body>
+</html>

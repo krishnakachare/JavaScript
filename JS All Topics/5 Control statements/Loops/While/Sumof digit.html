@@ -1,0 +1,15 @@
+<html>
+  <body>
+    <script>
+      let n = +prompt("enter a number"); // n = 125
+      let sum = 0;
+
+      while (n != 0) {
+        let rem = n % 10;
+        sum = sum + rem;
+        n = parseInt(n / 10);
+      }
+      console.log("sum of digit " + sum);
+    </script>
+  </body>
+</html>
