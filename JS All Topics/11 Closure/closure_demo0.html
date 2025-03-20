@@ -1,0 +1,15 @@
+<script>
+  let name = 'sanjay';
+  var age = 32;
+  
+  function f1() {
+    let a = 10;
+
+    function f2() {
+      let b = 20;
+      console.log(a + b); // b is Local , a is Closure 
+    }
+    f2();
+  }
+  f1();
+</script>

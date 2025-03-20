@@ -1,0 +1,42 @@
+DOM (Document Object Model)
+==========================
+-The Hierarchical representation of all html elements inside browser is DOM.
+-The DOM represents a document as a tree of nodes. 
+-The Document Object Model (DOM) is an application programming interface (API) for manipulating HTML documents.
+-It provides methods that allows to add, remove, and modify parts of the document effectively.
+
+Uses:
+----
+-display content conditionally(After page load)
+-add/remove/update content dynamically.
+-change css after page load.
+-add event listener to the elements which are dynamically added.
+
+
+Find Elements from DOM
+---------------------
+1. document.getElementById(id); //Single Element
+2. document.getElementsByClassName(className); //Array of elements
+3. document.getElementsByTagName(tagName); //Array of elements
+4. document.getElementsByName(name); //Array of elements
+
+5. document.querySelector(); //Single Element
+6. document.querySelectorAll();//Array of elements
+
+
+get value from inputBox
+--var x = document.getElementById('name').value
+
+set value to an input box
+--document.getElementById('name').value = "new value"
+
+
+- CreateElement Dynamically: createElement(), appendChild()
+- attributes : getAttribute(), setAttribute(),removeAttribute(),toggleAttribute()
+- CSS Class : addClass() , removeClass() , toggleClass()
+
+
+innerText vs innerHTML
+----------------------
+innerText : returns only text contained by an element and all its child elements.
+innerHtml : returns all text, including html tags, that is contained by an element.

@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>this is title</title>
+  </head>
+
+  <body>
+    <p id="one">Hellooooooooooo</p>
+    <p id="two">hii</p>
+
+    <button onclick="copyText()">Click me</button>
+
+    <script>
+      function copyText() {
+        let myText = document.getElementById("one").innerText; // Read
+        document.getElementById("two").innerText = myText; // write
+      }
+    </script>
+  </body>
+</html>

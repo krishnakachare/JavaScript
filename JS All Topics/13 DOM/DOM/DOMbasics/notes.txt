@@ -1,0 +1,5 @@
+
+
+// html  -- text contect (mark up)
+// css -- styling 
+// js - user -- change --- dom element (html element)
