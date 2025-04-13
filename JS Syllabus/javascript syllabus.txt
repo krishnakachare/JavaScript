@@ -260,7 +260,7 @@
      - Event loop
      - Asynchronous Behavior
 
-38. Js Grahics 
+38. Js Graphics 
     - Graphics 
     - Canvas 
     - Plotly 
