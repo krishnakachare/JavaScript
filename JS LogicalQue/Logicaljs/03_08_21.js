@@ -79,17 +79,18 @@
 
 // var v1 = 10
 // let v2;
-// function pr(){
-//     console.log(v1);     // 10
-//     console.log(v2);    //  undefined
-// }
-// pr()
-// console.log(window.write)    //undefined
-// console.log(window.v1)      // 10
-// console.log(window.v2)      // undefined
 
-// console.log(v1)         // 10
-// console.log(v2)        /// undefined
+// function print() {
+//     console.log(v1);
+//     console.log(v2);
+// }
+// print();
+
+// console.log(window.write);
+// console.log(window.v1);
+// console.log(window.v2);
+// console.log(v1);
+// console.log(v2);
 
 // ------------------------------------------------------------------------------------------------------------
 
