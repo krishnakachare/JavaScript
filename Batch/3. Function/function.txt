@@ -1,0 +1,256 @@
+14.	Functions:
+      | ├── Function declaration
+      | ├── Function expression
+      | ├── Arrow function
+      | ├── IIFE (Immediately Invoked Function Expression)
+      | ├── Higher order function
+      | ├── Callback function
+      | ├── Constructor function
+   
+         -Hoisting,Function Hoisting:
+         -Diff bt Function declaration & Function expression ?
+         -function with parameters, without parameters, default parameters(ES6)
+         -return
+         -pre-defined and user-defined functions --> E.g. describe(), it()
+         -Diff bt function and method --> E.g. cy.get()
+         -Closures (Lexical scope)
+         -'this' keyword
+         -function recursion (factorial, fibonacci)
+         -Memoization
+
+# functions in javascript: 
+============================
+*What is the function?
+   -function is a block of code/statements designed to perform a particular task.
+   -The main uses of functions are reusability, split the code.
+   -In JS, functions are called as first class citizens, functions are heart of JS.
+	  
+-Have 3 stages in function:
+	1. function declaration
+	2. function definition
+	3. function calling
+
+	    function function-name(parametrs)-->declaration
+            {
+               //code --> body/defination
+            }
+        function-name(arguments) -->calling
+
+   -function is executed only when that gets invoked/called.
+   -function is defined with the function keyword, followed by a name, followed by parentheses ().
+   -The code to be executed(function body), by the function, is placed inside curly brackets: {}
+   -Function parameters are listed inside the parentheses () in the function definition.
+   -Parameter: is the variable in the function declaration.(behave as local variables.) 
+            It is part of the function signature when you create it.
+   -Argument: Actual value of the variable being passed/recived to the function when it is called/invoked.
+
+1. pre-defined functions: Already written, we are just using them/calling them
+   E.g. alert(),prompt(),confirm(),max(),min(),sqrt(),cbrt()
+	
+2. user-defined functions: we have to write,and we will use them/ calling them
+	
+* Type of functions:
+	1. function declaration (named function)
+	2. function expression(anonymous)
+	3. arrow function (ES - 6)(2015)
+	4. self invoked ( IIFE- Immediately Invoked Function Expression)
+
+   Every function also be stored as a variable by default with same name
+   console.log(incre)--> it will print whole function
+
+      var xyz= function incre()
+      {
+         console.log("something")
+      }
+      console.log(xyz)--> will print whole function.
+      you can even remove name and call the function as anonymous function
+
+# Difference bt function and method ==>
+   method(): Function belongs to object (function stored in key)
+   functionName(): specific function
+
+
+Function Declaration			Function Expression
+--------------------------------------------------------
+1. Named						   1. Anonymous
+2. Hoisting - yes				2. Hoisting - No
+3. creation phase(parse)		3. execution phase (run)
+
+   -A Function Expression is created when the execution reaches it and is usable only from that moment.
+   -A Function Declaration can be called before it is defined.
+   -function declarations are parsed before their execution. 
+   function expressions are parsed only when the script engine encounters it during execution.
+
+
+# Arrow Function:
+--------------------
+   -'this' value inside a regular function is dynamic and depends on the context in which it is called.
+   -'this' inside the arrow function is bound lexically and equals to 'this' where the function is declared.
+   -lexical context means that arrow function uses 'this' from the code that contains the arrow function.
+   -Regular function ( this = how the function is invoked/who invoked )
+   -Arrow function( this = where the function is declared )
+==================================================================================================
+
+# Self Invoked:
+------------------
+   -The function is invoked Immediately after the declaration
+   -If we have to exceute a block of code only once, IIFE can be used
+   -self invoked functions cann't be invoked more than once.
+===========================================================
+
+# Higher-order Function:
+----------------------------
+-Higher-order function is a function that may receive a function as an argument and/or can even return a function. 
+-a function can be called as a Higher-order if that function has either of the below 2 abilities:
+	1. a function has ability to return another function.
+	2. a function has ability to take another function as argument.
+-Array filter(),map(),reduce(),sort() are some of the Higher-Order functions.
+
+   -Continuing with the functional programming paradigm from last week, today let us look at Higher Order Functions in Javascript.   
+      1. A higher order function is a function that takes in a function as an argument or returns a function.
+      2. It can be used to create a generic function to perform several operations.
+      3. A callback function is a function that is executed after another function has finished execution.
+      4. Alternatively, it is a function that is passed as an argument to another function so that it can be executed inside that function. This makes it a higher order function.
+      5. If there are nested callbacks, every callback function waits for the previous function to complete, thereby affecting the readability and maintainability of the code. This is called callback hell.
+      6. setInterval(), clearInterval(), setTimeOut(), clearTimeOut() are all good examples of higher order functions. They take in a task(function) as an argument along with a time and execute the function.
+      7. Array functions like map(), filter(), forEach(), some(), reduce(), find(), etc are also examples of higher order functions as they take in a function as argument.
+========================================
+
+## callback functions:
+---------------------------
+      Writing or taking one function as aparameter to another function is called call back function
+
+      The function which is taking is called Higher order function.
+      The function which is in parameter is called callback function.
+==========================================================================
+
+## function closure:
+---------------------
+Lexical Scope: 
+   -The scope of a variable is determined by its location within the source code and nested functions have access to variables declared in their outer scope.
+Closure: 
+   -A closure is an inner function that has access to its outer function's variables even after the outer function's execution is Completed/Closed.
+   -A function that retains access to its lexical scope even when it is executed outside of that lexical scope.
+
+-When the outer function execution completes, you’d expect all its variables to be no longer accessible. However, if the inner function uses variables from the outer function, those variables remain accessible.
+
+-The inner function retains access to the outer function’s scope, because the inner function ‘remembers’ the environment in which it was created.
+-------------------------------------------------------------------------------
+
+      function createCounter() {
+      let count = 0; // `count` is in the lexical scope of `incrementCounter`
+
+      function incrementCounter() {
+         count += 1;
+         console.log(count);
+      }
+
+      return incrementCounter;
+      }
+
+      const counter = createCounter();
+      counter(); // Outputs: 1
+      counter(); // Outputs: 2
+      counter(); // Outputs: 3
+-----------------------------------------------------------------------------
+
+      function makeAdder(x) {
+      return function(y) {
+         return x + y; // `x` is from the lexical scope of `makeAdder`
+      };
+      }
+
+      const add5 = makeAdder(5);
+      console.log(add5(2)); // Outputs: 7
+      console.log(add5(10)); // Outputs: 15
+
+      const add10 = makeAdder(10);
+      console.log(add10(2)); // Outputs: 12
+      console.log(add10(10)); // Outputs: 20
+
+========================================================
+
+# Function Curring:
+----------------------------
+-Function Currying is a concept of breaking a function with many arguments into many functions with single argument in such a way, that the output is same. 
+-its a technique of simplifying a multi-valued argument function into single-valued argument multi-functions.
+-It helps to create a higher-order function. It is extremely helpful in event handling.
+
+	var add = function (a){
+                 return function(b){
+                       return function(c){
+                                 return a+b+c;
+                              }        
+                        }
+                  }
+	console.log(add(2)(3)(4)); //output 9
+=======================================
+
+# Pure Function:
+---------------------------
+-Pure functions are functions that accept an input and returns a value without 
+ modifying any data outside its scope(Side Effects). 
+ 
+-A function is called pure if that follows the below 3 standards
+	1. Pure functions shouldn't update the data outside it's scope.
+	2. pure functions must return a value.
+	3. Its output or return value must depend on the input/arguments.
+
+-Pure functions in Javascript are part of the functional programming paradigm. They apply to all programming languages using functions.
+   In Javascript, functions are first-class citizens. They can be passed to functions, returned from functions and assigned to variables. Here, let us see what are pure functions and why we need them.
+      1. By definition, a pure function is a function that always returns the same output for a given input.
+      2. A pure function is predictable, readable, reusable and testable.
+      3. It does not have any side effects. Side effects are the impact a function has on its outer environment or the inputs passed to it(mutation) or DOM manipulation etc. So a pure function does not affect its outer environment.
+      4. Mutating inputs(arrays) can be avoided by using the spread parameter and functions like map(), filter() and reduce(), which make shallow copies of the input array, thereby not changing the original array.
+      5. Pure functions should have at least one parameter and should return something.
+      6. There are many advantages of pure functions. They are easy to test, and debug, and result in clean code that is decoupled and independent and can be added to utility functions.
+      7.  Functions that include API calls, database read and writes, logging, and filesystem manipulation are all impure functions, as they have side effects. However, it is not possible to do without these types of functions in application programming. Hence the idea is to have such functions to a minimum and have pure functions as much as possible as a best programming practice.
+=========================================================
+
+## function recursion:
+----------------------------
+-A recursive function is a function that calls itself until the program achieves the desired result.
+-A recursive function should have a condition that stops the function from calling itself.otherwise, 'RangeError: Maximum call stack size exceeded'  error will be thrown
+-A recursive function can be used instead of a loop where we don't know how many times the loop needs to be executed.
+
+ex: function countDown(fromNumber) {
+		console.log(fromNumber);
+		let nextNumber = fromNumber - 1;
+		if (nextNumber > 0) {
+			countDown(nextNumber);
+		}
+	}
+	countDown(5);
+=====================================
+
+## Memoization:
+------------------------------------------
+-Memoization is a programming technique that attempts to increase a function’s performance by caching its previously computed results.
+-Memoization is an optimization technique used to speed up performance by storing the results of expensive function calls and returning the cached result when the same inputs occur again.
+-its a kind of caching the data.
+-used with recursion.
+======================================
+
+
+
+
+   
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+   

@@ -1,0 +1,81 @@
+/* 
+- JavaScript stores dates as number of milliseconds since January 01, 1970.
+# Ways of Creating Date Objects :
+    1. new Date()
+    2. new Date(milliseconds)
+    3. new Date(date string)
+        e.g : new Date("2023-03-28")
+    4. new Date(year,month,day,hours,minutes,seconds,ms)
+        JavaScript counts months from 0 (January) to 11 (December).
+*/
+
+/* 
+# Date object Methods :
+    1. toString()
+    2. toLocalString(locales, options)
+    3. toDateString()
+    4. toLocaleDateString()
+    5. toTimeString()
+    6. toLocaleTimeString()
+
+* Action : converting date object into string in more readable formate &   able to configure it
+* Return : string
+
+# configurable object :
+* local aurguments :
+    - `"en-US"`: English (United States)
+    - `"en-GB"`: English (United Kingdom)
+    - `"fr-FR"`: French (France)
+    - `"de-DE"`: German (Germany)
+    - `"zh-CN"`: Chinese (Simplified, China)
+
+* optional aurguments object values:
+    - Date Options:
+        - `weekday`: `"long"`, `"short"`, `"narrow"`
+        - `year`: `"numeric"`, `"2-digit"`
+        - `month`: `"numeric"`, `"2-digit"`, `"long"`, `"short"`, `"narrow"`
+        - `day`: `"numeric"`, `"2-digit"`
+    - Time Options:
+        - `hour`: `"numeric"`, `"2-digit"`
+        - `minute`: `"numeric"`, `"2-digit"`
+        - `second`: `"numeric"`, `"2-digit"`
+        - `timeZoneName`: `"short"`, `"long"`
+    - Other Options:
+        - `timeZone`: `"UTC"` or an IANA time zone name like `"America/New_York"`
+        - `hour12`: `true` for 12-hour time (AM/PM), `false` for 24-hour time
+
+  toLocalString('default', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false, timeZone: 'UTC' });
+  
+  toLocaleDateString('default', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+  
+  toLocaleTimeString('default', { hour: '2-digit', minute: '2-digit', second: '2-digit', timeZoneName: 'short' });
+*/
+
+/* 
+# Get Methods ==>
+    1. getFullYear()	    Get year as a four digit number (yyyy)
+    2. getMonth()	    Get month as a number (0-11)
+    3. getDate()	    Get day as a number (1-31)
+    4. getDay()	    Get weekday as a number (0-6)
+    5. getHours()	    Get hour (0-23)
+    6. getMinutes()	    Get minute (0-59)
+    7. getSeconds()	    Get second (0-59)
+    8. getMilliseconds()  Get millisecond (0-999)
+
+   * Action: as per the method collecting that portion from date object
+   * Return: number
+*/
+
+/*
+# Set Methods ==> we can custmize date & time
+  Two Ways:
+    A. Use Get method + increment/Decrement Pass it to set methods
+    B. Using set methods :
+
+        1. setFullYear()	   Set the year (optionally month and day)
+        2. setMonth()	   Set the month (0-11)
+        3. setDate()	   Set the day as a number (1-31)
+        4. setHours()	   Set the hour (0-23)
+        5. setMinutes()	   Set the minutes (0-59)
+        6. setSeconds()      Set the seconds (0-59)
+*/

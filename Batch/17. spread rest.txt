@@ -1,0 +1,26 @@
+# spread-rest with Array, String, Object: ES6 feature
+    *spread operator: functionCall(...spread)
+
+    *rest operator/parameter:
+        -Partial rest
+
+    *spread+rest:
+        let a = [1, 2, 3, 4, 5]
+        a = {a: 10 }
+        a = 'krishna'
+        function add(...arr) {
+            console.log(arr, typeof (arr))
+        }
+        console.log(add(...a))
+
+    *spread-rest with destructuring: LHS(rest) = RHS(spread)  
+    - use : [...rest], {...rest} = [...spread], {...spread} ---> Here [], {} are destructuring 
+        LHS(rest):
+         - partial rest
+
+        RHS(spread):        
+         - combine datatype(2 array(concatenating), 2 objects, add in existing)
+         - spread creating shallow copy
+
+
+

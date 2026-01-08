@@ -1,0 +1,70 @@
+/*
+ Object :
+    # What is object in JS?
+        Object is non-primitive datatype in JS, Its stored info/data in descriptive form.
+        Object have key(property)-value pair.
+        key have a string and symbol datatype and value have any datatype
+        Object contains properties and methods.
+
+    # object creation ways in JS :
+        1. object literal;
+        2. function constructor (ES5)
+        3. Class (ES6)
+        4. new Object();
+        5. Object.create();
+
+    # CURD operations on database:
+        C --> Create object
+        U --> Update
+        R --> Retrive/get
+        D --> Delete
+
+   # object properties:
+            1.length
+            2.prototype
+
+========================================================
+                    2.prototype : 
+                            -Prototype is class inbuild property who have object value.
+                            -Prototype is inbuild object which is inbuild attached to every instance object in javascript.
+                    # Use:
+                            -Set properties in class level
+                            -Inherite properties from one class to another class
+
+                    All JavaScript objects inherit properties and methods from a prototype.
+
+                    # Prototype chain:
+                    prototype ==> inbuild class property
+                    __proto__ ==> is a instance property. Its return instance constructor/class prototype
+
+                        Object
+                            |
+                            Array, String, Number, Boolean, Function --> inbuild and user define class
+                            |
+                            Instances...
+                            let arr = [1,2] 
+
+                    Relation bt __proto__ and prototype :
+                    Prototype chain : Prototype chain ends at null
+========================================================
+
+   # object methods:
+        hasOwnProperty()
+
+        Object.keys()
+        Object.values()
+        Object.entries()
+        Object.fromEntries()
+
+        Object.create()
+        Object.assign()
+
+    Object is non-primitive datatype.
+    Object class methods to control object CURD operations:
+        Object.preventExtensions()
+        Object.isExtensible()
+        Object.seal()
+        Object.isSealed()
+        Object.freeze()
+        Object.isFrozen()
+*/
