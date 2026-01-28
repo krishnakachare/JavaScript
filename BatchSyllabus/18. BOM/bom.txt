@@ -1,0 +1,25 @@
+BOM- Browser Object Model
+=========================
+-The Browser Object Model (BOM) is used to interact with the browser.
+
+1. window - alert,prompt,confirm,open,close,print
+2. screen - 
+	screen.width
+	screen.height
+
+3. Location - window.location
+   protocol,host,hostname,pathname,href
+   refresh a page  - window.location.reload();
+   open a new page - window.location.assign('url');
+
+4. History - 
+   back(),forward(),length(),go()
+
+5. Navigator - 
+  The window.navigator object contains information about the visitor's browser.
+  navigator.appName
+  navigator.appVersion
+  navigator.language
+  navigator.onLine
+  navigator.geolocation.getCurrentPosition(pos=>{console.log(pos)})
+

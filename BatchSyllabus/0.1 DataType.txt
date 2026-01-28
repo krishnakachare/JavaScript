@@ -1,0 +1,80 @@
+# js Comments
+# synch Execution
+
+# variables defination: Read js code
+
+# variable declaration keywords:
+        var                        let             const
+    1. begining                     ES6              ES5
+    2. value update                  Y                N(mutate)
+    3. Initialization N required     N                Y
+    4. Redeclared                    N                N
+    5. Scope: Function, Global       B,F,G          B,F,G
+
+
+- Read js
+
+# Miscellaneous operators in js -
+1. Comma
+2. typeof, typeof()
+    - Cover datatypes
+3. instanceof
+4. void
+
+# Data types in js:- typeof()- Action, Return
+
+'use strict'
+
+
+1. Primitive Data types(6):- immutable(can't update original value)
+    1. string 
+    2. Boolean
+    3. Undefined
+    4. Null
+    5. Number
+    6. Bigint
+    7. Symbol
+    
+2. Non- Primitive data types:- mutable (can update original value)
+    1. Object (E.g.Date,);
+    2. Array
+    3. Function  
+    4. RegEx  
+
+-Global Methods --> String, Number, Math, Date
+
+1. string- Anything in '' "" ``
+        - made by 2 ways - 1. '', 2. String()
+        - Templete literal ES6
+        - everything on dom is string
+
+2. Boolean - Represents true or false values.
+           - Boolean(variable/expression)
+
+3. Undefined - not containing any values
+             - Global object property- value undefined
+             - Decleared but not assign - value undefined
+             - Function not returns anything - value undefined
+                        
+4. Null - not containing any values
+         - represent absence of value
+         - its value, datatypes-object, can return null
+
+5. Number - Number(+,-,0,integer,float)
+6. Bigint - Represents large integers beyond the limit of the Number type.
+            // n => nth power 
+            // ** => Exponential operator
+            // 2n ** 2n, 2n
+
+7. Symbol 
+   - ES6
+   - Represents a unique and immutable data type used as the key of an object’s property.
+
+# What diff bt Null, undefined and NaN?
+* NaN - 
+    - Not a number, datatypes-Number
+    - Global object property
+    - In mathematical operation with arithmetic operators reflecting
+    - 10/"Hi" --> NaN
+
+-  const for object.

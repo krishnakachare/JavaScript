@@ -1,0 +1,152 @@
+/*
+ Object :
+    # What is object in JS?
+        Object is non-primitive datatype in JS, Its stored info/data in descriptive form.
+        Object have key(property)-value pair.
+        key have a string and symbol datatype and value have any datatype
+        Object contains properties and methods.
+
+    # object creation ways in JS :
+        1. object literal;
+        2. function constructor (ES5)
+        3. Class (ES6)
+        4. new Object();
+        5. Object.create();
+
+    # CURD operations on database:
+        C --> Create object
+        U --> Update
+        R --> Retrive/get
+        D --> Delete
+
+   # object properties:
+            1.length
+            2.prototype
+========================================================
+
+   # object methods:
+        hasOwnProperty()
+
+        Object.keys()
+        Object.values()
+        Object.entries()
+        Object.fromEntries()
+
+        Object.create()
+        Object.assign()
+
+    Object is non-primitive datatype.
+    Object class methods to control object CURD operations:
+        Object.preventExtensions()
+        Object.isExtensible()
+        Object.seal()
+        Object.isSealed()
+        Object.freeze()
+        Object.isFrozen()
+
+=======================================================
+# Function constroctor (ES5)
+# What is class?  
+    ES6 feature,user defined datatype    
+    Blueprint, skelton, tempate, mould for object making
+
+# class provinding features :
+    1. class inheritance --> extend super()
+    2. class constructor --> to set instance dynamic property
+    3. class level properties
+========================================================
+                    2.prototype : 
+                            -Prototype is class inbuild property who have object value.
+                            -Prototype is inbuild object which is inbuild attached to every instance object in javascript.
+                    # Use:
+                            -Set properties in class level
+                            -Inherite properties from one class to another class
+
+                    All JavaScript objects inherit properties and methods from a prototype.
+
+                    -----------------------------
+                    Direct properties
+                    Prototype properties
+
+                    Object.getPrototypeOf(variableName)
+
+
+                    ---------------------------------
+
+                    # Prototype chain:
+                    prototype ==> inbuild class property
+                    __proto__ ==> is a instance property. Its return instance constructor/class prototype
+
+                        Object
+                            |
+                            Array, String, Number, Boolean, Function --> inbuild and user define class
+                            |
+                            Instances...
+                            let arr = [1,2] 
+
+                    Relation bt __proto__ and prototype :
+                    Prototype chain : Prototype chain ends at null
+
+
+
+// Array class inherite properties to the arr with the help of prototype
+
+// Array class prototype attached to the Object class
+// console.log(Object.prototype)
+
+// Prototype inheritance will see in OOPS...
+
+// 1. Add properties on class level : It will access in all instances:
+
+// Add properties in class with help of prototype:
+
+# Prototype chain:
+  prototype ==> inbuild class property
+  __proto__ ==> is a instance property. Its return instance constructor/class prototype
+
+       Object
+          |
+        Array, String, Number, Boolean, Function --> inbuild and user define class
+          |
+        Instances...
+        let arr = [1,2] 
+
+
+
+// Object:
+let obj = { a: 10 }
+console.log(obj)
+// Direct properties : Exist in instance/direct class
+console.log(obj.a) // 10
+// prototype properties : Exist in prototype
+console.log(obj.hasOwnProperty('a')) // true
+// Get the direct obj prototype object
+console.log(obj.__proto__) // obj is instance of Object class
+console.log(Object.prototype)
+
+
+// class abc2 {
+//     b = 20
+// }
+// class abc1 {
+//     a = 10   
+// }
+// let objNew1 = new abc1()
+// let objNew2 = new abc2()
+// objNew1.__proto__ = obj2
+
+
+// Array:
+let arr = [] // arr is instance of Array class
+console.log(arr.__proto__) // getting direct arr prototype object
+console.log(Array.prototype)
+
+console.log(arr.__proto__ === Array.prototype) // true
+console.log(arr.__proto__.__proto__)
+console.log(Object.prototype)
+console.log(arr.__proto__.__proto__ === Object.prototype) // true
+console.log(arr.__proto__.__proto__.__proto__) // null
+
+// Try with String, Object
+
+*/

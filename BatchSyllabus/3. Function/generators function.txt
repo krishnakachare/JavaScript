@@ -1,0 +1,70 @@
+Generators in JavaScript are a powerful feature that allows you to work with functions that can be paused and resumed, making them particularly useful for creating iterators and managing asynchronous code flows.
+
+Generator (or Generator function) is the new concept introduced in ES6. It provides you a new way of working with iterators and functions.
+
+A generator function is defined using the function* syntax and uses the yield keyword to yield values.
+
+The generator function can return (or yield) the control back to the caller at any point.
+-------------------------------------------------------------------------------------------
+# yield:
+    1.Pauses and Resumes Execution: When a yield statement is encountered in a generator function, it pauses the function execution and returns the value specified. The execution can be resumed later by calling the generator's next() method.
+
+    2.Multiple Values: A generator function can have multiple yield statements, allowing it to yield multiple values over time.
+
+    3.Returns an Iterator Result: When a yield statement is executed, it returns an object with two properties: value (the yielded value) and done (a boolean indicating whether the generator function has completed).
+
+    4.Continuation: The generator function can continue execution from where it was paused, allowing for complex state management and iteration.
+-------------
+# return:
+    1.Terminates Execution: When a return statement is encountered in a generator function, it terminates the function execution and optionally returns a value. This signals that the generator is done and no further values will be yielded.
+
+    2.Single Value: The return statement is used to return a single final value from the generator function and indicate that the generator is finished.
+
+    3.Final Value: When a return statement is executed, it returns an object with value (the return value) and done (set to true), indicating that the generator is completed.
+
+    4.No Further Execution: After a return statement, the generator function cannot continue execution or yield additional values.
+----------------------------------------------------------------------------------------
+# Passing arguments into Generators:
+
+    function* logGenerator() {
+    console.log(0);
+    console.log(1, yield);
+    console.log(2, yield);
+    console.log(3, yield);
+    }
+
+    const gen = logGenerator();
+
+    // the first call of next executes from the start of the function
+    // until the first yield statement
+    gen.next(); // 0
+    gen.next("pretzel"); // 1 pretzel
+    gen.next("california"); // 2 california
+    gen.next("mayonnaise"); // 3 mayonnaise
+-----------------------------------------------------
+# Return statement in a generator:
+
+    function* yieldAndReturn() {
+    yield "Y";
+    return "R";
+    yield "unreachable";
+    }
+
+    const gen = yieldAndReturn();
+    console.log(gen.next()); // { value: "Y", done: false }
+    console.log(gen.next()); // { value: "R", done: true }
+    console.log(gen.next()); // { value: undefined, done: true }
+-----------------------------------------------------------------
+function* exampleGenerator() {
+    yield 'First yield';  // Pauses here and yields 'First yield'
+    yield 'Second yield'; // Pauses here and yields 'Second yield'
+    return 'Final return'; // Returns 'Final return' and terminates the generator
+    yield 'This will not execute'; // This line will never be reached
+}
+
+const generator = exampleGenerator();
+
+console.log(generator.next()); // { value: 'First yield', done: false }
+console.log(generator.next()); // { value: 'Second yield', done: false }
+console.log(generator.next()); // { value: 'Final return', done: true }
+console.log(generator.next()); // { value: undefined, done: true }
