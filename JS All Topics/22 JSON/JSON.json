@@ -5,5 +5,3 @@
   "hobbies": ["weight lifting", "Bowling"],
   "friends": [{ "name": "Tom", "age": 28, "isSportsman": true }]
 }
-
-

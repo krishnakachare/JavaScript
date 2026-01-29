@@ -156,47 +156,46 @@
 
 
 
-function createUser(){
-          return  new Promise(function(resolve,reject){
-              setTimeout(function(){
-                  resolve('user created')
-              },3000)
-          })
-      }
-      
-      function getId(){
-          return  new Promise(function(resolve,reject){
-              setTimeout(function(){
-                  resolve('get id')
-              },2000)
-          })
-      }
-      
-      function getInfoById(){
-          return  new Promise(function(resolve,reject){
-              setTimeout(function(){
-                  resolve('get info by id')
-              },1000)
-          })
-      }
-      
-      
-      createUser()
-      .then(function(a){
-          console.log(a)
-          return  getId()
-      })
-      .then(function(b){
-          console.log(b)
-          return getInfoById()
-      })
-      .then(function(c){
-          console.log(c)
-      })
-      .catch(function(){
-          console.log('rejected')
-      })
-      .finally(function(){
-          console.log('finally')
-      })
-      
+function createUser() {
+    return new Promise(function (resolve, reject) {
+        setTimeout(function () {
+            resolve('user created')
+        }, 3000)
+    })
+}
+
+function getId() {
+    return new Promise(function (resolve, reject) {
+        setTimeout(function () {
+            resolve('get id')
+        }, 2000)
+    })
+}
+
+function getInfoById() {
+    return new Promise(function (resolve, reject) {
+        setTimeout(function () {
+            resolve('get info by id')
+        }, 1000)
+    })
+}
+
+
+createUser()
+    .then(function (a) {
+        console.log(a)
+        return getId()
+    })
+    .then(function (b) {
+        console.log(b)
+        return getInfoById()
+    })
+    .then(function (c) {
+        console.log(c)
+    })
+    .catch(function () {
+        console.log('rejected')
+    })
+    .finally(function () {
+        console.log('finally')
+    })

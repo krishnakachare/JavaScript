@@ -15,9 +15,9 @@
 // for (let variableName in ObjectName){}
 
 let student = {
-          fname: "kk",
-          age: 20,
-          adharNo: 123
+    fname: "kk",
+    age: 20,
+    adharNo: 123
 }
 // for (let val in student) {
 //           // console.log(val);  // keys of object  ---> fname,age,adharNo
@@ -56,8 +56,8 @@ let [a, b] = ['fname', 'kk']
 
 // Value -- > Value is array
 for (let [a, b] of Object.entries(student)) {
-          console.log(a)  // keys
-          console.log(b) // values
+    console.log(a)  // keys
+    console.log(b) // values
 }
 
 //============================
@@ -76,11 +76,11 @@ for (let [a, b] of Object.entries(student)) {
 
 let str = "aaabbbcckkkii" //"gsffdsh"
 let ObjOutput = {
-          a: 3,
-          b: 3,
-          c: 2,
-          k: 3,
-          i: 2
+    a: 3,
+    b: 3,
+    c: 2,
+    k: 3,
+    i: 2
 }
 
 

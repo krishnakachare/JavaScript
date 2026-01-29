@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Promises in JavaScript</title>
 </head>
+
 <body>
     <!-- This is a comment. It won't be displayed in the web page. -->
 
@@ -20,37 +22,35 @@
                 // Simulate an asynchronous task (e.g., data fetching)
                 setTimeout(function () {
                     let data = "jhsgdsghj kjdsgfshgfhgsj!";
-                    let isLogin=false;
-                    if(isLogin){
+                    let isLogin = false;
+                    if (isLogin) {
                         resolve(data);
                     }
-                    else
-                    {
+                    else {
                         reject("i'm rejected")
                     }
                     // Resolve the Promise with the data
-                
+
                     // Reject the Promise with an error (uncomment to test rejection)
                     // reject("Error: Data retrieval failed!");
                 }, 5000);
             });
+
             // Using the Promise
             anyname
                 .then(function (result) {
                     console.log("Resolved: " + result);
                     return "user successfully logged in"
                 })
-                .then(function(msg){
+                .then(function (msg) {
                     console.log(msg)
-                   
                     return "bye,bye"
                 })
                 .catch(function (error) {
                     console.info("Rejected: " + error);
                 })
-                .then(function(m){
+                .then(function (m) {
                     console.log(m)
-                     
                 })
         </script>
 
@@ -87,4 +87,5 @@
         </script>
     </div>
 </body>
+
 </html>

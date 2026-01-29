@@ -62,7 +62,7 @@ let aaaa = "aaabbaaccee"
 // }
 
 
-let hnn = { }
+let hnn = {}
 for (let i = 0; i < aaaa.length; i++) {
 
     if (hnn.hasOwnProperty(aaaa[i])) {

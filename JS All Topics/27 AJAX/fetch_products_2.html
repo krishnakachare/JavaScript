@@ -1,50 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
 
-    <style>
-      .loading,
-      .container {
-        display: none;
-      }
-    </style>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-  <body>
-    <h1 class="text-center bg-primary text-white">Product List</h1>
-    <button onclick="fetchProducts()">fetch products</button>
+  <style>
+    .loading,
+    .container {
+      display: none;
+    }
+  </style>
+</head>
 
-    <img src="./loading.gif" alt="" class="loading text-center" />
+<body>
+  <h1 class="text-center bg-primary text-white">Product List</h1>
+  <button onclick="fetchProducts()">fetch products</button>
 
-    <div class="container">
-      <div class="row">
-        
-      </div>
+  <img src="./loading.gif" alt="" class="loading text-center" />
+
+  <div class="container">
+    <div class="row">
+
     </div>
+  </div>
 
-    <script>
-      function fetchProducts() {
-        document.querySelector(".loading").style.display = "block";
+  <script>
+    function fetchProducts() {
+      document.querySelector(".loading").style.display = "block";
 
-        fetch("https://dummyjson.com/products")
-          .then((response) => response.json())
-          .then((finalResponse) => {
-            console.log(finalResponse.products);
-            document.querySelector(".container").style.display = "block";
-            document.querySelector(".loading").style.display = "none";
+      fetch("https://dummyjson.com/products")
+        .then((response) => response.json())
+        .then((finalResponse) => {
+          console.log(finalResponse.products);
+          document.querySelector(".container").style.display = "block";
+          document.querySelector(".loading").style.display = "none";
 
-            let str = "";
-            finalResponse.products.forEach((product) => {
-              str = str +
-                `<div class="col-sm-3">
+          let str = "";
+          finalResponse.products.forEach((product) => {
+            str = str +
+              `<div class="col-sm-3">
                   <div class="card text-center">
                     <img src="${product.images[0]}" class="card-img-top" alt="..." height='200px'>
                     <div class="card-body">
@@ -56,10 +54,11 @@
                   </div>
                 </div>
               `;
-              document.querySelector(".row").innerHTML = str;
-            });
+            document.querySelector(".row").innerHTML = str;
           });
-      }
-    </script>
-  </body>
+        });
+    }
+  </script>
+</body>
+
 </html>
