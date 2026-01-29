@@ -9,17 +9,17 @@
 // This operation changes the length of the array.
 
 
-Array.prototype.myPush= function(number){
-    this[this.length]=number;
+Array.prototype.myPush = function (number) {
+    this[this.length] = number;
     return this.length;
 }
 
-console.log([1,2,3,4,5].myPush(80));   // 6
+console.log([1, 2, 3, 4, 5].myPush(80));   // 6
 
-Array.prototype.myPop= function(){
-    let lastEle= this[this.length-1];
-    this.length=this.length-1;
+Array.prototype.myPop = function () {
+    let lastEle = this[this.length - 1];
+    this.length = this.length - 1;
     return lastEle;
 }
 
-console.log([1,2,3,4,5].myPop());  // 5
+console.log([1, 2, 3, 4, 5].myPop());  // 5

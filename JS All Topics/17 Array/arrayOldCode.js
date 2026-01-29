@@ -382,7 +382,7 @@
 
 //===========================================================================
 
-let arr=['a',2,'b',3,'c','d',"i",3,5,6,7,8,'o','p','q','s']
+let arr = ['a', 2, 'b', 3, 'c', 'd', "i", 3, 5, 6, 7, 8, 'o', 'p', 'q', 's']
 console.log(arr)
 let a1 = []
 let b1 = []
@@ -399,8 +399,8 @@ console.log(b1)
 
 //find the length of the number
 
-let num=1234567890123457
-let str=new String(num)
+let num = 1234567890123457
+let str = new String(num)
 console.log(str.length)
 console.log(String(num).length)
 
