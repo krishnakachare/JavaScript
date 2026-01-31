@@ -1,2 +1,0 @@
-
-#Global Methods --> String, Number, alert, confirm, prompt, console methods, Math object methods
