@@ -1,4 +1,4 @@
-// // [0,1,0,1,1,0,1,1,1,1,0,0,1,0,1]     count max consicatives of 1
+// [0,1,0,1,1,0,1,1,1,1,0,0,1,0,1]     count max consicatives of 1
 // let arr = [0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1]
 // let countArr = []
 // let count = 0;

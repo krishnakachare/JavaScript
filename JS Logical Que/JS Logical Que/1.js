@@ -1,7 +1,7 @@
 // Q. We have to change in this no.  0-5, 1-9, 2-8, 3-7, 4-6 and vice versa
 //-------------------------------------------------------------------------------------
 // let strInput = "0123456789"
-// //strOutput = '5987604321'
+// strOutput = '5987604321'
 // let strOutput = ""
 
 // for (let key of strInput) {

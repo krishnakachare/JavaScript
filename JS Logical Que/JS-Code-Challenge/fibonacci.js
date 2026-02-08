@@ -3,10 +3,10 @@
 
 function fibonacci(num) {
 
-    let res = [0,1];
+    let res = [0, 1];
 
-    for(let i=2;i<=num;i++){
-     let tempNum= res[i-1]+ res[i-2]
+    for (let i = 2; i <= num; i++) {
+        let tempNum = res[i - 1] + res[i - 2]
         res.push(tempNum)
     }
 

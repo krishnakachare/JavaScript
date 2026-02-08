@@ -229,6 +229,7 @@ Promise.resolve().then(() => {
 }).then(() => console.log('6'));
 
 console.log('7');
+
 //===================================
 
 const obj = { a: 1, b: { c: 2 } };
