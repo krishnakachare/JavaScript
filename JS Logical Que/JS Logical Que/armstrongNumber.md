@@ -122,13 +122,3 @@ isArmstrong(7); // true
 ## 📝 Interview-ready explanation
 
 > An Armstrong number is a number where the sum of its digits raised to the power of the total number of digits equals the original number. In JavaScript, we can extract digits, compute the powered sum, and compare it with the input number.
-
----
-
-If you want, I can also:
-
-* Write this **without loops**
-* Optimize for **large numbers**
-* Provide **MCQ / interview trick questions**
-
-Just say 👍

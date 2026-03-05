@@ -5,3 +5,18 @@ we encounter OTP's , they use 3rd party otp system.
 In olden Times, we used to use XmlHttpRequest for API's, but modern browsers implemented their own functionality for API called fetch
 
 fetch return promises,
+
+
+
+If JavaScript worked only synchronously, the browser would freeze while waiting for slow operations like:
+
+
+API calls
+
+Database queries
+
+File reading
+
+Timers
+
+Network requests

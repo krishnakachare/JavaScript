@@ -29,6 +29,12 @@
 //   a.split('').sort().join('') === b.split('').sort().join('')
 // ```
 
+// const isAnagram = (a, b) =>
+//   'eat'.split('').sort().join('') === 'ear'.split('').sort().join('')
+
+// const isAnagram2 = (a, b) =>
+//   'eat'.split('').sort().join('') === 'tea'.split('').sort().join('')
+
 
 
 

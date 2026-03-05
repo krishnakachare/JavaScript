@@ -1,3 +1,5 @@
+
+
 let names = ["Mahesh", "Dienesh", "Kamalesh", "Sathish", "Suresh", "Ramesh"];
 let weightage = [-2, 2, 1, -1, 3, 0];
 let sortWeightage = [-2, 2, 1, -1, 3, 0];
