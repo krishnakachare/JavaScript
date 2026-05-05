@@ -343,22 +343,12 @@ console.log(price);
 
 # 5 Common RegEx Interview Questions
 
-### 1
+1 Write regex to validate email.
 
-Write regex to validate email.
+2 Extract numbers from string.
 
-### 2
+3 Validate strong password.
 
-Extract numbers from string.
+4 Remove special characters from string.
 
-### 3
-
-Validate strong password.
-
-### 4
-
-Remove special characters from string.
-
-### 5
-
-Find words starting with capital letter.
+5 Find words starting with capital letter.

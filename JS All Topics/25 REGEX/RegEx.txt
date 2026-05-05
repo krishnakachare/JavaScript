@@ -1,0 +1,119 @@
+## Regular Expressions: RegExp:
+A regular expression or RegExp is a small programming language that helps to find pattern in string.
+
+-----------------
+# Two ways to create Regular Expressions in JavaScript:
+
+1. Literal Syntax:
+let pattern = /hello/;
+
+2. Constructor Syntax:
+let pattern = new RegExp("hello");
+
+------------
+# Flags : Flags are optional parameters in a regular expression which determine the type of searching. 
+- g: a global flag which means looking for a pattern in whole text
+- i: case insensitive flag(it searches for both lowercase and uppercase)
+- m: multiline
+
+-------------------------------
+* []:  A set of characters:
+  * [a-c] means, a or b or c
+  * [a-z] means, any letter a to z
+  * [A-Z] means, any character A to Z
+  * [0-3] means, 0 or 1 or 2 or 3
+  * [0-9] means any number 0 to 9
+  * [A-Za-z0-9] any character which is a to z, A to Z, 0 to 9
+
+----------
+# Anchors
+
+| Anchor | Meaning         |
+| ------ | --------------- |
+| ^      | start of string |
+| $      | end of string   |
+
+^: starts with
+  r'^substring' eg r'^love', a sentence which starts with a word love
+  r'[^abc] mean not a, not b, not c.
+
+$: ends with
+  r'substring$' eg r'love$', sentence ends with a word love
+
+* . : any character except new line character(\n)
+
+-------------------------------
+#Predefined Character Classes
+
+| Pattern | Meaning            |
+| ------- | ------------------ |
+| \d      | digit              |
+| \D      | non-digit          |
+| \w      | word character     |
+| \W      | non-word character |
+| \s      | whitespace         |
+| \S      | non-whitespace     |
+
+ \b: word bounder, matches with the beginning or ending of a word
+
+ \\:  uses to escape special characters
+   \d mean: match where the string contains digits (numbers from 0-9)
+   \D mean: match where the string does not contain digits
+
+-------------------
+# Quantifiers:
+
+| Quantifier | Meaning         |
+| ---------- | --------------- |
+| \*         | 0 or more       |
+| +          | 1 or more       |
+| ?          | 0 or 1          |
+| {n}        | exactly n       |
+| {n,}       | n or more       |
+| {n,m}      | between n and m |
+
+*: zero or more times
+  r'[a]*' means a optional or it can occur many times.
+
++: one or more times
+   r'[a]+' means at least once or more times
+
+ ?: zero or one times
+    r'[a]?' means zero times or once
+
+ {3}: Exactly 3 characters
+ {3,}: At least 3 characters
+ {3,8}: 3 to 8 characters
+ |: Either or
+   r'apple|banana' mean either of an apple or a banana
+
+(): Capture and group
+
+------------------
+# String Methods:
+
+| Method       | Purpose         |
+| ------------ | --------------- |
+| match()      | Find matches    |
+| matchAll()   | Get all matches |
+| search()     | Find position   |
+| replace()    | Replace text    |
+| replaceAll() | Replace all     |
+| split()      | Split string    |
+
+match():Returns an array containing all of the matches, including capturing groups, or null if no match is found.
+If we do not use a global flag, match() returns an array containing the pattern, index, input and group.
+
+search(): Tests for a match in a string. It returns the index of the match, or -1 if the search fails.
+
+replace(): Executes a search for a match in a string, and replaces the matched substring with a replacement substring.
+
+------------------
+# RegExp Methods:
+
+| Method | Purpose          |
+| ------ | ---------------- |
+| test() | true/false match |
+| exec() | detailed match   |
+
+test():Tests for a match in a string. It returns true or false.
