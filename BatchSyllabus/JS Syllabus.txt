@@ -160,17 +160,20 @@
     25.	Destructuring (string, array, object)
     26.	spread & rest operator, Destructure + spread-rest
 
-    27. Modules in js   
-    
-    28.	Debugging:
+    27. Modules in js     
+
+    28.	JavaScript Execution:
+        • Execution context
+        • callback queue
+        • Event loop
+
+    29.	Debugging:
         | └── Console.log()
         | └── Breakpoints
         | └── DevTools
         |── ESLint    
 
-    29.	Error Handling:
-
-    30.	JavaScript Execution:
-        • Execution context
-        • callback queue
-        • Event loop
+    30.	Error Handling in JavaScript
+    31. Exceptional Handling in JavaScript
+    32. JavaScript best coding Practices
+    33. Javascript coding principles

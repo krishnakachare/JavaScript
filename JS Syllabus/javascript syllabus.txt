@@ -233,18 +233,22 @@
     - Breakpoints
     - ESLint   
 
-34. Error Handling
+34. Error Handling in JavaScript
     - `try...catch`
     - `throw`
     - Custom Errors
 
-35. JavaScript Best Practices
+34.1 Exceptional Handling in JavaScript
+
+35. JavaScript Coding Best Practices
     - Reserved keywords 
     - Code Optimization
     - Performance Tuning
     - Security Best Practices
     - Linting & Formatting (ESLint, Prettier)
     - Testing (Jest, Mocha, Cypress)
+
+35.1 JavaScript Coding principles
 
 36. Node.js (Basics)
     - npm, npx, Yarn

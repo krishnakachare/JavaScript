@@ -226,11 +226,17 @@
 - Breakpoints
 - ESLint
 
-# 30. Error Handling
+# 30. Error Handling in JavaScript
 
 - `try...catch`
 - `throw`
 - Custom Errors
+
+# 30.1. Exceptional Handling in Javascript
+
+# 30.2. JavaScript best coding practices
+
+# 30.3. JavaScript coding principles
 
 # 31. JavaScript Projects
 
