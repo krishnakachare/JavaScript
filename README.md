@@ -12,4 +12,4 @@
 
 ### JavaScript Syllabus:
 
-- [JavaScript Syllabus List](JS Syllabus\javascript syllabus.md)
+- [JavaScript Syllabus List](JS Syllabus/javascript syllabus.md)
