@@ -1,37 +1,3 @@
-<div align="center">
-  <h1> 30 Days Of JavaScript: JSON</h1>
-  <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
-  <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
-  </a>
-  <a class="header-badge" target="_blank" href="https://twitter.com/Asabeneh">
-  <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
-  </a>
-
-<sub>Author:
-<a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-<small> January, 2020</small>
-</sub>
-
-</div>
-
-[<< Day 15](../15_Day_Classes/15_day_classes.md) | [Day 17 >>](../17_Day_Web_storages/17_day_web_storages.md)
-
-![Thirty Days Of JavaScript](../images/banners/day_1_16.png)
-
-- [Day 16](#day-16)
-	- [JSON](#json)
-		- [Converting JSON to JavaScript Object](#converting-json-to-javascript-object)
-			- [JSON.parse()](#jsonparse)
-		- [Using a reviver function with JSON.parse()](#using-a-reviver-function-with-jsonparse)
-		- [Converting Object to JSON](#converting-object-to-json)
-		- [Using a Filter Array with JSON.stringify](#using-a-filter-array-with-jsonstringify)
-	- [Exercises](#exercises)
-		- [Exercises Level 1](#exercises-level-1)
-		- [Exercises Level 2](#exercises-level-2)
-		- [Exercises Level 3](#exercises-level-3)
-
-# Day 16
-
 ## JSON
 
 JSON stands for JavaScript Object Notation. The JSON syntax is derived from JavaScript object notation syntax, but the JSON format is text or string only. JSON is a light weight data format for storing and transporting. JSON is mostly used when data is sent from a server to a client. JSON is an easier-to-use alternative to XML.
@@ -205,10 +171,10 @@ const usersText = `{
   "email":"lidiya@lidiya.com"
   }
 ]
-}`
+}`;
 
-const usersObj = JSON.parse(usersText, undefined, 4)
-console.log(usersObj)
+const usersObj = JSON.parse(usersText, undefined, 4);
+console.log(usersObj);
 ```
 
 ### Using a reviver function with JSON.parse()
@@ -237,14 +203,14 @@ const usersText = `{
   "email":"lidiya@lidiya.com"
   }
 ]
-}`
+}`;
 
 const usersObj = JSON.parse(usersText, (key, value) => {
   let newValue =
-    typeof value == 'string' && key != 'email' ? value.toUpperCase() : value
-  return newValue
-})
-console.log(usersObj)
+    typeof value == "string" && key != "email" ? value.toUpperCase() : value;
+  return newValue;
+});
+console.log(usersObj);
 ```
 
 The _JSON.parse()_ is very handy to use. You do not have to pass optional parameter, you can just use it with the required parameter and you will achieve quite a lot.
@@ -254,7 +220,7 @@ The _JSON.parse()_ is very handy to use. You do not have to pass optional parame
 When we want to change the object to JSON we use _JSON.stringify()_. The stringify method takes one required parameter and two optional parameters. The replacer is used as filter and the space is an indentations. If we do not want to filter out any of the keys from the object we can just pass undefined.
 
 ```js
-JSON.stringify(obj, replacer, space)
+JSON.stringify(obj, replacer, space);
 // json or text , the data
 // reviver is an optional callback function
 ```
@@ -264,75 +230,75 @@ Let us convert the following object to a string. First let use keep all the keys
 ```js
 const users = {
   Alex: {
-    email: 'alex@alex.com',
-    skills: ['HTML', 'CSS', 'JavaScript'],
+    email: "alex@alex.com",
+    skills: ["HTML", "CSS", "JavaScript"],
     age: 20,
     isLoggedIn: false,
-    points: 30
+    points: 30,
   },
   Asab: {
-    email: 'asab@asab.com',
+    email: "asab@asab.com",
     skills: [
-      'HTML',
-      'CSS',
-      'JavaScript',
-      'Redux',
-      'MongoDB',
-      'Express',
-      'React',
-      'Node'
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Redux",
+      "MongoDB",
+      "Express",
+      "React",
+      "Node",
     ],
     age: 25,
     isLoggedIn: false,
-    points: 50
+    points: 50,
   },
   Brook: {
-    email: 'daniel@daniel.com',
-    skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux'],
+    email: "daniel@daniel.com",
+    skills: ["HTML", "CSS", "JavaScript", "React", "Redux"],
     age: 30,
     isLoggedIn: true,
-    points: 50
+    points: 50,
   },
   Daniel: {
-    email: 'daniel@alex.com',
-    skills: ['HTML', 'CSS', 'JavaScript', 'Python'],
+    email: "daniel@alex.com",
+    skills: ["HTML", "CSS", "JavaScript", "Python"],
     age: 20,
     isLoggedIn: false,
-    points: 40
+    points: 40,
   },
   John: {
-    email: 'john@john.com',
-    skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'Node.js'],
+    email: "john@john.com",
+    skills: ["HTML", "CSS", "JavaScript", "React", "Redux", "Node.js"],
     age: 20,
     isLoggedIn: true,
-    points: 50
+    points: 50,
   },
   Thomas: {
-    email: 'thomas@thomas.com',
-    skills: ['HTML', 'CSS', 'JavaScript', 'React'],
+    email: "thomas@thomas.com",
+    skills: ["HTML", "CSS", "JavaScript", "React"],
     age: 20,
     isLoggedIn: false,
-    points: 40
+    points: 40,
   },
   Paul: {
-    email: 'paul@paul.com',
+    email: "paul@paul.com",
     skills: [
-      'HTML',
-      'CSS',
-      'JavaScript',
-      'MongoDB',
-      'Express',
-      'React',
-      'Node'
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "MongoDB",
+      "Express",
+      "React",
+      "Node",
     ],
     age: 20,
     isLoggedIn: false,
-    points: 40
-  }
-}
+    points: 40,
+  },
+};
 
-const txt = JSON.stringify(users, undefined, 4)
-console.log(txt) // text means JSON- because json is a string form of an object.
+const txt = JSON.stringify(users, undefined, 4);
+console.log(txt); // text means JSON- because json is a string form of an object.
 ```
 
 ```sh
@@ -439,19 +405,23 @@ Now, lets use the replacer as a filter. The user object has long list of keys bu
 
 ```js
 const user = {
-  firstName: 'Asabeneh',
-  lastName: 'Yetayeh',
-  country: 'Finland',
-  city: 'Helsinki',
-  email: 'alex@alex.com',
-  skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Python'],
+  firstName: "Asabeneh",
+  lastName: "Yetayeh",
+  country: "Finland",
+  city: "Helsinki",
+  email: "alex@alex.com",
+  skills: ["HTML", "CSS", "JavaScript", "React", "Python"],
   age: 250,
   isLoggedIn: false,
-  points: 30
-}
+  points: 30,
+};
 
-const txt = JSON.stringify(user,['firstName', 'lastName', 'country', 'city', 'age'],4)
-console.log(txt)
+const txt = JSON.stringify(
+  user,
+  ["firstName", "lastName", "country", "city", "age"],
+  4,
+);
+console.log(txt);
 ```
 
 ```sh
@@ -464,21 +434,21 @@ console.log(txt)
 }
 ```
 
-🌕 You are extraordinary.  Now, you knew a light-weight data format which you may use to store data or to send it an HTTP server. You are 16 steps a head to your way to greatness. Now do some exercises for your brain and for your muscle.
+🌕 You are extraordinary. Now, you knew a light-weight data format which you may use to store data or to send it an HTTP server. You are 16 steps a head to your way to greatness. Now do some exercises for your brain and for your muscle.
 
 ## Exercises
 
 ```js
-const skills = ['HTML', 'CSS', 'JS', 'React','Node', 'Python']
+const skills = ["HTML", "CSS", "JS", "React", "Node", "Python"];
 let age = 250;
-let isMarried = true
+let isMarried = true;
 const student = {
-  firstName:'Asabeneh',
-  lastName:'Yetayehe',
-  age:250,
-  isMarried:true,
-  skills:['HTML', 'CSS', 'JS', 'React','Node', 'Python', ]
-}
+  firstName: "Asabeneh",
+  lastName: "Yetayehe",
+  age: 250,
+  isMarried: true,
+  skills: ["HTML", "CSS", "JS", "React", "Node", "Python"],
+};
 const txt = `{
     "Alex": {
         "email": "alex@alex.com",
@@ -574,7 +544,7 @@ const txt = `{
         "points": 40
     }
 }
-`
+`;
 ```
 
 ### Exercises Level 1
@@ -590,9 +560,5 @@ const txt = `{
 
 ### Exercises Level 3
 
-1. Parse the *txt* JSON to object.
-2. Find the user who has many skills from the variable stored in *txt*.
-
-🎉 CONGRATULATIONS ! 🎉
-
-[<< Day 15](../15_Day_Classes/15_day_classes.md) | [Day 17 >>](../17_Day_Web_storages/17_day_web_storages.md)
+1. Parse the _txt_ JSON to object.
+2. Find the user who has many skills from the variable stored in _txt_.
