@@ -13,3 +13,5 @@
 ### JavaScript Syllabus:
 
 - [JavaScript Syllabus](JS%20Syllabus/javascript%20syllabus.md)
+
+- ![JavaScript](Javascript.jpg)
