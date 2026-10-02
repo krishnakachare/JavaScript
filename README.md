@@ -34,4 +34,4 @@
 
 - 🔗[ JS Bin: ](https://jsbin.com/repuxipuhi/edit?js,console,output)
 
-![JavaScript](Javascript2.jpg)
+![JavaScript](Js.gif)
